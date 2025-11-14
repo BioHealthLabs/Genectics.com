@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Genectics.com</title>
+    <title>Genectics.com – About Us</title>
     <style>
         :root {
             --bg: #020617;
@@ -46,14 +46,13 @@
         }
 
         .site-banner {
-    display: block;
-    width: 100%;
-    max-width: 520px;   /* ↓↓↓ Mye mindre banner */
-    height: auto;
-    margin: 10px auto 14px;
-    border-radius: 14px;
-    box-shadow: 0 12px 32px rgba(0,0,0,0.55);
-
+            display: block;
+            width: 100%;
+            max-width: 520px;
+            height: auto;
+            margin: 10px auto 14px;
+            border-radius: 14px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.55);
         }
 
         .site-nav {
@@ -118,6 +117,10 @@
             margin-top: 0;
         }
 
+        ul {
+            padding-left: 18px;
+        }
+
         a {
             color: var(--accent);
             text-decoration: none;
@@ -154,14 +157,21 @@
             h1 { font-size: 1.7rem; }
         }
     </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GVJ73QQ5J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date()); gtag('config', 'G-3GVJ73QQ5J');
+    </script>
 </head>
 <body>
 <div class="page">
     <header class="site-header">
         <a href="index.html" class="site-brand">GENECTICS.COM</a>
-        <img src="genectics_banner.png" alt="Genectics.com" class="site-banner">
+        <img src="genectics_banner.jpg" alt="Genectics.com" class="site-banner">
         <nav class="site-nav">
-            <a href="index.html" class="nav-link">Article</a>
+            <a href="index.html" class="nav-link">Comparison</a>
             <a href="about.html" class="nav-link active">About</a>
             <a href="privacy.html" class="nav-link">Privacy</a>
             <a href="disclosure.html" class="nav-link">Disclosure</a>

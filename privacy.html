@@ -7,23 +7,56 @@
     <style>
         :root { --bg: #020617; --text-main: #e5e7eb; --text-muted: #9ca3af; --accent: #38bdf8; }
         * { box-sizing: border-box; }
-        body { margin: 0; padding: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.7; background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #020617 100%); color: var(--text-main); -webkit-font-smoothing: antialiased; }
+        body {
+            margin: 0; padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.7;
+            background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #020617 100%);
+            color: var(--text-main);
+            -webkit-font-smoothing: antialiased;
+        }
         .page { min-height: 100vh; display: flex; flex-direction: column; }
         .site-header { padding: 18px 20px 8px; max-width: 1120px; margin: 0 auto; }
         .site-brand { text-decoration: none; color: var(--text-main); font-weight: 600; letter-spacing: 0.05em; font-size: 0.9rem; text-transform: uppercase; }
-        .site-banner { display: block; width: 100%; max-width: 520px; height: auto; margin: 10px auto 14px; border-radius: 14px; box-shadow: 0 12px 32px rgba(0,0,0,0.55); }
+        .site-banner {
+            display: block;
+            width: 100%; max-width: 520px;
+            height: auto; margin: 10px auto 14px;
+            border-radius: 14px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.55);
+        }
         .site-nav { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
-        .nav-link { font-size: 0.85rem; padding: 6px 14px; border-radius: 999px; border: 1px solid transparent; background: rgba(15,23,42,0.9); color: var(--text-muted); text-decoration: none; }
+        .nav-link {
+            font-size: 0.85rem; padding: 6px 14px;
+            border-radius: 999px; border: 1px solid transparent;
+            background: rgba(15,23,42,0.9);
+            color: var(--text-muted); text-decoration: none;
+        }
         .nav-link:hover { border-color: var(--accent); color: var(--accent); }
         .nav-link.active { border-color: var(--accent); color: #e0f2fe; }
         .site-main { flex: 1; max-width: 780px; margin: 0 auto 40px; padding: 10px 20px 40px; }
-        .content-card { background: radial-gradient(circle at top left,#020617,#020617 55%,#020617); border-radius: 22px; padding: 26px 26px 30px; box-shadow: 0 22px 60px rgba(0,0,0,0.75); border: 1px solid rgba(148,163,184,0.16); }
+        .content-card {
+            background: radial-gradient(circle at top left,#020617,#020617 55%,#020617);
+            border-radius: 22px;
+            padding: 26px 26px 30px;
+            box-shadow: 0 22px 60px rgba(0,0,0,0.75);
+            border: 1px solid rgba(148,163,184,0.16);
+        }
         h1 { font-size: 2rem; margin-top: 4px; margin-bottom: 12px; color: #f9fafb; }
-        h2 { margin-top: 26px; margin-bottom: 6px; font-size: 1.3rem; border-bottom: 1px solid rgba(148,163,184,0.25); padding-bottom: 6px; }
+        h2 {
+            margin-top: 26px; margin-bottom: 6px;
+            font-size: 1.3rem;
+            border-bottom: 1px solid rgba(148,163,184,0.25);
+            padding-bottom: 6px;
+        }
         p { margin-top: 0; }
         a { color: var(--accent); text-decoration: none; }
         a:hover { text-decoration: underline; }
-        .footer { text-align: center; padding: 18px 0 26px; margin-top: 10px; border-top: 1px solid rgba(31,41,55,0.9); font-size: 0.8em; color: var(--text-muted); }
+        .footer {
+            text-align: center; padding: 18px 0 26px;
+            margin-top: 10px; border-top: 1px solid rgba(31,41,55,0.9);
+            font-size: 0.8em; color: var(--text-muted);
+        }
         .footer a { color: var(--text-muted); text-decoration: none; margin: 0 10px; }
         .footer a:hover { color: #e5e7eb; text-decoration: underline; }
         @media (max-width: 640px) { .content-card { padding: 18px 16px 24px; } h1 { font-size: 1.7rem; } }
@@ -55,8 +88,20 @@
 
     <main class="site-main">
         <section class="content-card">
-            <!-- privacy-teksten din uendret -->
-            <!-- ... -->
+            <h1>Privacy Policy</h1>
+
+            <p>Your privacy is important to Ronarn AS, the owner and operator of Genectics.com. This policy explains how we collect and process personal data in accordance with international standards, including GDPR.</p>
+
+            <h2>Information We Collect</h2>
+            <p>We collect anonymized data via Google Analytics to analyze user patterns and improve the website.</p>
+
+            <h2>Cookies and Tracking</h2>
+            <p>Our site uses cookies for the purpose of tracking affiliate links. These are necessary for us to receive commissions from affiliate networks. You may disable cookies in your browser, but this may affect site functionality.</p>
+
+            <h2>Data Sharing</h2>
+            <p>We do not share any personal identifying data with third parties, except for Google Analytics for analysis and our affiliate partners for sales tracking.</p>
+
+            <p><a href="index.html">Back to Home</a></p>
         </section>
 
         <div class="footer">

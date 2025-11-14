@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Genectics.com</title>
+    <title>Genectics.com – Privacy Policy</title>
+
     <style>
         :root {
             --bg: #020617;
@@ -30,7 +31,7 @@
             flex-direction: column;
         }
 
-        /* HEADER + NAV */
+        /* HEADER */
 
         .site-header {
             padding: 18px 20px 8px;
@@ -47,16 +48,15 @@
             text-transform: uppercase;
         }
 
-     .site-banner {
-    display: block;
-    width: 100%;
-    max-width: 520px;   /* ↓↓↓ Mye mindre banner */
-    height: auto;
-    margin: 10px auto 14px;
-    border-radius: 14px;
-    box-shadow: 0 12px 32px rgba(0,0,0,0.55);
-}
-
+        .site-banner {
+            display: block;
+            width: 100%;
+            max-width: 520px;
+            height: auto;
+            margin: 10px auto 14px;
+            border-radius: 14px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.55);
+        }
 
         .site-nav {
             margin-top: 10px;
@@ -85,7 +85,7 @@
             color: #e0f2fe;
         }
 
-        /* MAIN CONTENT */
+        /* MAIN */
 
         .site-main {
             flex: 1;
@@ -117,19 +117,10 @@
             padding-bottom: 6px;
         }
 
-        p {
-            color: var(--text-main);
-            margin-top: 0;
-        }
+        p { margin-top: 0; }
 
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
 
         /* FOOTER */
 
@@ -154,21 +145,30 @@
         }
 
         @media (max-width: 640px) {
-            .content-card {
-                padding: 18px 16px 24px;
-            }
+            .content-card { padding: 18px 16px 24px; }
             h1 { font-size: 1.7rem; }
         }
     </style>
+
+    <!-- GOOGLE ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GVJ73QQ5J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3GVJ73QQ5J');
+    </script>
+
 </head>
 <body>
 <div class="page">
+
     <header class="site-header">
         <a href="index.html" class="site-brand">GENECTICS.COM</a>
-        <img src="genectics_banner.png" alt="Genectics.com" class="site-banner">
+        <img src="genectics_banner.jpg" alt="Genectics.com" class="site-banner">
 
         <nav class="site-nav">
-            <a href="index.html" class="nav-link">Article</a>
+            <a href="index.html" class="nav-link">Comparison</a>
             <a href="about.html" class="nav-link">About</a>
             <a href="privacy.html" class="nav-link active">Privacy</a>
             <a href="disclosure.html" class="nav-link">Disclosure</a>
@@ -178,6 +178,7 @@
 
     <main class="site-main">
         <section class="content-card">
+
             <h1>Privacy Policy</h1>
 
             <p>Your privacy is important to Ronarn AS, the owner and operator of Genectics.com. This policy explains how we collect and process personal data in accordance with international standards, including GDPR.</p>
@@ -189,9 +190,10 @@
             <p>Our site uses cookies for the purpose of tracking affiliate links. These are necessary for us to receive commissions from affiliate networks. You may disable cookies in your browser, but this may affect site functionality.</p>
 
             <h2>Data Sharing</h2>
-            <p>We do not share any personal identifying data with third parties, except for Google Analytics for analysis and our affiliate partners for sales tracking.</p>
+            <p>We do not share any personal identifying data with third parties, except for Google Analytics for analysis and affiliate partners for sales tracking.</p>
 
             <p><a href="index.html">Back to Home</a></p>
+
         </section>
 
         <div class="footer">
@@ -200,6 +202,7 @@
             <a href="disclosure.html">Affiliate Disclosure</a> |
             <a href="contact.html">Contact</a>
         </div>
+
     </main>
 </div>
 </body>

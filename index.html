@@ -7,41 +7,187 @@
     <style>
         :root { --bg: #020617; --text-main: #e5e7eb; --text-muted: #9ca3af; --accent: #38bdf8; }
         * { box-sizing: border-box; }
-        body { margin: 0; padding: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.7; background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #020617 100%); color: var(--text-main); -webkit-font-smoothing: antialiased; }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.7;
+            background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #020617 100%);
+            color: var(--text-main);
+            -webkit-font-smoothing: antialiased;
+        }
+
         .page { min-height: 100vh; display: flex; flex-direction: column; }
-        .site-header { padding: 18px 20px 8px; max-width: 1120px; margin: 0 auto; }
-        .site-brand { text-decoration: none; color: var(--text-main); font-weight: 600; letter-spacing: 0.05em; font-size: 0.9rem; text-transform: uppercase; }
-        .site-banner { display: block; width: 100%; max-width: 520px; height: auto; margin: 10px auto 14px; border-radius: 14px; box-shadow: 0 12px 32px rgba(0,0,0,0.55); }
-        .site-nav { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
-        .nav-link { font-size: 0.85rem; padding: 6px 14px; border-radius: 999px; border: 1px solid transparent; background: rgba(15,23,42,0.9); color: var(--text-muted); text-decoration: none; }
+
+        .site-header {
+            padding: 18px 20px 8px;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .site-brand {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .site-banner {
+            display: block;
+            width: 100%;
+            max-width: 520px;
+            height: auto;
+            margin: 10px auto 14px;
+            border-radius: 14px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.55);
+        }
+
+        .site-nav {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .nav-link {
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            background: rgba(15,23,42,0.9);
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
         .nav-link:hover { border-color: var(--accent); color: var(--accent); }
         .nav-link.active { border-color: var(--accent); color: #e0f2fe; }
-        .site-main { flex: 1; max-width: 900px; margin: 0 auto 40px; padding: 10px 20px 40px; }
-        .article-card { background: radial-gradient(circle at top left,#020617,#020617 55%,#020617); border-radius: 22px; padding: 26px 26px 36px; box-shadow: 0 22px 60px rgba(0,0,0,0.75); border: 1px solid rgba(148,163,184,0.16); }
-        h1 { color: #f9fafb; font-size: 2rem; margin-top: 4px; margin-bottom: 14px; }
-        h2 { color: #e5e7eb; border-bottom: 1px solid rgba(148,163,184,0.25); padding-bottom: 6px; margin-top: 32px; font-size: 1.45rem; }
-        h3 { color: #e5e7eb; margin-top: 24px; font-size: 1.1rem; }
+
+        .site-main {
+            flex: 1;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            padding: 10px 20px 40px;
+        }
+
+        .article-card {
+            background: radial-gradient(circle at top left,#020617,#020617 55%,#020617);
+            border-radius: 22px;
+            padding: 26px 26px 36px;
+            box-shadow: 0 22px 60px rgba(0,0,0,0.75);
+            border: 1px solid rgba(148,163,184,0.16);
+        }
+
+        h1 {
+            color: #f9fafb;
+            font-size: 2rem;
+            margin-top: 4px;
+            margin-bottom: 14px;
+        }
+
+        h2 {
+            color: #e5e7eb;
+            border-bottom: 1px solid rgba(148,163,184,0.25);
+            padding-bottom: 6px;
+            margin-top: 32px;
+            font-size: 1.45rem;
+        }
+
+        h3 {
+            color: #e5e7eb;
+            margin-top: 24px;
+            font-size: 1.1rem;
+        }
+
         p { color: var(--text-main); margin-top: 0; }
         ul { padding-left: 18px; }
         ul li { color: var(--text-main); }
-        table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 0.95em; text-align: left; }
-        th, td { border: 1px solid rgba(148,163,184,0.35); padding: 10px 10px; }
-        th { background-color: rgba(15,23,42,0.95); color: #e5e7eb; font-weight: 600; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0;
+            font-size: 0.95em;
+            text-align: left;
+        }
+
+        th, td {
+            border: 1px solid rgba(148,163,184,0.35);
+            padding: 10px 10px;
+        }
+
+        th {
+            background-color: rgba(15,23,42,0.95);
+            color: #e5e7eb;
+            font-weight: 600;
+        }
+
         tr:nth-child(even) td { background-color: rgba(15,23,42,0.6); }
-        .cta-box { border: 1px solid rgba(56,189,248,0.7); padding: 18px 20px; margin: 26px 0; background: radial-gradient(circle at top left,#102a3a,#020617 55%); border-radius: 14px; text-align: left; color: #e0f2fe; font-size: 0.95rem; }
+
+        .cta-box {
+            border: 1px solid rgba(56,189,248,0.7);
+            padding: 18px 20px;
+            margin: 26px 0;
+            background: radial-gradient(circle at top left,#102a3a,#020617 55%);
+            border-radius: 14px;
+            text-align: left;
+            color: #e0f2fe;
+            font-size: 0.95rem;
+        }
+
         .cta-box strong { display: block; margin-bottom: 6px; }
-        .cta-box a { display: inline-block; background-color: var(--accent); color: #020617; padding: 9px 20px; text-decoration: none; border-radius: 999px; font-weight: 600; margin-top: 10px; font-size: 0.9rem; }
-        .disclaimer { font-size: 0.85rem; color: var(--text-muted); margin-top: 26px; border-top: 1px solid rgba(31,41,55,0.9); padding-top: 14px; }
-        .footer { text-align: center; padding: 18px 0 26px; margin-top: 30px; border-top: 1px solid rgba(31,41,55,0.9); font-size: 0.8em; color: var(--text-muted); }
-        .footer a { color: var(--text-muted); text-decoration: none; margin: 0 10px; }
+
+        .cta-box a {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #020617;
+            padding: 9px 20px;
+            text-decoration: none;
+            border-radius: 999px;
+            font-weight: 600;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        .disclaimer {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 26px;
+            border-top: 1px solid rgba(31,41,55,0.9);
+            padding-top: 14px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 18px 0 26px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(31,41,55,0.9);
+            font-size: 0.8em;
+            color: var(--text-muted);
+        }
+
+        .footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
         .footer a:hover { color: #e5e7eb; text-decoration: underline; }
-        @media (max-width: 640px) { .article-card { padding: 18px 16px 26px; } h1 { font-size: 1.7rem; } }
+
+        @media (max-width: 640px) {
+            .article-card { padding: 18px 16px 26px; }
+            h1 { font-size: 1.7rem; }
+        }
     </style>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GVJ73QQ5J"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date()); gtag('config', 'G-3GVJ73QQ5J');
+      gtag('js', new Date());
+      gtag('config', 'G-3GVJ73QQ5J');
     </script>
 </head>
 <body>
@@ -49,6 +195,7 @@
     <header class="site-header">
         <a href="index.html" class="site-brand">GENECTICS.COM</a>
         <img src="genectics_banner.png" alt="Genectics.com" class="site-banner">
+
         <nav class="site-nav">
             <a href="index.html" class="nav-link active">Comparison</a>
             <a href="guide.html" class="nav-link">Safety Guide</a>
@@ -61,8 +208,109 @@
 
     <main class="site-main">
         <article class="article-card">
-            <!-- resten av innholdet ditt uendret -->
-            <!-- ... -->
+            <h1>2025 DNA Test Comparison: LivingDNA vs. MyHeritage vs. AncestryDNA vs. 23andMe</h1>
+            
+            <p>Choosing the right DNA kit in 2025 can feel overwhelming — the market is packed with bold claims, different technologies, and different types of insights. But if your goal is accurate ethnicity, transparent privacy, and a meaningful ancestry experience, the differences between the major companies become very clear.</p>
+            <p>In this updated comparison, we look at the four major DNA kits: <strong>LivingDNA</strong>, <strong>MyHeritage DNA</strong>, <strong>AncestryDNA</strong>, and <strong>23andMe</strong>. And we explain why, for many users, <strong>LivingDNA</strong> delivers the most valuable and precise results today.</p>
+
+            <h2>The 30-Second Summary Table</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>LivingDNA</th>
+                        <th>MyHeritage</th>
+                        <th>AncestryDNA</th>
+                        <th>23andMe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Ethnicity Accuracy</td><td>⭐⭐⭐⭐⭐ Best overall</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td></tr>
+                    <tr><td>UK/Europe Region Detail</td><td>⭐⭐⭐⭐⭐ Unmatched</td><td>⭐⭐⭐⭐</td><td>⭐⭐</td><td>⭐⭐</td></tr>
+                    <tr><td>Family Matching</td><td>Growing</td><td>Large (Europe-focused)</td><td>Largest</td><td>Medium</td></tr>
+                    <tr><td>Health Reports</td><td>⭐⭐ (Wellness)</td><td>⭐⭐⭐⭐</td><td>⭐⭐</td><td>⭐⭐⭐⭐⭐ (Health-focused)</td></tr>
+                    <tr><td>Privacy</td><td>⭐⭐⭐⭐⭐ Strongest stance</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐</td></tr>
+                    <tr><td>Price</td><td>Mid</td><td>Low</td><td>Mid</td><td>High</td></tr>
+                    <tr><td>Best For</td><td>Ethnicity + privacy lovers</td><td>Budget genealogy</td><td>Deep genealogy</td><td>Health insights</td></tr>
+                </tbody>
+            </table>
+
+            <h2>Why LivingDNA Is the Most Accurate Ethnicity Test in 2025</h2>
+            <p>LivingDNA is built for users who care deeply about where they come from — not just broad regions, but fine, detailed, sub-regional ancestry. Its strength is precision, not hype.</p>
+            
+            <h3>1. Deep Regional Mapping (Especially the UK & Europe)</h3>
+            <p>LivingDNA doesn’t just tell you “British Isles.” It breaks the UK into 21+ sub-regions, including: Cornwall, Devon, Norfolk, Yorkshire, Northumbria, and The Hebrides. This level of detail simply doesn’t exist on other platforms. If even a small part of your ancestry is British or European, LivingDNA provides the clearest picture available.</p>
+            
+            <h3>2. More Accurate Population Reference Panels</h3>
+            <p>LivingDNA uses region-specific sampling, making ethnicity results: more stable, more consistent, more granular, and more scientifically transparent. Their ethnicity model is widely considered one of the most advanced in Europe.</p>
+            
+            <h3>3. Strong Privacy-by-Design Approach</h3>
+            <p>Unlike some competitors, LivingDNA:</p>
+            <ul>
+                <li>Does not sell or license your genetic data</li>
+                <li>Does not share data with pharmaceutical partners</li>
+                <li>Does not cooperate with law enforcement</li>
+                <li>Destroys physical samples faster than many competitors</li>
+            </ul>
+            <p>This makes LivingDNA ideal for people who want DNA insights without worrying about long-term data exposure.</p>
+
+            <div class="cta-box">
+                <strong>➡️ BEST CHOICE: LivingDNA is the ultimate precision pick for ancestry and privacy.</strong>
+                <a href="disclosure.html" rel="sponsored noopener">Buy LivingDNA Now</a>
+            </div>
+
+            <h2>MyHeritage DNA: The Best Budget-Friendly Alternative</h2>
+            <p>If cost matters, MyHeritage is the strongest competitor — especially in Europe.</p>
+            <p>MyHeritage stands out because it combines:</p>
+            <ul>
+                <li>Great coverage for European ancestry</li>
+                <li>Strong matching in Scandinavia, Eastern Europe, the Balkans, and Jewish heritage</li>
+                <li>Affordable pricing (often discounted)</li>
+                <li>Solid family-tree tools</li>
+                <li>An easy-to-use interface</li>
+            </ul>
+            <p>MyHeritage is the smart “value pick” if you want strong genealogy features without paying premium prices.</p>
+
+            <div class="cta-box">
+                <strong>➡️ VALUE PICK: MyHeritage DNA is the best safe low-cost alternative.</strong>
+                <a href="disclosure.html" rel="sponsored noopener">Buy MyHeritage DNA</a>
+            </div>
+
+            <h2>Where the Others Fit In (But Don’t Lead)</h2>
+            <p><strong>AncestryDNA:</strong> Still the best for large family trees and serious genealogists, with the largest DNA-matching database. However, its ethnicity reports are no longer dramatically better than MyHeritage or LivingDNA.</p>
+            <p><strong>23andMe:</strong> Strong for health insights, but weaker on family matching, regional ancestry depth, and privacy (due to pharma partnerships and data licensing). Great if you want health data; weaker if you mainly care about family history.</p>
+
+            <h2>Final Verdict: Which DNA Kit Should YOU Choose?</h2>
+            
+            <h3>Choose LivingDNA if you want:</h3>
+            <ul>
+                <li>✔ The most accurate ancestry breakdown</li>
+                <li>✔ The best European/British regional detail</li>
+                <li>✔ The strongest privacy protections</li>
+                <li>✔ A company that does <em>not</em> sell or share your data</li>
+                <li>✔ Transparent, science-based reporting</li>
+            </ul>
+            <div class="cta-box">
+                <strong>➡️ Best choice overall for ethnicity + privacy</strong>
+                <a href="disclosure.html" rel="sponsored noopener">Buy LivingDNA Kit</a>
+            </div>
+
+            <h3>Choose MyHeritage DNA if you want:</h3>
+            <ul>
+                <li>✔ A cheaper alternative that still offers quality</li>
+                <li>✔ Strong European matching</li>
+                <li>✔ A large match database</li>
+                <li>✔ Affordable genealogy tools</li>
+            </ul>
+            <div class="cta-box">
+                <strong>➡️ Best budget-friendly option</strong>
+                <a href="disclosure.html" rel="sponsored noopener">Buy MyHeritage Kit</a>
+            </div>
+
+            <p class="disclaimer">
+                <strong>Disclaimer:</strong> This content is for informational purposes only and is not medical advice.
+                Always consult a qualified healthcare professional about medical questions or genetic results.
+            </p>
         </article>
     </main>
 

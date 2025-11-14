@@ -3,246 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genectics.com</title>
+    <title>LivingDNA vs. MyHeritage: Best DNA Test Comparison | Genectics.com</title>
     <style>
-        :root {
-            --bg: #020617;
-            --bg-soft: #020617;
-            --card: #020617;
-            --card-soft: #020617;
-            --text-main: #e5e7eb;
-            --text-muted: #9ca3af;
-            --accent: #38bdf8;
-            --accent-soft: rgba(56,189,248,0.16);
-            --border-subtle: #1f2937;
-        }
-
+        :root { --bg: #020617; --text-main: #e5e7eb; --text-muted: #9ca3af; --accent: #38bdf8; }
         * { box-sizing: border-box; }
-
-        body { 
-            margin: 0; 
-            padding: 0; 
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            line-height: 1.7; 
-            background:
-                radial-gradient(circle at top, #0b1120 0, #020617 45%, #020617 100%);
-            color: var(--text-main);
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .page {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* HEADER + BANNER */
-
-        .site-header {
-            padding: 18px 20px 8px;
-            max-width: 1120px;
-            margin: 0 auto;
-        }
-
-        .site-brand {
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-        }
-.site-banner {
-    display: block;
-    width: 100%;
-    max-width: 520px;   /* ↓↓↓ Mye mindre banner */
-    height: auto;
-    margin: 10px auto 14px;
-    border-radius: 14px;
-    box-shadow: 0 12px 32px rgba(0,0,0,0.55);
-    
-        }
-
-        .site-nav {
-            margin-top: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .nav-link {
-            font-size: 0.85rem;
-            padding: 6px 14px;
-            border-radius: 999px;
-            border: 1px solid transparent;
-            background: rgba(15,23,42,0.9);
-            color: var(--text-muted);
-            text-decoration: none;
-        }
-
-        .nav-link:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-
-        .nav-link.active {
-            border-color: var(--accent);
-            color: #e0f2fe;
-        }
-
-        /* MAIN CONTENT */
-
-        .site-main {
-            flex: 1;
-            max-width: 900px;
-            margin: 0 auto 40px;
-            padding: 10px 20px 40px;
-        }
-
-        .article-card {
-            background: radial-gradient(circle at top left,#020617,#020617 55%,#020617);
-            border-radius: 22px;
-            padding: 26px 26px 36px;
-            box-shadow: 0 22px 60px rgba(0,0,0,0.75);
-            border: 1px solid rgba(148,163,184,0.16);
-        }
-
-        h1 { 
-            color: #f9fafb;
-            font-size: 2rem; 
-            margin-top: 4px; 
-            margin-bottom: 14px;
-        }
-
-        h2 { 
-            color: #e5e7eb; 
-            border-bottom: 1px solid rgba(148,163,184,0.25);
-            padding-bottom: 6px; 
-            margin-top: 32px; 
-            font-size: 1.45rem; 
-        }
-
-        h3 {
-            color: #e5e7eb;
-            margin-top: 24px;
-            font-size: 1.1rem;
-        }
-
-        p { 
-            color: var(--text-main);
-            margin-top: 0;
-        }
-
-        ul {
-            padding-left: 18px;
-        }
-
-        ul li {
-            color: var(--text-main);
-        }
-
-        table { 
-            width: 100%; 
-            border-collapse: collapse; 
-            margin: 18px 0; 
-            font-size: 0.95em; 
-            text-align: left; 
-        }
-
-        th, td { 
-            border: 1px solid rgba(148,163,184,0.35);
-            padding: 10px 10px; 
-        }
-
-        th { 
-            background-color: rgba(15,23,42,0.95); 
-            color: #e5e7eb; 
-            font-weight: 600; 
-        }
-
-        tr:nth-child(even) td {
-            background-color: rgba(15,23,42,0.6);
-        }
-
-        .cta-box { 
-            border: 1px solid rgba(248,113,113,0.7);
-            padding: 18px 20px; 
-            margin: 26px 0; 
-            background: radial-gradient(circle at top left,#451a1a,#111827 55%);
-            border-radius: 14px; 
-            text-align: left; 
-            color: #fee2e2;
-            font-size: 0.95rem;
-        }
-        .cta-box strong {
-            display: block;
-            margin-bottom: 6px;
-        }
-        .cta-box a { 
-            display: inline-block; 
-            background-color: var(--accent);
-            color: #020617; 
-            padding: 9px 20px; 
-            text-decoration: none; 
-            border-radius: 999px; 
-            font-weight: 600; 
-            margin-top: 10px;
-            font-size: 0.9rem;
-        }
-        .cta-box a:hover {
-            filter: brightness(1.1);
-        }
-
-        .disclaimer {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-top: 26px;
-            border-top: 1px solid rgba(31,41,55,0.9);
-            padding-top: 14px;
-        }
-
-        .footer {
-            text-align: center; 
-            padding: 18px 0 26px; 
-            margin-top: 30px; 
-            border-top: 1px solid rgba(31,41,55,0.9); 
-            font-size: 0.8em; 
-            color: var(--text-muted); 
-        }
-        .footer a { 
-            color: var(--text-muted); 
-            text-decoration: none; 
-            margin: 0 10px; 
-        }
-        .footer a:hover {
-            color: #e5e7eb;
-            text-decoration: underline;
-        }
-
-        @media (max-width: 640px) {
-            .article-card {
-                padding: 18px 16px 26px;
-            }
-            h1 { font-size: 1.7rem; }
-        }
+        body { margin: 0; padding: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.7; background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #020617 100%); color: var(--text-main); -webkit-font-smoothing: antialiased; }
+        .page { min-height: 100vh; display: flex; flex-direction: column; }
+        .site-header { padding: 18px 20px 8px; max-width: 1120px; margin: 0 auto; }
+        .site-brand { text-decoration: none; color: var(--text-main); font-weight: 600; letter-spacing: 0.05em; font-size: 0.9rem; text-transform: uppercase; }
+        .site-banner { display: block; width: 100%; max-width: 520px; height: auto; margin: 10px auto 14px; border-radius: 14px; box-shadow: 0 12px 32px rgba(0,0,0,0.55); }
+        .site-nav { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
+        .nav-link { font-size: 0.85rem; padding: 6px 14px; border-radius: 999px; border: 1px solid transparent; background: rgba(15,23,42,0.9); color: var(--text-muted); text-decoration: none; }
+        .nav-link:hover { border-color: var(--accent); color: var(--accent); }
+        .nav-link.active { border-color: var(--accent); color: #e0f2fe; }
+        .site-main { flex: 1; max-width: 900px; margin: 0 auto 40px; padding: 10px 20px 40px; }
+        .article-card { background: radial-gradient(circle at top left,#020617,#020617 55%,#020617); border-radius: 22px; padding: 26px 26px 36px; box-shadow: 0 22px 60px rgba(0,0,0,0.75); border: 1px solid rgba(148,163,184,0.16); }
+        h1 { color: #f9fafb; font-size: 2rem; margin-top: 4px; margin-bottom: 14px; }
+        h2 { color: #e5e7eb; border-bottom: 1px solid rgba(148,163,184,0.25); padding-bottom: 6px; margin-top: 32px; font-size: 1.45rem; }
+        h3 { color: #e5e7eb; margin-top: 24px; font-size: 1.1rem; }
+        p { color: var(--text-main); margin-top: 0; }
+        ul { padding-left: 18px; }
+        ul li { color: var(--text-main); }
+        table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 0.95em; text-align: left; }
+        th, td { border: 1px solid rgba(148,163,184,0.35); padding: 10px 10px; }
+        th { background-color: rgba(15,23,42,0.95); color: #e5e7eb; font-weight: 600; }
+        tr:nth-child(even) td { background-color: rgba(15,23,42,0.6); }
+        .cta-box { border: 1px solid rgba(56,189,248,0.7); padding: 18px 20px; margin: 26px 0; background: radial-gradient(circle at top left,#102a3a,#020617 55%); border-radius: 14px; text-align: left; color: #e0f2fe; font-size: 0.95rem; }
+        .cta-box strong { display: block; margin-bottom: 6px; }
+        .cta-box a { display: inline-block; background-color: var(--accent); color: #020617; padding: 9px 20px; text-decoration: none; border-radius: 999px; font-weight: 600; margin-top: 10px; font-size: 0.9rem; }
+        .disclaimer { font-size: 0.85rem; color: var(--text-muted); margin-top: 26px; border-top: 1px solid rgba(31,41,55,0.9); padding-top: 14px; }
+        .footer { text-align: center; padding: 18px 0 26px; margin-top: 30px; border-top: 1px solid rgba(31,41,55,0.9); font-size: 0.8em; color: var(--text-muted); }
+        .footer a { color: var(--text-muted); text-decoration: none; margin: 0 10px; }
+        .footer a:hover { color: #e5e7eb; text-decoration: underline; }
+        @media (max-width: 640px) { .article-card { padding: 18px 16px 26px; } h1 { font-size: 1.7rem; } }
     </style>
-
-    <!-- Google Analytics (beholdt uendret) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GVJ73QQ5J"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-3GVJ73QQ5J');
+      gtag('js', new Date()); gtag('config', 'G-3GVJ73QQ5J');
     </script>
 </head>
 <body>
 <div class="page">
     <header class="site-header">
         <a href="index.html" class="site-brand">GENECTICS.COM</a>
-        <img src="genectics_banner.png" alt="Genectics.com" class="site-banner">
+        <img src="genectics_banner.jpg" alt="Genectics.com" class="site-banner">
         <nav class="site-nav">
-            <a href="index.html" class="nav-link active">Article</a>
+            <a href="index.html" class="nav-link active">Comparison</a>
+            <a href="guide.html" class="nav-link">Safety Guide</a>
             <a href="about.html" class="nav-link">About</a>
             <a href="privacy.html" class="nav-link">Privacy</a>
             <a href="disclosure.html" class="nav-link">Disclosure</a>
@@ -252,127 +61,105 @@
 
     <main class="site-main">
         <article class="article-card">
-            <h1>AncestryDNA vs. 23andMe: The Ultimate Comparison for 2025</h1>
+            <h1>2025 DNA Test Comparison: LivingDNA vs. MyHeritage vs. AncestryDNA vs. 23andMe</h1>
             
-            <p>Choosing a DNA test in 2025 can feel like standing at a crossroads. Both AncestryDNA and 23andMe are respected, powerful, and wildly popular — but only one of them is the right match for your specific goals.</p>
-            <p>Do you want to discover your family history and build a deep ancestral profile? Or are you more interested in health insights, genetic risks, and wellness data?</p>
-            <p>This guide is the most comprehensive, up-to-date comparison online, designed to save you hours of research. By the end of this article, you’ll know exactly which test is worth your money — and why.</p>
+            <p>Choosing the right DNA kit in 2025 can feel overwhelming — the market is packed with bold claims, different technologies, and different types of insights. But if your goal is accurate ethnicity, transparent privacy, and a meaningful ancestry experience, the differences between the major companies become very clear.</p>
+            <p>In this updated comparison, we look at the four major DNA kits: LivingDNA, MyHeritage DNA, AncestryDNA, and 23andMe. And we explain why for many users, LivingDNA delivers the most valuable and precise results today.</p>
 
-            <h2>The 30-Second Decision Table</h2>
-            <p>Busy? Start here. This table gives you the fastest possible overview of the differences that matter.</p>
+            <h2>The 30-Second Summary Table</h2>
             <table>
                 <thead>
                     <tr>
                         <th>Feature</th>
-                        <th>Winner: AncestryDNA</th>
-                        <th>Winner: 23andMe</th>
+                        <th>LivingDNA</th>
+                        <th>MyHeritage</th>
+                        <th>AncestryDNA</th>
+                        <th>23andMe</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>Family Tree / Genealogy</td><td>⭐⭐⭐⭐⭐ (Unmatched)</td><td>⭐⭐⭐</td></tr>
-                    <tr><td>Health & Wellness Reports</td><td>⭐⭐</td><td>⭐⭐⭐⭐⭐ (Industry-leading)</td></tr>
-                    <tr><td>App Experience</td><td>High</td><td>Very High</td></tr>
-                    <tr><td>Price (Starter Kit)</td><td>Lower</td><td>Higher</td></tr>
-                    <tr><td>Best For</td><td>Those searching for relatives</td><td>Those wanting genetic health insights</td></tr>
+                    <tr><td>Ethnicity Accuracy</td><td>⭐⭐⭐⭐⭐ Best overall</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td></tr>
+                    <tr><td>UK/Europe Region Detail</td><td>⭐⭐⭐⭐⭐ Unmatched</td><td>⭐⭐⭐⭐</td><td>⭐⭐</td><td>⭐⭐</td></tr>
+                    <tr><td>Family Matching</td><td>Growing</td><td>Large (Europe-focused)</td><td>Largest</td><td>Medium</td></tr>
+                    <tr><td>Health Reports</td><td>⭐⭐ (Wellness)</td><td>⭐⭐⭐⭐</td><td>⭐⭐</td><td>⭐⭐⭐⭐⭐ (Health-focused)</td></tr>
+                    <tr><td>Privacy</td><td>⭐⭐⭐⭐⭐ Strongest stance</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐</td></tr>
+                    <tr><td>Price</td><td>Mid</td><td>Low</td><td>Mid</td><td>High</td></tr>
+                    <tr><td>Best For</td><td>Ethnicity + privacy lovers</td><td>Budget genealogy</td><td>Deep genealogy</td><td>Health insights</td></tr>
                 </tbody>
             </table>
 
-            <h2>Deep Dive 1: AncestryDNA — The Genealogy Powerhouse</h2>
-            <p>If your primary goal is to discover family connections, trace your lineage, or build a multi-generation family tree, then AncestryDNA stands far above the competition.</p>
+            <h2>Why LivingDNA Is the Most Accurate Ethnicity Test in 2025</h2>
+            <p>LivingDNA is built for users who care deeply about where they come from — not just broad regions, but fine, detailed, sub-regional ancestry. Its strength is precision, not hype.</p>
             
-            <h3>Why AncestryDNA dominates genealogy</h3>
-            <p><strong>1. The world’s largest DNA-matching database:</strong> AncestryDNA has tested over 22+ million people, giving you the highest chance of finding biological relatives — from close cousins to distant ancestral matches.</p>
-            <p><strong>2. Seamless family-tree integration:</strong> Ancestry uniquely allows you to connect your DNA results directly to detailed family trees. The platform can hint, auto-match, and expand your tree using billions of historical records.</p>
-            <p><strong>3. Historical document connections:</strong> Ancestry’s core strength comes from its archive: birth and death certificates, immigration and travel documents, census records, military archives, marriage and church records. This gives you not just DNA matches, but real historical context, which makes your ancestry story far more complete.</p>
-            <p><strong>4. Best for adoptees and genealogists:</strong> Those searching for biological parents or constructing detailed lineage charts consistently report better results with AncestryDNA.</p>
-
-            <h3>Who should choose AncestryDNA?</h3>
-            <ul>
-                <li>Anyone building a family tree</li>
-                <li>Anyone searching for relatives</li>
-                <li>Adoptees looking for biological connections</li>
-                <li>Genealogy enthusiasts</li>
-            </ul>
-
-            <div class="cta-box">
-                <strong>➡️ If your goal is to find relatives, AncestryDNA is the clear choice.</strong>
-                <a href="disclosure.html" rel="sponsored noopener">Buy AncestryDNA here</a>
-            </div>
-
-            <h2>Deep Dive 2: 23andMe — The Health Insights Leader</h2>
-            <p>If you care more about health, genetic traits, and disease risk, then 23andMe is in a league of its own. Their reports are science-driven, easy to understand, and uniquely authorized for consumers.</p>
-
-            <h3>Why 23andMe dominates health testing</h3>
-            <p><strong>1. FDA-authorized health reports:</strong> 23andMe offers dozens of health-related insights that are approved by the U.S. Food and Drug Administration — something AncestryDNA does not offer. These include: risk reports for certain genetic conditions, carrier status for inherited disorders, pharmacogenetics (how your body responds to medications), wellness factors (sleep, diet, fitness, etc.). This is clinical-grade data that can be genuinely useful in conversations with your doctor.</p>
-            <p><strong>2. Highly accurate ancestry percentages:</strong> While AncestryDNA is the genealogy king, 23andMe still provides extremely detailed ancestry breakdowns, including: regional ancestry, maternal (mtDNA) haplogroup, paternal (Y-DNA) haplogroup, Neanderthal percentage.</p>
-            <p><strong>3. Best app and user interface:</strong> The 23andMe app and dashboard are clean, modern, and built for non-technical users. Complex data is broken into simple, actionable insights.</p>
-
-            <h3>Who should choose 23andMe?</h3>
-            <ul>
-                <li>Those wanting health and wellness analysis</li>
-                <li>People curious about genetic disease predispositions</li>
-                <li>Biohackers</li>
-                <li>Anyone wanting a modern, easy-to-use genetic overview</li>
-            </ul>
-
-            <div class="cta-box">
-                <strong>➡️ If your goal is understanding health risks and genetic wellness, 23andMe is the best option.</strong>
-                <a href="disclosure.html" rel="sponsored noopener">Buy 23andMe Health + Ancestry here</a>
-            </div>
+            <h3>1. Deep Regional Mapping (Especially the UK & Europe)</h3>
+            <p>LivingDNA doesn’t just tell you “British Isles.” It breaks the UK into 21+ sub-regions, including: Cornwall, Devon, Norfolk, Yorkshire, Northumbria, and The Hebrides. This level of detail simply doesn’t exist on other platforms. If even a small part of your ancestry is British or European, LivingDNA provides the clearest picture available.</p>
             
-            <h2>Final Verdict: Which Test Should You Buy in 2025?</h2>
-            <p>Here’s the simplest way to decide:</p>
+            <h3>2. More Accurate Population Reference Panels</h3>
+            <p>LivingDNA uses region-specific sampling, making ethnicity results: more stable, more consistent, more granular, and more scientifically transparent. Their ethnicity model is widely considered the most advanced in Europe.</p>
+            
+            <h3>3. Strong Privacy-by-Design Approach</h3>
+            <p>Unlike competitors: LivingDNA does not share data with pharmaceutical partners, they do not cooperate with law enforcement, they do not sell or license genetic data, and they destroy samples faster than average. This makes LivingDNA ideal for people who want DNA insights without worrying about long-term data exposure.</p>
 
-            <h3>Choose AncestryDNA if…</h3>
-            <ul>
-                <li>Your primary goal is to find relatives</li>
-                <li>You want the strongest genealogy tools</li>
-                <li>You want the largest DNA-matching database</li>
-                <li>You care about connecting DNA to historical records</li>
-            </ul>
-            <p>This is the #1 choice for family discovery.</p>
             <div class="cta-box">
-                <strong>➡️ Ready? Buy AncestryDNA here:</strong>
-                <a href="disclosure.html" rel="sponsored noopener">Buy AncestryDNA</a>
+                <strong>➡️ BEST CHOICE: LivingDNA is the ultimate precision pick for ancestry and privacy.</strong>
+                <a href="disclosure.html" rel="sponsored noopener">Buy LivingDNA Now</a>
             </div>
 
-            <h3>Choose 23andMe if…</h3>
-            <ul>
-                <li>You want health reports and wellness data</li>
-                <li>You’re curious about genetic risks</li>
-                <li>You want FDA-authorized health insights</li>
-                <li>You want the best user experience and app</li>
-            </ul>
-            <p>This is the #1 choice for health and wellness insights.</p>
+            <h2>MyHeritage DNA: The Best Budget-Friendly Alternative</h2>
+            <p>If cost matters, MyHeritage is the strongest competitor — especially in Europe.</p>
+            <p>MyHeritage stands out because it is great for European ancestry, has strong matching in Scandinavia, Eastern Europe, the Balkans, and Jewish heritage. It offers an affordable price (often discounted), good family-tree tools, and an easy-to-use interface. MyHeritage is the smart “value pick.”</p>
             <div class="cta-box">
-                <strong>➡️ Ready? Buy 23andMe Health + Ancestry here:</strong>
-                <a href="disclosure.html" rel="sponsored noopener">Buy 23andMe Health + Ancestry</a>
+                <strong>➡️ VALUE PICK: MyHeritage DNA is the best safe low-cost alternative.</strong>
+                <a href="disclosure.html" rel="sponsored noopener">Buy MyHeritage DNA</a>
             </div>
 
-            <h2>Bottom Line</h2>
-            <p>Both tests are excellent — but they serve different purposes. Your decision should be based on what you want to learn:</p>
+            <h2>Where the Others Fit In (But Don’t Lead)</h2>
+            <p><strong>AncestryDNA:</strong> Still the best for large family trees and genealogists, but ethnicity is no longer dramatically better than MyHeritage or LivingDNA.</p>
+            <p><strong>23andMe:</strong> Strong for health insights, but weaker on family matching, regional ancestry, and privacy (pharma partnerships). Good health kit, weaker genealogy kit.</p>
+
+            <h2>Final Verdict: Which DNA Kit Should YOU Choose?</h2>
+            
+            <h3>Choose LivingDNA if you want:</h3>
             <ul>
-                <li>Family &amp; relatives → AncestryDNA</li>
-                <li>Health &amp; wellness → 23andMe</li>
+                <li>✔ The most accurate ancestry breakdown</li>
+                <li>✔ Best European/British region detail</li>
+                <li>✔ Strongest privacy protections</li>
+                <li>✔ A company NOT selling or sharing your data</li>
+                <li>✔ Transparent science-based reports</li>
             </ul>
-            <p>If you follow your goal, you won’t make a wrong choice.</p>
+            <div class="cta-box">
+                <strong>➡️ Best choice overall for ethnicity + privacy</strong>
+                <a href="disclosure.html" rel="sponsored noopener">Buy LivingDNA Kit</a>
+            </div>
+
+            <h3>Choose MyHeritage DNA if you want:</h3>
+            <ul>
+                <li>✔ A cheaper alternative</li>
+                <li>✔ Strong European matching</li>
+                <li>✔ A large match database</li>
+                <li>✔ Affordable genealogy tools</li>
+            </ul>
+            <div class="cta-box">
+                <strong>➡️ Best budget-friendly option</strong>
+                <a href="disclosure.html" rel="sponsored noopener">Buy MyHeritage Kit</a>
+            </div>
 
             <p class="disclaimer">
                 <strong>Disclaimer:</strong> This content is for informational purposes only and is not medical advice.
                 Always consult a qualified healthcare professional about medical questions or genetic results.
             </p>
-
-            <div class="footer">
-                <p>
-                    <a href="about.html">About us</a> | 
-                    <a href="privacy.html">Privacy</a> | 
-                    <a href="disclosure.html">Affiliate Disclosure</a> |
-                    <a href="contact.html">Contact</a>
-                </p>
-                <p>Genectics.com is owned and operated by Ronarn AS.</p>
-            </div>
         </article>
     </main>
+
+    <footer class="footer">
+        <p>
+            <a href="about.html">About Us</a> | 
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="disclosure.html">Affiliate Disclosure</a> | 
+            <a href="contact.html">Contact</a>
+        </p>
+        <p>Genectics.com is owned and operated by Ronarn AS.</p>
+    </footer>
 </div>
 </body>
 </html>

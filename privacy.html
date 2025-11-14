@@ -5,120 +5,201 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Genectics.com</title>
     <style>
-        body { 
-            font-family: 'Arial', sans-serif; /* Bruker en renere, standard font */
-            line-height: 1.7; 
-            background-color: #f0f3f6; /* Lysere bakgrunn */
-            color: #333; 
-            margin: 0; 
-            padding: 0; 
+        :root {
+            --bg: #020617;
+            --text-main: #e5e7eb;
+            --text-muted: #9ca3af;
+            --accent: #38bdf8;
         }
-        .header { 
-            background-color: #1a759f; /* Dyp, vitenskapelig blå */
-            color: #ffffff; 
-            padding: 18px 40px; 
-            text-align: center; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.7;
+            background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #020617 100%);
+            color: var(--text-main);
+            -webkit-font-smoothing: antialiased;
         }
-        .header a { 
-            color: #ffffff; 
-            text-decoration: none; 
-            font-weight: bold; 
-            font-size: 1.2em; 
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-        .container { 
-            max-width: 900px; 
-            margin: 30px auto; 
-            padding: 30px 40px 60px; 
-            background-color: #ffffff; 
-            box-shadow: 0 0 15px rgba(0,0,0,0.08); 
-            border-radius: 8px; /* Mykere kanter */
+
+        /* HEADER + NAV */
+
+        .site-header {
+            padding: 18px 20px 8px;
+            max-width: 1120px;
+            margin: 0 auto;
         }
-        h1 { 
-            color: #1a759f; /* Bruk merkevarefargen */
-            font-size: 2.4em; 
-            margin-top: 10px; 
+
+        .site-brand {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            font-size: 0.9rem;
+            text-transform: uppercase;
         }
-        h2 { 
-            color: #34495e; 
-            border-bottom: 2px solid #a9d4e5; /* Lysere skillelinje */
-            padding-bottom: 5px; 
-            margin-top: 35px; 
-            font-size: 1.8em; 
+
+        .site-banner {
+            display: block;
+            width: 100%;
+            max-width: 1120px;
+            height: auto;
+            margin: 6px auto 10px;
+            border-radius: 18px;
+            box-shadow: 0 20px 55px rgba(0,0,0,0.7);
         }
-        table { 
-            width: 100%; 
-            border-collapse: collapse; 
-            margin: 20px 0; 
-            font-size: 1em; 
-            text-align: left; 
+
+        .site-nav {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
         }
-        th, td { 
-            border: 1px solid #c9e0ea; /* Lettere border */
-            padding: 12px; 
+
+        .nav-link {
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            background: rgba(15,23,42,0.9);
+            color: var(--text-muted);
+            text-decoration: none;
         }
-        th { 
-            background-color: #eaf6fc; 
-            color: #2c3e50; 
-            font-weight: 600; 
+
+        .nav-link:hover {
+            border-color: var(--accent);
+            color: var(--accent);
         }
-        .cta-box { 
-            border: 2px solid #e74c3c; 
-            padding: 25px; 
-            margin: 40px 0; 
-            background-color: #fef0f0; 
-            border-radius: 8px; 
-            text-align: center; 
+
+        .nav-link.active {
+            border-color: var(--accent);
+            color: #e0f2fe;
         }
-        .cta-box a { 
-            display: inline-block; 
-            background-color: #1a759f; /* Bruk den primære merkevarefargen */
-            color: white; 
-            padding: 12px 25px; 
-            text-decoration: none; 
-            border-radius: 5px; 
-            font-weight: bold; 
-            margin-top: 15px;
-            transition: background-color 0.3s;
+
+        /* MAIN CONTENT */
+
+        .site-main {
+            flex: 1;
+            max-width: 780px;
+            margin: 0 auto 40px;
+            padding: 10px 20px 40px;
         }
-        .cta-box a:hover {
-            background-color: #14597b;
+
+        .content-card {
+            background: radial-gradient(circle at top left,#020617,#020617 55%,#020617);
+            border-radius: 22px;
+            padding: 26px 26px 30px;
+            box-shadow: 0 22px 60px rgba(0,0,0,0.75);
+            border: 1px solid rgba(148,163,184,0.16);
         }
-        .footer { 
-            text-align: center; 
-            padding: 20px 0; 
-            margin-top: 40px; 
-            border-top: 1px solid #eee; 
-            font-size: 0.8em; 
-            color: #777; 
+
+        h1 {
+            font-size: 2rem;
+            margin-top: 4px;
+            margin-bottom: 12px;
+            color: #f9fafb;
         }
-        .footer a { 
-            color: #777; 
-            text-decoration: underline; 
-            margin: 0 10px; 
+
+        h2 {
+            margin-top: 26px;
+            margin-bottom: 6px;
+            font-size: 1.3rem;
+            border-bottom: 1px solid rgba(148,163,184,0.25);
+            padding-bottom: 6px;
+        }
+
+        p {
+            color: var(--text-main);
+            margin-top: 0;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            text-align: center;
+            padding: 18px 0 26px;
+            margin-top: 10px;
+            border-top: 1px solid rgba(31,41,55,0.9);
+            font-size: 0.8em;
+            color: var(--text-muted);
+        }
+
+        .footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            color: #e5e7eb;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .content-card {
+                padding: 18px 16px 24px;
+            }
+            h1 { font-size: 1.7rem; }
         }
     </style>
 </head>
 <body>
-    <div class="header"><a href="index.html">Genectics.com</a></div>
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        
-        <p>Your privacy is important to Ronarn AS, the owner and operator of Genectics.com. This policy explains how we collect and process personal data in accordance with international standards, including GDPR.</p>
-        
-        <h2>Information We Collect</h2>
-        <p>We collect anonymized data via Google Analytics (as seen in the code tag) to analyze user patterns and improve the website.</p>
-        
-        <h2>Cookies and Tracking</h2>
-        <p>Our site uses cookies for the purpose of tracking affiliate links. These are necessary for us to receive commissions from affiliate networks. You may disable cookies in your browser, but this may affect site functionality.</p>
-        
-        <h2>Data Sharing</h2>
-        <p>We do not share any personal identifying data with third parties, except for Google Analytics for analysis and our affiliate partners for sales tracking.</p>
-        
-        <p><a href="index.html">Back to Home</a></p>
-    </div>
-    <div class="footer">
-        <a href="about.html">About Us</a> | <a href="privacy.html">Privacy Policy</a> | <a href="disclosure.html">Affiliate Disclosure</a> | <a href="contact.html">Contact</a>
-    </div>
+<div class="page">
+    <header class="site-header">
+        <a href="index.html" class="site-brand">GENECTICS.COM</a>
+        <img src="genectics_banner.png" alt="Genectics.com" class="site-banner">
+
+        <nav class="site-nav">
+            <a href="index.html" class="nav-link">Article</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="privacy.html" class="nav-link active">Privacy</a>
+            <a href="disclosure.html" class="nav-link">Disclosure</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <main class="site-main">
+        <section class="content-card">
+            <h1>Privacy Policy</h1>
+
+            <p>Your privacy is important to Ronarn AS, the owner and operator of Genectics.com. This policy explains how we collect and process personal data in accordance with international standards, including GDPR.</p>
+
+            <h2>Information We Collect</h2>
+            <p>We collect anonymized data via Google Analytics to analyze user patterns and improve the website.</p>
+
+            <h2>Cookies and Tracking</h2>
+            <p>Our site uses cookies for the purpose of tracking affiliate links. These are necessary for us to receive commissions from affiliate networks. You may disable cookies in your browser, but this may affect site functionality.</p>
+
+            <h2>Data Sharing</h2>
+            <p>We do not share any personal identifying data with third parties, except for Google Analytics for analysis and our affiliate partners for sales tracking.</p>
+
+            <p><a href="index.html">Back to Home</a></p>
+        </section>
+
+        <div class="footer">
+            <a href="about.html">About Us</a> |
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="disclosure.html">Affiliate Disclosure</a> |
+            <a href="contact.html">Contact</a>
+        </div>
+    </main>
+</div>
 </body>
 </html>

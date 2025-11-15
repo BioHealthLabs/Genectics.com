@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genectics.com – 7 Things You Must Know Before Buying a DNA Kit (2025)</title>
     <style>
-        :root { --bg: #020617; --text-main: #e5e7eb; --text-muted: #9ca3af; --accent: #38bdf8; }
+        :root { 
+            --bg: #020617; 
+            --text-main: #e5e7eb; 
+            --text-muted: #9ca3af; 
+            --accent: #38bdf8; 
+        }
         * { box-sizing: border-box; }
 
         body {
-            margin: 0; padding: 0;
+            margin: 0; 
+            padding: 0;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             line-height: 1.7;
             background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #020617 100%);
@@ -17,27 +23,55 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        .page { min-height: 100vh; display: flex; flex-direction: column; }
+        .page { 
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+        }
 
-        .site-header { padding: 18px 20px 8px; max-width: 1120px; margin: 0 auto; }
-        .site-brand { text-decoration: none; color: var(--text-main); font-weight: 600; letter-spacing: 0.05em; font-size: 0.9rem; text-transform: uppercase; display: none; }
+        /* HEADER */
+
+        .site-header { 
+            padding: 18px 20px 8px; 
+            max-width: 1120px; 
+            margin: 0 auto; 
+            text-align: center;
+        }
+
+        .site-brand { 
+            text-decoration: none; 
+            color: var(--text-main); 
+            font-weight: 600; 
+            letter-spacing: 0.05em; 
+            font-size: 0.9rem; 
+            text-transform: uppercase; 
+            display: none; 
+        }
 
         .site-banner {
             display: block;
-            width: 100%; max-width: 520px;
-            height: auto; margin: 10px auto 14px;
-            border-radius: 14px;
-            box-shadow: 0 12px 32px rgba(0,0,0,0.55);
+            width: 100%; 
+            max-width: 720px;
+            height: auto; 
+            margin: 10px auto 14px;
+            border-radius: 16px;
+            box-shadow: 0 14px 40px rgba(0,0,0,0.65);
         }
 
-        .site-nav { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
+        .site-nav { 
+            margin-top: 10px; 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 8px; 
+            justify-content: center;   /* midtstilt meny */
+        }
 
         .nav-link {
-            font-size: 0.85rem;
-            padding: 6px 14px;
+            font-size: 0.82rem;
+            padding: 6px 16px;
             border-radius: 999px;
             border: 1px solid transparent;
-            background: rgba(15,23,42,0.9);
+            background: rgba(15,23,42,0.95);
             color: var(--text-muted);
             text-decoration: none;
         }
@@ -45,70 +79,146 @@
         .nav-link:hover { border-color: var(--accent); color: var(--accent); }
         .nav-link.active { border-color: var(--accent); color: #e0f2fe; }
 
-        .site-main { flex: 1; max-width: 900px; margin: 0 auto 40px; padding: 10px 20px 40px; }
+        /* MAIN */
+
+        .site-main { 
+            flex: 1; 
+            max-width: 900px; 
+            margin: 0 auto 40px; 
+            padding: 10px 20px 40px; 
+        }
 
         .article-card {
             background: radial-gradient(circle at top left,#020617,#020617 55%,#020617);
             border-radius: 22px;
-            padding: 26px 26px 36px;
+            padding: 22px 24px 32px;
             box-shadow: 0 22px 60px rgba(0,0,0,0.75);
             border: 1px solid rgba(148,163,184,0.16);
         }
 
-        h1 { color: #f9fafb; font-size: 2rem; margin-top: 4px; margin-bottom: 14px; }
-        h2 { color: #e5e7eb; border-bottom: 1px solid rgba(148,163,184,0.25); padding-bottom: 6px; margin-top: 32px; font-size: 1.45rem; }
-        h3 { color: #e5e7eb; margin-top: 24px; font-size: 1.1rem; }
-        p { color: var(--text-main); margin-top: 0; }
-        ul { padding-left: 18px; }
-        ul li { color: var(--text-main); }
+        h1 { 
+            color: #f9fafb; 
+            font-size: 1.8rem;  /* litt mindre for premium-look */
+            margin-top: 4px; 
+            margin-bottom: 12px; 
+        }
 
-        table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 0.95em; text-align: left; }
-        th, td { border: 1px solid rgba(148,163,184,0.35); padding: 10px 10px; }
-        th { background-color: rgba(15,23,42,0.95); color: #e5e7eb; font-weight: 600; }
-        tr:nth-child(even) td { background-color: rgba(15,23,42,0.6); }
+        h2 { 
+            color: #e5e7eb; 
+            border-bottom: 1px solid rgba(148,163,184,0.25); 
+            padding-bottom: 6px; 
+            margin-top: 28px; 
+            font-size: 1.3rem; 
+        }
+
+        h3 { 
+            color: #e5e7eb; 
+            margin-top: 24px; 
+            font-size: 1.05rem; 
+        }
+
+        p { 
+            color: var(--text-main); 
+            margin-top: 0; 
+            font-size: 0.95rem;
+        }
+
+        ul { 
+            padding-left: 18px; 
+        }
+
+        ul li { 
+            color: var(--text-main); 
+            font-size: 0.95rem;
+        }
+
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin: 18px 0; 
+            font-size: 0.9em; 
+            text-align: left; 
+        }
+
+        th, td { 
+            border: 1px solid rgba(148,163,184,0.35); 
+            padding: 8px 9px; 
+        }
+
+        th { 
+            background-color: rgba(15,23,42,0.95); 
+            color: #e5e7eb; 
+            font-weight: 600; 
+        }
+
+        tr:nth-child(even) td { 
+            background-color: rgba(15,23,42,0.6); 
+        }
 
         .cta-box {
             border: 1px solid rgba(56,189,248,0.7);
-            padding: 18px 20px; margin: 26px 0;
+            padding: 16px 18px; 
+            margin: 24px 0;
             background: radial-gradient(circle at top left,#102a3a,#020617 55%);
-            border-radius: 14px; text-align: left;
-            color: #e0f2fe; font-size: 0.95rem;
+            border-radius: 14px; 
+            text-align: left;
+            color: #e0f2fe; 
+            font-size: 0.9rem;
         }
 
-        .cta-box strong { display: block; margin-bottom: 6px; }
+        .cta-box strong { 
+            display: block; 
+            margin-bottom: 4px; 
+            font-size: 0.94rem;
+        }
 
         .cta-box a {
             display: inline-block;
             background-color: var(--accent);
             color: #020617;
-            padding: 9px 20px;
+            padding: 8px 18px;
             text-decoration: none;
             border-radius: 999px;
-            font-weight: 600; margin-top: 10px;
-            font-size: 0.9rem;
+            font-weight: 600; 
+            margin-top: 8px;
+            font-size: 0.85rem;
+        }
+
+        .cta-box a:hover {
+            filter: brightness(1.05);
         }
 
         .disclaimer {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
-            margin-top: 26px;
+            margin-top: 24px;
             border-top: 1px solid rgba(31,41,55,0.9);
-            padding-top: 14px;
+            padding-top: 12px;
         }
 
         .footer {
-            text-align: center; padding: 18px 0 26px;
+            text-align: center; 
+            padding: 18px 0 26px;
             margin-top: 30px;
             border-top: 1px solid rgba(31,41,55,0.9);
-            font-size: 0.8em; color: var(--text-muted);
+            font-size: 0.8em; 
+            color: var(--text-muted);
         }
 
-        .footer a { color: var(--text-muted); text-decoration: none; margin: 0 10px; }
-        .footer a:hover { color: #e5e7eb; text-decoration: underline; }
+        .footer a { 
+            color: var(--text-muted); 
+            text-decoration: none; 
+            margin: 0 10px; 
+        }
+
+        .footer a:hover { 
+            color: #e5e7eb; 
+            text-decoration: underline; 
+        }
 
         @media (max-width: 640px) {
-            .article-card { padding: 18px 16px 26px; }
-            h1 { font-size: 1.7rem; }
+            .article-card { padding: 18px 16px 24px; }
+            h1 { font-size: 1.6rem; }
         }
     </style>
 
@@ -116,7 +226,8 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date()); gtag('config', 'G-3GVJ73QQ5J');
+      gtag('js', new Date()); 
+      gtag('config', 'G-3GVJ73QQ5J');
     </script>
 </head>
 
@@ -152,7 +263,7 @@
                 <li><strong>AncestryDNA:</strong> Does not sell data, but may cooperate with law enforcement with a court order.</li>
             </ul>
             <div class="cta-box">
-                <strong>If privacy matters most: choose LivingDNA or MyHeritage.</strong>
+                <strong>If privacy matters most, LivingDNA and MyHeritage are usually the safest choices.</strong>
             </div>
 
             <h2>2. Can Police Access Your DNA?</h2>
@@ -160,7 +271,7 @@
                 <thead>
                     <tr>
                         <th>Company</th>
-                        <th>Police Access?</th>
+                        <th>Police access?</th>
                         <th>Notes</th>
                     </tr>
                 </thead>
@@ -171,31 +282,31 @@
                     <tr><td>23andMe</td><td>✔ In rare cases</td><td>Legally required only</td></tr>
                 </tbody>
             </table>
-            <p>Again: LivingDNA &amp; MyHeritage are the safest choices for data security.</p>
+            <p>Again: LivingDNA and MyHeritage are the safest choices for users who want to avoid law-enforcement access.</p>
             
             <h2>3. Cybersecurity: Who Protects Your Data Best?</h2>
             <ul>
                 <li><strong>LivingDNA:</strong> Smaller database → less attractive to hackers. Strong UK cybersecurity rules.</li>
                 <li><strong>MyHeritage:</strong> Good security; previous breach was email-only, not DNA.</li>
-                <li><strong>AncestryDNA &amp; 23andMe:</strong> Largest databases → biggest targets. Cost: higher risk of mass-scale exposure.</li>
+                <li><strong>AncestryDNA &amp; 23andMe:</strong> Largest databases → biggest targets, which increases the potential impact of a breach.</li>
             </ul>
             
             <h2>4. What Happens to Your DNA Sample?</h2>
-            <p><strong>LivingDNA</strong> destroys samples physically faster than others. <strong>MyHeritage</strong> destroys on request. <strong>23andMe</strong> and <strong>AncestryDNA</strong> store samples unless you explicitly ask them to destroy them.</p>
+            <p><strong>LivingDNA</strong> destroys samples physically faster than others. <strong>MyHeritage</strong> destroys samples on request. <strong>23andMe</strong> and <strong>AncestryDNA</strong> typically store samples unless you explicitly ask them to destroy them.</p>
 
             <h2>5. What Results Affect Family Members?</h2>
-            <p><strong>LivingDNA</strong> produces the least controversial relative matches since its database is smaller and privacy-focused. <strong>AncestryDNA &amp; MyHeritage</strong> produce more matches, which may reveal surprise relatives, unknown parents, or unexpected heritage.</p>
+            <p><strong>LivingDNA</strong> produces the least controversial relative matches since its database is smaller and privacy-focused. <strong>AncestryDNA</strong> and <strong>MyHeritage</strong> produce more matches, which may reveal surprise relatives, unknown parents, or unexpected heritage.</p>
 
             <h2>6. Are Health Reports Accurate?</h2>
-            <p><strong>23andMe</strong> remains the leader. <strong>LivingDNA</strong> focuses on ethnicity. <strong>MyHeritage Health</strong> exists, but is more limited. <strong>AncestryDNA</strong> has discontinued health reports entirely.</p>
+            <p><strong>23andMe</strong> remains the strongest for health-related reports. <strong>LivingDNA</strong> focuses mainly on ethnicity. <strong>MyHeritage Health</strong> exists, but is more limited. <strong>AncestryDNA</strong> has discontinued health reports entirely.</p>
 
             <h2>7. Hidden Consent Settings You MUST Review</h2>
-            <p>All companies have hidden toggles for things like: research, pharma partnerships, DNA matching, sample storage, and third-party data use. The safest defaults: <strong>LivingDNA</strong>. The least safe defaults: <strong>23andMe</strong>.</p>
+            <p>All companies have toggles for things like research, pharma partnerships, DNA matching, sample storage, and third-party data use. The safest default settings tend to be with <strong>LivingDNA</strong>. The least privacy-friendly defaults are usually found at <strong>23andMe</strong>.</p>
 
             <div class="cta-box">
-                <strong>Final Recommendation (Trust &amp; Safety)</strong><br>
-                If your priority is <em>Privacy</em>, <em>Accurate ethnicity</em>, <em>No data selling</em>, and <em>Zero police access</em>, then the DNA test with the strongest consumer protection is:
-                <a href="disclosure.html" rel="sponsored noopener">LivingDNA — The safest DNA kit in 2025</a>
+                <strong>Final Recommendation (Trust &amp; Safety)</strong>
+                If your priority is <em>privacy</em>, <em>accurate ethnicity</em>, <em>no data selling</em> and <em>zero police access</em>, the kit with the strongest consumer protection for most users is:
+                <a href="disclosure.html" rel="sponsored noopener">LivingDNA — our safest DNA kit pick for 2025</a>
             </div>
 
             <p class="disclaimer">

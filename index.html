@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genectics.com – LivingDNA vs. MyHeritage: Best DNA Test Comparison (2025)</title>
     <style>
-        :root { --bg: #020617; --text-main: #e5e7eb; --text-muted: #9ca3af; --accent: #38bdf8; }
+        :root { 
+            --bg: #020617; 
+            --text-main: #e5e7eb; 
+            --text-muted: #9ca3af; 
+            --accent: #38bdf8; 
+            --card-bg: #020617;
+        }
+
         * { box-sizing: border-box; }
 
         body {
@@ -18,12 +25,19 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        .page { min-height: 100vh; display: flex; flex-direction: column; }
+        .page { 
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+        }
+
+        /* HEADER / NAV */
 
         .site-header {
             padding: 18px 20px 8px;
             max-width: 1120px;
             margin: 0 auto;
+            text-align: center;
         }
 
         .site-brand {
@@ -33,17 +47,17 @@
             letter-spacing: 0.05em;
             font-size: 0.9rem;
             text-transform: uppercase;
-            display: none;
+            display: none; /* vi bruker banneret som logo */
         }
 
         .site-banner {
             display: block;
             width: 100%;
-            max-width: 520px;
+            max-width: 720px;
             height: auto;
-            margin: 10px auto 14px;
-            border-radius: 14px;
-            box-shadow: 0 12px 32px rgba(0,0,0,0.55);
+            margin: 10px auto 16px;
+            border-radius: 16px;
+            box-shadow: 0 14px 40px rgba(0,0,0,0.65);
         }
 
         .site-nav {
@@ -51,20 +65,30 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
+            justify-content: center; /* midtstilt meny */
         }
 
         .nav-link {
-            font-size: 0.85rem;
-            padding: 6px 14px;
+            font-size: 0.82rem;
+            padding: 6px 16px;
             border-radius: 999px;
             border: 1px solid transparent;
-            background: rgba(15,23,42,0.9);
+            background: rgba(15,23,42,0.95);
             color: var(--text-muted);
             text-decoration: none;
         }
 
-        .nav-link:hover { border-color: var(--accent); color: var(--accent); }
-        .nav-link.active { border-color: var(--accent); color: #e0f2fe; }
+        .nav-link:hover { 
+            border-color: var(--accent); 
+            color: var(--accent); 
+        }
+
+        .nav-link.active { 
+            border-color: var(--accent); 
+            color: #e0f2fe; 
+        }
+
+        /* MAIN LAYOUT */
 
         .site-main {
             flex: 1;
@@ -74,49 +98,131 @@
         }
 
         .article-card {
-            background: radial-gradient(circle at top left,#020617,#020617 55%,#020617);
+            background: radial-gradient(circle at top left, #020617, #020617 55%, #020617);
             border-radius: 22px;
-            padding: 26px 26px 36px;
+            padding: 22px 24px 32px;
             box-shadow: 0 22px 60px rgba(0,0,0,0.75);
             border: 1px solid rgba(148,163,184,0.16);
         }
 
         h1 {
             color: #f9fafb;
-            font-size: 2rem;
-            margin-top: 4px;
-            margin-bottom: 14px;
+            font-size: 1.8rem;    /* litt mindre */
+            margin-top: 2px;
+            margin-bottom: 10px;
         }
 
         h2 {
             color: #e5e7eb;
             border-bottom: 1px solid rgba(148,163,184,0.25);
             padding-bottom: 6px;
-            margin-top: 32px;
-            font-size: 1.45rem;
+            margin-top: 28px;
+            font-size: 1.3rem;    /* litt mindre */
         }
 
         h3 {
             color: #e5e7eb;
-            margin-top: 24px;
-            font-size: 1.1rem;
+            margin-top: 20px;
+            font-size: 1.02rem;
         }
 
-        p { color: var(--text-main); margin-top: 0; }
-        ul { padding-left: 18px; }
-        ul li { color: var(--text-main); }
+        p { 
+            color: var(--text-main); 
+            margin-top: 0; 
+            font-size: 0.95rem;
+        }
+
+        ul { 
+            padding-left: 18px; 
+            margin-top: 6px;
+        }
+
+        ul li { 
+            color: var(--text-main); 
+            font-size: 0.95rem;
+        }
+
+        /* TOP PICKS (AFFILIATES HØYT PÅ SIDEN) */
+
+        .top-picks {
+            margin: 18px 0 20px;
+            padding: 16px 18px 18px;
+            border-radius: 16px;
+            border: 1px solid rgba(56,189,248,0.5);
+            background: radial-gradient(circle at top left,#061826,#020617 60%);
+        }
+
+        .top-picks-title {
+            font-size: 1.1rem;
+            margin: 0 0 10px;
+            color: #e5f4ff;
+        }
+
+        .top-picks-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0,1fr));
+            gap: 14px;
+        }
+
+        .pick-card {
+            padding: 12px 12px 14px;
+            border-radius: 14px;
+            background: rgba(15,23,42,0.95);
+            border: 1px solid rgba(148,163,184,0.35);
+        }
+
+        .pick-title {
+            font-size: 0.96rem;
+            margin: 0 0 4px;
+        }
+
+        .pick-tag {
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .pick-text {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin: 6px 0 10px;
+        }
+
+        .pick-card a {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #020617;
+            padding: 7px 16px;
+            text-decoration: none;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .pick-card a:hover {
+            filter: brightness(1.05);
+        }
+
+        .top-note {
+            margin-top: 10px;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        /* TABLE */
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 18px 0;
-            font-size: 0.95em;
+            margin: 16px 0;
+            font-size: 0.9em;
             text-align: left;
         }
 
         th, td {
             border: 1px solid rgba(148,163,184,0.35);
-            padding: 10px 10px;
+            padding: 8px 9px;
         }
 
         th {
@@ -125,40 +231,55 @@
             font-weight: 600;
         }
 
-        tr:nth-child(even) td { background-color: rgba(15,23,42,0.6); }
+        tr:nth-child(even) td { 
+            background-color: rgba(15,23,42,0.6); 
+        }
+
+        /* CTA-BOKSER NEDERST I ARTIKKELEN */
 
         .cta-box {
             border: 1px solid rgba(56,189,248,0.7);
-            padding: 18px 20px;
-            margin: 26px 0;
+            padding: 16px 18px;
+            margin: 22px 0;
             background: radial-gradient(circle at top left,#102a3a,#020617 55%);
             border-radius: 14px;
             text-align: left;
             color: #e0f2fe;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
-        .cta-box strong { display: block; margin-bottom: 6px; }
+        .cta-box strong { 
+            display: block; 
+            margin-bottom: 4px;
+            font-size: 0.94rem;  /* litt roligere */
+            text-transform: none;
+        }
 
         .cta-box a {
             display: inline-block;
             background-color: var(--accent);
             color: #020617;
-            padding: 9px 20px;
+            padding: 8px 18px;
             text-decoration: none;
             border-radius: 999px;
             font-weight: 600;
-            margin-top: 10px;
-            font-size: 0.9rem;
+            margin-top: 8px;
+            font-size: 0.85rem;
+        }
+
+        .cta-box a:hover {
+            filter: brightness(1.05);
         }
 
         .disclaimer {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
-            margin-top: 26px;
+            margin-top: 24px;
             border-top: 1px solid rgba(31,41,55,0.9);
-            padding-top: 14px;
+            padding-top: 12px;
         }
+
+        /* FOOTER */
 
         .footer {
             text-align: center;
@@ -175,11 +296,17 @@
             margin: 0 10px;
         }
 
-        .footer a:hover { color: #e5e7eb; text-decoration: underline; }
+        .footer a:hover { 
+            color: #e5e7eb; 
+            text-decoration: underline; 
+        }
 
         @media (max-width: 640px) {
-            .article-card { padding: 18px 16px 26px; }
-            h1 { font-size: 1.7rem; }
+            .article-card { padding: 18px 16px 24px; }
+            h1 { font-size: 1.55rem; }
+            .top-picks-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 
@@ -209,43 +336,71 @@
 
     <main class="site-main">
         <article class="article-card">
-            <h1>2025 DNA Test Comparison: LivingDNA vs. MyHeritage vs. AncestryDNA vs. 23andMe</h1>
+            <h1>2025 DNA Test Comparison: LivingDNA vs. MyHeritage DNA vs. AncestryDNA vs. 23andMe</h1>
             
-            <p>Choosing the right DNA kit in 2025 can feel overwhelming — the market is packed with bold claims, different technologies, and different types of insights. But if your goal is accurate ethnicity, transparent privacy, and a meaningful ancestry experience, the differences between the major companies become very clear.</p>
-            <p>In this updated comparison, we look at the four major DNA kits: <strong>LivingDNA</strong>, <strong>MyHeritage DNA</strong>, <strong>AncestryDNA</strong>, and <strong>23andMe</strong>. And we explain why, for many users, <strong>LivingDNA</strong> delivers the most valuable and precise results today.</p>
+            <p>Choosing the right DNA kit in 2025 can feel overwhelming — the market is packed with bold claims, different technologies, and different types of insights. If your goal is accurate ethnicity, transparent privacy, and a meaningful ancestry experience, the differences between the major companies become very clear.</p>
+            <p>In this independent comparison, we look at the four major DNA kits: <strong>LivingDNA</strong>, <strong>MyHeritage DNA</strong>, <strong>AncestryDNA</strong>, and <strong>23andMe</strong> — and focus on where LivingDNA and MyHeritage DNA stand out for most users.</p>
 
-            <h2>The 30-Second Summary Table</h2>
+            <!-- TOP PICKS – AFFILIATE LENKER TIDLIG PÅ SIDEN -->
+            <section class="top-picks">
+                <h2 class="top-picks-title">Our top picks for most people in 2025</h2>
+                <div class="top-picks-grid">
+                    <div class="pick-card">
+                        <div class="pick-tag">Best overall</div>
+                        <h3 class="pick-title">LivingDNA</h3>
+                        <p class="pick-text">
+                            Best combination of ethnicity accuracy, European detail and privacy. 
+                            Ideal if you care about where your DNA data ends up.
+                        </p>
+                        <a href="disclosure.html" rel="sponsored noopener">View LivingDNA offer</a>
+                    </div>
+                    <div class="pick-card">
+                        <div class="pick-tag">Best budget</div>
+                        <h3 class="pick-title">MyHeritage DNA</h3>
+                        <p class="pick-text">
+                            Strong European matching and genealogy tools at a lower price point. 
+                            Great value if you want family matches without paying premium pricing.
+                        </p>
+                        <a href="disclosure.html" rel="sponsored noopener">View MyHeritage DNA offer</a>
+                    </div>
+                </div>
+                <p class="top-note">
+                    These are affiliate links. If you choose to buy through them, we may earn a commission at no extra cost to you.
+                </p>
+            </section>
+
+            <h2>The 30-second comparison table</h2>
             <table>
                 <thead>
                     <tr>
                         <th>Feature</th>
                         <th>LivingDNA</th>
-                        <th>MyHeritage</th>
+                        <th>MyHeritage DNA</th>
                         <th>AncestryDNA</th>
                         <th>23andMe</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>Ethnicity Accuracy</td><td>⭐⭐⭐⭐⭐ Best overall</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td></tr>
-                    <tr><td>UK/Europe Region Detail</td><td>⭐⭐⭐⭐⭐ Unmatched</td><td>⭐⭐⭐⭐</td><td>⭐⭐</td><td>⭐⭐</td></tr>
-                    <tr><td>Family Matching</td><td>Growing</td><td>Large (Europe-focused)</td><td>Largest</td><td>Medium</td></tr>
-                    <tr><td>Health Reports</td><td>⭐⭐ (Wellness)</td><td>⭐⭐⭐⭐</td><td>⭐⭐</td><td>⭐⭐⭐⭐⭐ (Health-focused)</td></tr>
-                    <tr><td>Privacy</td><td>⭐⭐⭐⭐⭐ Strongest stance</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐</td></tr>
-                    <tr><td>Price</td><td>Mid</td><td>Low</td><td>Mid</td><td>High</td></tr>
-                    <tr><td>Best For</td><td>Ethnicity + privacy lovers</td><td>Budget genealogy</td><td>Deep genealogy</td><td>Health insights</td></tr>
+                    <tr><td>Ethnicity accuracy</td><td>⭐⭐⭐⭐⭐ Best overall</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td></tr>
+                    <tr><td>UK/Europe region detail</td><td>⭐⭐⭐⭐⭐ Unmatched</td><td>⭐⭐⭐⭐</td><td>⭐⭐</td><td>⭐⭐</td></tr>
+                    <tr><td>Family matching</td><td>Growing</td><td>Large (Europe-focused)</td><td>Largest</td><td>Medium</td></tr>
+                    <tr><td>Health reports</td><td>⭐⭐ (Wellness)</td><td>⭐⭐⭐⭐</td><td>⭐⭐</td><td>⭐⭐⭐⭐⭐ (Health-focused)</td></tr>
+                    <tr><td>Privacy stance</td><td>⭐⭐⭐⭐⭐ Strongest</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐</td></tr>
+                    <tr><td>Typical price</td><td>Mid</td><td>Low</td><td>Mid</td><td>High</td></tr>
+                    <tr><td>Best for</td><td>Ethnicity + privacy</td><td>Budget genealogy</td><td>Deep genealogy</td><td>Health insights</td></tr>
                 </tbody>
             </table>
 
-            <h2>Why LivingDNA Is the Most Accurate Ethnicity Test in 2025</h2>
-            <p>LivingDNA is built for users who care deeply about where they come from — not just broad regions, but fine, detailed, sub-regional ancestry. Its strength is precision, not hype.</p>
+            <h2>Why LivingDNA leads for ethnicity and privacy</h2>
+            <p>LivingDNA is built for users who care deeply about where they come from — not just broad regions, but fine, detailed, sub-regional ancestry. Its strength is precision and privacy, not hype.</p>
             
-            <h3>1. Deep Regional Mapping (Especially the UK & Europe)</h3>
-            <p>LivingDNA doesn’t just tell you “British Isles.” It breaks the UK into 21+ sub-regions, including: Cornwall, Devon, Norfolk, Yorkshire, Northumbria, and The Hebrides. This level of detail simply doesn’t exist on other platforms. If even a small part of your ancestry is British or European, LivingDNA provides the clearest picture available.</p>
+            <h3>1. Deep regional mapping (especially the UK & Europe)</h3>
+            <p>LivingDNA doesn’t just tell you “British Isles.” It breaks the UK into over 20 sub-regions such as Cornwall, Devon, Norfolk, Yorkshire, Northumbria and The Hebrides. If even a small part of your ancestry is British or European, LivingDNA provides one of the clearest pictures available.</p>
             
-            <h3>2. More Accurate Population Reference Panels</h3>
-            <p>LivingDNA uses region-specific sampling, making ethnicity results: more stable, more consistent, more granular, and more scientifically transparent. Their ethnicity model is widely considered one of the most advanced in Europe.</p>
+            <h3>2. Region-specific reference panels</h3>
+            <p>LivingDNA uses region-specific sampling, making ethnicity results more stable, more consistent, more granular and more transparent. Their ethnicity model is widely regarded as one of the strongest in Europe.</p>
             
-            <h3>3. Strong Privacy-by-Design Approach</h3>
+            <h3>3. Strong privacy-by-design approach</h3>
             <p>Unlike some competitors, LivingDNA:</p>
             <ul>
                 <li>Does not sell or license your genetic data</li>
@@ -253,59 +408,57 @@
                 <li>Does not cooperate with law enforcement</li>
                 <li>Destroys physical samples faster than many competitors</li>
             </ul>
-            <p>This makes LivingDNA ideal for people who want DNA insights without worrying about long-term data exposure.</p>
+            <p>This makes LivingDNA a good fit if you want DNA insights without worrying about long-term data exposure.</p>
 
             <div class="cta-box">
-                <strong>➡️ BEST CHOICE: LivingDNA is the ultimate precision pick for ancestry and privacy.</strong>
-                <a href="disclosure.html" rel="sponsored noopener">Buy LivingDNA Now</a>
+                <strong>Our verdict: best overall choice for ethnicity + privacy</strong>
+                <a href="disclosure.html" rel="sponsored noopener">Check LivingDNA pricing</a>
             </div>
 
-            <h2>MyHeritage DNA: The Best Budget-Friendly Alternative</h2>
-            <p>If cost matters, MyHeritage is the strongest competitor — especially in Europe.</p>
-            <p>MyHeritage stands out because it combines:</p>
+            <h2>MyHeritage DNA: strongest value for money</h2>
+            <p>If cost matters, MyHeritage DNA is the strongest competitor — especially if your roots are in Europe.</p>
+            <p>MyHeritage DNA stands out because it combines:</p>
             <ul>
-                <li>Great coverage for European ancestry</li>
-                <li>Strong matching in Scandinavia, Eastern Europe, the Balkans, and Jewish heritage</li>
+                <li>Very good coverage for European ancestry</li>
+                <li>Strong matching in Scandinavia, Eastern Europe, the Balkans and Jewish heritage</li>
                 <li>Affordable pricing (often discounted)</li>
                 <li>Solid family-tree tools</li>
                 <li>An easy-to-use interface</li>
             </ul>
-            <p>MyHeritage is the smart “value pick” if you want strong genealogy features without paying premium prices.</p>
+            <p>MyHeritage DNA is the smart “value pick” if you want strong genealogy features without paying premium prices.</p>
 
             <div class="cta-box">
-                <strong>➡️ VALUE PICK: MyHeritage DNA is the best safe low-cost alternative.</strong>
-                <a href="disclosure.html" rel="sponsored noopener">Buy MyHeritage DNA</a>
+                <strong>Our verdict: best budget-friendly genealogy option</strong>
+                <a href="disclosure.html" rel="sponsored noopener">Check MyHeritage DNA pricing</a>
             </div>
 
-            <h2>Where the Others Fit In (But Don’t Lead)</h2>
-            <p><strong>AncestryDNA:</strong> Still the best for large family trees and serious genealogists, with the largest DNA-matching database. However, its ethnicity reports are no longer dramatically better than MyHeritage or LivingDNA.</p>
-            <p><strong>23andMe:</strong> Strong for health insights, but weaker on family matching, regional ancestry depth, and privacy (due to pharma partnerships and data licensing). Great if you want health data; weaker if you mainly care about family history.</p>
+            <h2>Where AncestryDNA and 23andMe fit in</h2>
+            <p><strong>AncestryDNA</strong> is still the best choice for very large family trees and serious genealogists, with the largest DNA-matching database. Its ethnicity reports are good, but no longer dramatically better than MyHeritage DNA or LivingDNA.</p>
+            <p><strong>23andMe</strong> is still a leader for health insights, but weaker on family matching, regional ancestry depth and privacy (because of pharma partnerships and data licensing). It is a good option if your main goal is health-related genetic information rather than genealogy.</p>
 
-            <h2>Final Verdict: Which DNA Kit Should YOU Choose?</h2>
+            <h2>Which DNA kit should you choose?</h2>
             
             <h3>Choose LivingDNA if you want:</h3>
             <ul>
-                <li>✔ The most accurate ancestry breakdown</li>
-                <li>✔ The best European/British regional detail</li>
-                <li>✔ The strongest privacy protections</li>
-                <li>✔ A company that does <em>not</em> sell or share your data</li>
-                <li>✔ Transparent, science-based reporting</li>
+                <li>The most detailed European/British ancestry breakdown</li>
+                <li>The strongest privacy protections</li>
+                <li>A company that does <em>not</em> sell or share your data</li>
+                <li>Transparent, science-based reporting</li>
             </ul>
             <div class="cta-box">
-                <strong>➡️ Best choice overall for ethnicity + privacy</strong>
-                <a href="disclosure.html" rel="sponsored noopener">Buy LivingDNA Kit</a>
+                <strong>For most privacy-conscious users, LivingDNA is the safest overall pick.</strong>
+                <a href="disclosure.html" rel="sponsored noopener">View LivingDNA offer</a>
             </div>
 
             <h3>Choose MyHeritage DNA if you want:</h3>
             <ul>
-                <li>✔ A cheaper alternative that still offers quality</li>
-                <li>✔ Strong European matching</li>
-                <li>✔ A large match database</li>
-                <li>✔ Affordable genealogy tools</li>
+                <li>A cheaper alternative that still offers strong results</li>
+                <li>Good European matching and family networks</li>
+                <li>A large match database and solid genealogy tools</li>
             </ul>
             <div class="cta-box">
-                <strong>➡️ Best budget-friendly option</strong>
-                <a href="disclosure.html" rel="sponsored noopener">Buy MyHeritage Kit</a>
+                <strong>If you want maximum value per euro, MyHeritage DNA is hard to beat.</strong>
+                <a href="disclosure.html" rel="sponsored noopener">View MyHeritage DNA offer</a>
             </div>
 
             <p class="disclaimer">

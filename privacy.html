@@ -1,116 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genectics.com – Privacy Policy</title>
-    <style>
-        :root { --bg: #020617; --text-main: #e5e7eb; --text-muted: #9ca3af; --accent: #38bdf8; }
-        * { box-sizing: border-box; }
-        body {
-            margin: 0; padding: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            line-height: 1.7;
-            background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #020617 100%);
-            color: var(--text-main);
-            -webkit-font-smoothing: antialiased;
-        }
-        .page { min-height: 100vh; display: flex; flex-direction: column; }
-        .site-header { padding: 18px 20px 8px; max-width: 1120px; margin: 0 auto; }
-        .site-brand { text-decoration: none; color: var(--text-main); font-weight: 600; letter-spacing: 0.05em; font-size: 0.9rem; text-transform: uppercase; display: none; }
-        .site-banner {
-            display: block;
-            width: 100%; max-width: 520px;
-            height: auto; margin: 10px auto 14px;
-            border-radius: 14px;
-            box-shadow: 0 12px 32px rgba(0,0,0,0.55);
-        }
-        .site-nav { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
-        .nav-link {
-            font-size: 0.85rem; padding: 6px 14px;
-            border-radius: 999px; border: 1px solid transparent;
-            background: rgba(15,23,42,0.9);
-            color: var(--text-muted); text-decoration: none;
-        }
-        .nav-link:hover { border-color: var(--accent); color: var(--accent); }
-        .nav-link.active { border-color: var(--accent); color: #e0f2fe; }
-        .site-main { flex: 1; max-width: 780px; margin: 0 auto 40px; padding: 10px 20px 40px; }
-        .content-card {
-            background: radial-gradient(circle at top left,#020617,#020617 55%,#020617);
-            border-radius: 22px;
-            padding: 26px 26px 30px;
-            box-shadow: 0 22px 60px rgba(0,0,0,0.75);
-            border: 1px solid rgba(148,163,184,0.16);
-        }
-        h1 { font-size: 2rem; margin-top: 4px; margin-bottom: 12px; color: #f9fafb; }
-        h2 {
-            margin-top: 26px; margin-bottom: 6px;
-            font-size: 1.3rem;
-            border-bottom: 1px solid rgba(148,163,184,0.25);
-            padding-bottom: 6px;
-        }
-        p { margin-top: 0; }
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .footer {
-            text-align: center; padding: 18px 0 26px;
-            margin-top: 10px; border-top: 1px solid rgba(31,41,55,0.9);
-            font-size: 0.8em; color: var(--text-muted);
-        }
-        .footer a { color: var(--text-muted); text-decoration: none; margin: 0 10px; }
-        .footer a:hover { color: #e5e7eb; text-decoration: underline; }
-        @media (max-width: 640px) { .content-card { padding: 18px 16px 24px; } h1 { font-size: 1.7rem; } }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GVJ73QQ5J"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-3GVJ73QQ5J');
-    </script>
+  <title>Genectics.com – Privacy Policy</title>
+  <meta name="description"
+        content="Privacy policy for Genectics.com, operated by Ronarn AS. Learn how we use cookies, analytics, and affiliate tracking in full compliance with GDPR and international privacy standards.">
+
+  <style>
+    :root {
+      --bg: #020617;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --accent: #38bdf8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0; padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+      background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #020617 100%);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page { min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* HEADER */
+    .site-header {
+      padding: 18px 20px 8px;
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: #e5e7eb;
+    }
+
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(56,189,248,0.8);
+    }
+
+    .brand-text { opacity: 0.9; }
+
+    .brand-tagline {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .nav-link {
+      font-size: 0.82rem;
+      padding: 6px 16px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background: rgba(15,23,42,0.95);
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .nav-link.active {
+      border-color: var(--accent);
+      color: #e0f2fe;
+    }
+
+    /* MAIN */
+    .site-main {
+      flex: 1;
+      max-width: 780px;
+      margin: 0 auto 40px;
+      padding: 10px 20px 40px;
+    }
+
+    .content-card {
+      background: radial-gradient(circle at top left,#020617,#020617 55%,#020617);
+      border-radius: 22px;
+      padding: 26px 26px 30px;
+      box-shadow: 0 22px 60px rgba(0,0,0,0.75);
+      border: 1px solid rgba(148,163,184,0.16);
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #f9fafb;
+    }
+
+    h2 {
+      margin-top: 26px;
+      margin-bottom: 6px;
+      font-size: 1.28rem;
+      color: #e5e7eb;
+      border-bottom: 1px solid rgba(148,163,184,0.25);
+      padding-bottom: 6px;
+    }
+
+    p {
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    ul { padding-left: 18px; }
+    ul li { color: var(--text-main); }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 18px 0 26px;
+      margin-top: 10px;
+      border-top: 1px solid rgba(31,41,55,0.9);
+      font-size: 0.8em;
+      color: var(--text-muted);
+    }
+
+    .footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      color: #e5e7eb;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .content-card { padding: 18px 16px 24px; }
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GVJ73QQ5J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3GVJ73QQ5J');
+  </script>
 </head>
+
 <body>
 <div class="page">
-    <header class="site-header">
-        <a href="index.html" class="site-brand">GENECTICS.COM</a>
-        <img src="genectics_banner.png" alt="Genectics.com" class="site-banner">
 
-        <nav class="site-nav">
-            <a href="index.html" class="nav-link">Comparison</a>
-            <a href="guide.html" class="nav-link">Safety Guide</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a href="privacy.html" class="nav-link active">Privacy</a>
-            <a href="disclosure.html" class="nav-link">Disclosure</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-        </nav>
-    </header>
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-mark">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Genectics.com</span>
+      </div>
+      <div class="brand-tagline">
+        Independent DNA test comparison. Neutral. Evidence-based.
+      </div>
+    </div>
 
-    <main class="site-main">
-        <section class="content-card">
-            <h1>Privacy Policy</h1>
+    <nav class="site-nav">
+      <a href="index.html" class="nav-link">Comparison</a>
+      <a href="guide.html" class="nav-link">Safety Guide</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="privacy.html" class="nav-link active">Privacy</a>
+      <a href="disclosure.html" class="nav-link">Disclosure</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
 
-            <p>Your privacy is important to Ronarn AS, the owner and operator of Genectics.com. This policy explains how we collect and process personal data in accordance with international standards, including GDPR.</p>
+  <main class="site-main">
+    <section class="content-card">
+      <h1>Privacy Policy</h1>
 
-            <h2>Information We Collect</h2>
-            <p>We collect anonymized data via Google Analytics to analyze user patterns and improve the website.</p>
+      <p>
+        This Privacy Policy explains how Genectics.com, operated by <strong>Ronarn AS</strong> (Norway),
+        handles data in full compliance with GDPR and international privacy standards.  
+        We respect your privacy and do not collect personal data unnecessarily.
+      </p>
 
-            <h2>Cookies and Tracking</h2>
-            <p>Our site uses cookies for the purpose of tracking affiliate links. These are necessary for us to receive commissions from affiliate networks. You may disable cookies in your browser, but this may affect site functionality.</p>
+      <h2>1. Data we collect</h2>
+      <p>
+        Genectics.com only collects anonymised, non-personally identifiable data for analytics purposes.
+      </p>
+      <ul>
+        <li>Page views and traffic patterns</li>
+        <li>Browser type, country and device type</li>
+        <li>Anonymous event data (e.g., outbound link clicks)</li>
+      </ul>
+      <p>No DNA or sensitive personal information is ever collected by us.</p>
 
-            <h2>Data Sharing</h2>
-            <p>We do not share any personal identifying data with third parties, except for Google Analytics for analysis and our affiliate partners for sales tracking.</p>
+      <h2>2. Cookies</h2>
+      <p>We use two types of cookies:</p>
+      <ul>
+        <li><strong>Analytics cookies</strong> (Google Analytics 4)</li>
+        <li><strong>Affiliate tracking cookies</strong> (Amazon Associates, CJ, Awin, Impact, etc.)</li>
+      </ul>
+      <p>
+        These cookies ensure that affiliate partners can credit us for referrals.  
+        You may disable cookies in your browser at any time.
+      </p>
 
-            <p><a href="index.html">Back to Home</a></p>
-        </section>
+      <h2>3. Affiliate links</h2>
+      <p>
+        When you click certain outbound links (e.g., to Amazon), a tracking parameter is added to confirm
+        that Genectics.com referred the visitor. This contains no personal information.
+      </p>
 
-        <div class="footer">
-            <a href="about.html">About Us</a> |
-            <a href="privacy.html">Privacy Policy</a> |
-            <a href="disclosure.html">Affiliate Disclosure</a> |
-            <a href="contact.html">Contact</a>
-        </div>
-    </main>
+      <h2>4. Data sharing</h2>
+      <p>We share limited data only with:</p>
+      <ul>
+        <li><strong>Google Analytics</strong> – for anonymised traffic analysis</li>
+        <li><strong>Affiliate networks</strong> – to confirm a purchase originated from our site</li>
+      </ul>
+      <p>We never sell or disclose user data to third parties for advertising purposes.</p>
+
+      <h2>5. Your rights (GDPR)</h2>
+      <p>Under GDPR, you have the right to:</p>
+      <ul>
+        <li>Request deletion of any analytics data associated with your visits</li>
+        <li>Request details about how affiliate networks handle tracking</li>
+        <li>Use the site without accepting non-essential cookies</li>
+      </ul>
+
+      <p><a href="index.html">← Back to Home</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      <a href="about.html">About Us</a> |
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="disclosure.html">Affiliate Disclosure</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+    <p>Genectics.com is owned and operated by Ronarn AS.</p>
+  </footer>
 </div>
 </body>
 </html>

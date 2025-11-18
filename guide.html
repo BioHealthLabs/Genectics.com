@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Genectics.com – Best DNA Test Kits on Amazon (2025)</title>
+  <title>Genectics.com – DNA Test Safety & Privacy Guide (2025)</title>
   <meta name="description"
-        content="Genectics.com compares the most useful DNA test kits on Amazon. See our top picks for ancestry, family trees, power users and health, then click through to today’s price on Amazon.">
+        content="A practical safety and privacy guide before you buy a DNA test kit. Learn about data storage, law enforcement access, emotional impact and how to protect yourself when testing.">
 
   <style>
     :root {
@@ -16,7 +16,7 @@
       --text-muted: #9ca3af;
       --accent: #38bdf8;
       --card-bg: #020617;
-      --star: #fbbf24;
+      --chip-bg: #0b1220;
     }
 
     * { box-sizing: border-box; }
@@ -37,7 +37,7 @@
       flex-direction: column;
     }
 
-    /* HEADER / NAV – lik stil som .bio */
+    /* HEADER / NAV – samme stil som index */
 
     .site-header {
       padding: 18px 20px 8px;
@@ -148,7 +148,7 @@
       border-bottom: 1px solid rgba(148,163,184,0.25);
       padding-bottom: 6px;
       margin-top: 28px;
-      font-size: 1.3rem;
+      font-size: 1.25rem;
     }
 
     h3 {
@@ -178,122 +178,81 @@
       color: var(--text-muted);
     }
 
-    /* TOP PICKS (ABOVE THE FOLD CTAs) */
+    /* CHIPS / BADGES */
 
-    .top-picks {
-      margin: 18px 0 20px;
-      padding: 16px 18px 18px;
-      border-radius: 16px;
-      border: 1px solid rgba(56,189,248,0.5);
-      background: radial-gradient(circle at top left,#061826,#020617 60%);
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0 4px;
     }
 
-    .top-picks-title {
-      font-size: 1.1rem;
-      margin: 0 0 8px;
-      color: #e5f4ff;
-    }
-
-    .top-picks-sub {
-      font-size: 0.85rem;
+    .chip {
+      font-size: 0.78rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--chip-bg);
+      border: 1px solid rgba(148,163,184,0.35);
       color: var(--text-muted);
-      margin-bottom: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
     }
 
-    .top-picks-grid {
+    .chip span {
+      font-size: 0.78rem;
+    }
+
+    /* INFO GRID */
+
+    .grid-2 {
       display: grid;
       grid-template-columns: repeat(2, minmax(0,1fr));
       gap: 14px;
+      margin-top: 10px;
     }
 
-    .pick-card {
-      padding: 12px 12px 14px;
+    .card-ghost {
       border-radius: 14px;
-      background: rgba(15,23,42,0.95);
-      border: 1px solid rgba(148,163,184,0.35);
+      padding: 12px 14px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.25);
     }
 
-    .pick-title-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 6px;
+    .card-ghost h3 {
+      margin-top: 0;
+      margin-bottom: 6px;
+      font-size: 0.98rem;
     }
 
-    .pick-title {
-      font-size: 0.96rem;
-      margin: 0 0 2px;
+    .card-ghost p,
+    .card-ghost li {
+      font-size: 0.9rem;
+      color: var(--text-main);
     }
 
-    .star-rating {
-      font-size: 0.85rem;
-      color: var(--star);
-      white-space: nowrap;
+    /* CHECKLIST */
+
+    .checklist {
+      list-style: none;
+      padding-left: 0;
     }
 
-    .pick-tag {
+    .checklist li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 4px;
+      font-size: 0.92rem;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
       font-size: 0.8rem;
       color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    .pick-text {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      margin: 6px 0 10px;
-    }
-
-    .pick-card a {
-      display: inline-block;
-      background-color: var(--accent);
-      color: #020617;
-      padding: 7px 16px;
-      text-decoration: none;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.85rem;
-    }
-
-    .pick-card a:hover {
-      filter: brightness(1.06);
-    }
-
-    .top-note {
-      margin-top: 10px;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    /* TABLE */
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 16px 0;
-      font-size: 0.9em;
-      text-align: left;
-    }
-
-    th, td {
-      border: 1px solid rgba(148,163,184,0.35);
-      padding: 8px 9px;
-    }
-
-    th {
-      background-color: rgba(15,23,42,0.95);
-      color: #e5e7eb;
-      font-weight: 600;
-    }
-
-    tr:nth-child(even) td {
-      background-color: rgba(15,23,42,0.6);
-    }
-
-    .table-stars {
-      color: var(--star);
-      font-size: 0.9rem;
-      white-space: nowrap;
     }
 
     /* CTA BOXES */
@@ -367,7 +326,7 @@
       }
       .article-card { padding: 18px 16px 24px; }
       h1 { font-size: 1.6rem; }
-      .top-picks-grid {
+      .grid-2 {
         grid-template-columns: 1fr;
       }
     }
@@ -391,13 +350,13 @@
         <span class="brand-text">Genectics.com</span>
       </div>
       <div class="brand-tagline">
-        Independent comparison of DNA test kits on Amazon. No sponsorships. No fluff.
+        Independent DNA test comparison and safety guidance. Neutral. Evidence-based.
       </div>
     </div>
 
     <nav class="site-nav">
-      <a href="index.html" class="nav-link active">Comparison</a>
-      <a href="guide.html" class="nav-link">Safety Guide</a>
+      <a href="index.html" class="nav-link">Comparison</a>
+      <a href="guide.html" class="nav-link active">Safety Guide</a>
       <a href="about.html" class="nav-link">About</a>
       <a href="privacy.html" class="nav-link">Privacy</a>
       <a href="disclosure.html" class="nav-link">Disclosure</a>
@@ -407,256 +366,205 @@
 
   <main class="site-main">
     <article class="article-card">
-      <p class="hero-kicker">DNA Test Buying Guide · Amazon 2025</p>
-      <h1>Best DNA Test Kits on Amazon in 2025</h1>
-
+      <p class="hero-kicker">Read this before you buy a kit</p>
+      <h1>DNA Test Safety & Privacy Guide</h1>
       <p>
-        Most people buying a DNA kit in 2025 do it the same way: click “Add to cart” on Amazon,
-        spit in a tube and wait. The tricky part is choosing the <em>right</em> kit before you buy.
+        A DNA test is not just a one-time purchase. It is a long-term data relationship with a company –
+        and sometimes with law enforcement, researchers and third parties.
       </p>
       <p>
-        Below we compare four of the most useful and widely available kits on Amazon –
-        <strong>MyHeritage DNA</strong>, <strong>AncestryDNA</strong>, <strong>FamilyTreeDNA</strong>
-        and <strong>LifeDNA</strong> – and give you clear buttons straight to each product page.
+        This guide walks you through the main safety and privacy topics to consider <em>before</em> you
+        order any DNA kit. It is not legal or medical advice, but a checklist to help you ask better questions.
       </p>
 
-      <!-- TOP PICKS – AFFILIATE LENKER TIDLIG PÅ SIDEN -->
-      <section class="top-picks">
-        <h2 class="top-picks-title">Quick picks – click through to today’s price</h2>
-        <p class="top-picks-sub">
-          Pick the card that matches your goal and tap the button to open the kit on Amazon.
-        </p>
+      <div class="cta-box">
+        <strong>Short version:</strong>
+        Don’t only compare price and “ethnicity percentage”. Also compare:
+        <ul class="checklist">
+          <li>How long they keep your raw data and physical sample.</li>
+          <li>Whether you can request full deletion and sample destruction.</li>
+          <li>How they handle law-enforcement and research requests.</li>
+          <li>How they protect relatives who never consented.</li>
+        </ul>
+        <a href="index.html">See the kit comparison page</a>
+      </div>
 
-        <div class="top-picks-grid">
-          <div class="pick-card">
-            <div class="pick-tag">Best overall (Amazon)</div>
-            <div class="pick-title-row">
-              <h3 class="pick-title">MyHeritage DNA Test Kit</h3>
-              <span class="star-rating">★★★★★</span>
-            </div>
-            <p class="pick-text">
-              Great mix of price, ancestry detail and family matching – especially strong for Europe.
-              Perfect “first DNA kit” if you want both ethnicity and relatives.
-            </p>
-            <a href="https://www.amazon.com/MyHeritage-DNA-Test-Kit-Ethnicity/dp/B072SY5JHQ?crid=2UQM2Q8OBHN2B&dib=eyJ2IjoiMSJ9.3R_ukTQB9lcZafUQkHIdGXFbN6V6x8cz5G5GfknSCo94j3TsFh9ogFTJWsDAMJ_4GSNjas5EhNCNczuoDGxOJ4FNa8bK92IzhK_Eok4uNw4jT21ZI3ZcBIyzHXhKYsoKrafhPujNL5xrSx5PoWv-IpCshkdJ_NO22MFe7-wnRvD0n-NDB_-ALAmRhSGFt96od9HCm-bVeyPFOn4IwAmwVdi208IG6xsW9f2Ah3mBapI.FuhzjY2WsM_HbTK4G3I_gsgpcZYmHmUfrrGneowzRVw&dib_tag=se&keywords=myheritage+dna+test+kit&qid=1763242435&sprefix=MyHer%2Caps%2C184&sr=8-1&linkCode=ll1&tag=genecticscom-20&linkId=10d0d4cd6d53cbea8e7a3549226ccaea&language=en_US&ref_=as_li_ss_tl"
-               rel="sponsored noopener">
-              View MyHeritage DNA on Amazon
-            </a>
-          </div>
+      <h2 id="data-storage">1. Data storage: how long do they keep your DNA?</h2>
+      <div class="chip-row">
+        <div class="chip"><span>★</span> Raw data retention</div>
+        <div class="chip"><span>★</span> Sample storage</div>
+        <div class="chip"><span>★</span> Deletion process</div>
+      </div>
+      <p>
+        When you send in a DNA sample, most companies generate raw genetic data and then store it on their
+        servers. Some also keep the physical saliva or cheek-swab sample for future re-analysis.
+      </p>
 
-          <div class="pick-card">
-            <div class="pick-tag">Best for family trees</div>
-            <div class="pick-title-row">
-              <h3 class="pick-title">AncestryDNA Genetic Test Kit</h3>
-              <span class="star-rating">★★★★★</span>
-            </div>
-            <p class="pick-text">
-              Huge DNA database and tight integration with family trees and records. The right choice
-              if your main goal is building a giant family tree.
-            </p>
-            <a href="https://www.amazon.com/AncestryDNA-Genetic-Ethnicity-Test/dp/B00TRLVKW0?crid=20GDMNH7N058L&dib=eyJ2IjoiMSJ9.DKc32ncgQExyWl1pTkpnOLffBpJ4ShzbPE9pZEmQB_4uyjUkUb6zQ79ANHIvkTVeze-qIPR8K43CQTRI4-3r7KItVWltAkmP4luBTc3fKpGozV-BD5G8ziXXHrPOXZQ5f5aN7O7ThWnp0edv4j2uQkYq0HDxEnsuNhm3IPJq73hpT_w96UWL51TuvlN3FxOpIOxVWqJjvNvUG_-1VCLRrfniqZm_TvPYjScnt9WwENw.o7-7uNHt1wndAKe7_z1tq6BdARMoH7XLtOMfSrD5mPM&dib_tag=se&keywords=23+and+me+dna+test+kit&qid=1763242964&sprefix=23++dna+test+kit%2Caps%2C207&sr=8-1&linkCode=ll1&tag=genecticscom-20&linkId=3fd3b2d1065c8e17766c358e929ea61e&language=en_US&ref_=as_li_ss_tl"
-               rel="sponsored noopener">
-              View AncestryDNA on Amazon
-            </a>
-          </div>
-
-          <div class="pick-card">
-            <div class="pick-tag">Best for DNA enthusiasts</div>
-            <div class="pick-title-row">
-              <h3 class="pick-title">FamilyTreeDNA Test Kit</h3>
-              <span class="star-rating">★★★★★</span>
-            </div>
-            <p class="pick-text">
-              More tools, more knobs to turn. Great if you already love genealogy and want to go
-              deeper than a simple ethnicity wheel.
-            </p>
-            <a href="https://www.amazon.com/FamilyTreeDNA-Geographic-Relatives-Processed-Convenient/dp/B01NAQ1UCW?crid=1GW150RW66L28&dib=eyJ2IjoiMSJ9.gKnNnRCobmrvAXfLUUrpiKhzKJCOCDaRiXpFn34G842dBO38u11iqKmvGLz6ivGXm57Ofjxs6DUgXYXKy7J0N_qrp5iYS9Pi8yOclCaRZYPzEaz0CcX81QBcRaVb1_d5BR23sWtD_Pk3pIrSX7U6aW-d5at4F783rEgLwVNc50jfi7nu-KBtzY2KqBdRyIh8aBdMqzrEJifEcV4fu-81PJYL7xYDM2GgjK4az6YqOf4.WnUeCCsDnvJbUtTz57sy-wTn5lxiA6qNMYfbPrc6UWU&dib_tag=se&keywords=dna+kit&qid=1763243406&sprefix=dna+kit%2Caps%2C178&sr=8-10&linkCode=ll1&tag=genecticscom-20&linkId=8166a15dd53d7d11eb1912d8266f5ef4&language=en_US&ref_=as_li_ss_tl"
-               rel="sponsored noopener">
-              View FamilyTreeDNA on Amazon
-            </a>
-          </div>
-
-          <div class="pick-card">
-            <div class="pick-tag">Best for health & wellness</div>
-            <div class="pick-title-row">
-              <h3 class="pick-title">LifeDNA Wellness & Nutrition Test</h3>
-              <span class="star-rating">★★★★★</span>
-            </div>
-            <p class="pick-text">
-              Less about ancestry, more about how your genetics may influence wellness,
-              nutrition and lifestyle choices.
-            </p>
-            <a href="https://www.amazon.com/Methylation-Complete-Wellness-Analysis-Nutrition/dp/B0DJ1VWJYL?crid=1GW150RW66L28&dib=eyJ2IjoiMSJ9.gKnNnRCobmrvAXfLUUrpiKhzKJCOCDaRiXpFn34G842dBO38u11iqKmvGLz6ivGXm57Ofjxs6DUgXYXKy7J0N_qrp5iYS9Pi8yOclCaRZYPzEaz0CcX81QBcRaVb1_d5BR23sWtD_Pk3pIrSX7U6aW-d5at4F783rEgLwVNc50jfi7nu-KBtzY2KqBdRyIh8aBdMqzrEJifEcV4fu-81PJYL7xYDM2GgjK4az6YqOf4.WnUeCCsDnvJbUtTz57sy-wTn5lxiA6qNMYfbPrc6UWU&dib_tag=se&keywords=dna+kit&qid=1763243406&sprefix=dna+kit%2Caps%2C178&sr=8-16&linkCode=ll1&tag=genecticscom-20&linkId=1a1fadf8654317b5cf1b5c613432626d&language=en_US&ref_=as_li_ss_tl"
-               rel="sponsored noopener">
-              View LifeDNA on Amazon
-            </a>
-          </div>
+      <div class="grid-2">
+        <div class="card-ghost">
+          <h3>Questions to ask</h3>
+          <ul class="checklist">
+            <li>How long do you keep my raw DNA file?</li>
+            <li>Do you store my physical sample? If yes, for how long?</li>
+            <li>Can I ask you to destroy my sample and delete my data completely?</li>
+            <li>How do you verify that deletion is actually done?</li>
+          </ul>
         </div>
-
-        <p class="top-note">
-          These are affiliate links. If you choose to buy through them, we may earn a commission at no
-          extra cost to you.
-        </p>
-      </section>
-
-      <h2>The 30-second comparison table</h2>
-      <p class="inline-note">
-        Scan the table, see where each kit shines, then click one of the Amazon buttons above or below.
-      </p>
-
-      <table>
-        <thead>
-        <tr>
-          <th>Feature</th>
-          <th>MyHeritage DNA</th>
-          <th>AncestryDNA</th>
-          <th>FamilyTreeDNA</th>
-          <th>LifeDNA</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>Main focus</td>
-          <td>Ethnicity + family matches</td>
-          <td>Family trees & relatives</td>
-          <td>Deep genealogy tools</td>
-          <td>Health & wellness insights</td>
-        </tr>
-        <tr>
-          <td>Best for</td>
-          <td>Europe-focused ancestry</td>
-          <td>Big US/UK family networks</td>
-          <td>DNA “power users”</td>
-          <td>Lifestyle & nutrition guidance</td>
-        </tr>
-        <tr>
-          <td>Ease of use</td>
-          <td>Very easy</td>
-          <td>Easy</td>
-          <td>More advanced</td>
-          <td>Easy</td>
-        </tr>
-        <tr>
-          <td>Typical price level</td>
-          <td>Low–mid</td>
-          <td>Mid</td>
-          <td>Mid</td>
-          <td>Mid–high</td>
-        </tr>
-        <tr>
-          <td>Where this kit really shines</td>
-          <td class="table-stars">Ancestry detail ★★★★★</td>
-          <td class="table-stars">Family trees ★★★★★</td>
-          <td class="table-stars">Advanced tools ★★★★★</td>
-          <td class="table-stars">Health & wellness ★★★★★</td>
-        </tr>
-        </tbody>
-      </table>
-
-      <div class="cta-box">
-        <strong>Fast track:</strong>
-        If you just want a safe pick, go with <strong>MyHeritage DNA</strong> for most people,
-        or <strong>AncestryDNA</strong> if you’re obsessed with family trees.
-        <a href="https://www.amazon.com/MyHeritage-DNA-Test-Kit-Ethnicity/dp/B072SY5JHQ?crid=2UQM2Q8OBHN2B&dib=eyJ2IjoiMSJ9.3R_ukTQB9lcZafUQkHIdGXFbN6V6x8cz5G5GfknSCo94j3TsFh9ogFTJWsDAMJ_4GSNjas5EhNCNczuoDGxOJ4FNa8bK92IzhK_Eok4uNw4jT21ZI3ZcBIyzHXhKYsoKrafhPujNL5xrSx5PoWv-IpCshkdJ_NO22MFe7-wnRvD0n-NDB_-ALAmRhSGFt96od9HCm-bVeyPFOn4IwAmwVdi208IG6xsW9f2Ah3mBapI.FuhzjY2WsM_HbTK4G3I_gsgpcZYmHmUfrrGneowzRVw&dib_tag=se&keywords=myheritage+dna+test+kit&qid=1763242435&sprefix=MyHer%2Caps%2C184&sr=8-1&linkCode=ll1&tag=genecticscom-20&linkId=10d0d4cd6d53cbea8e7a3549226ccaea&language=en_US&ref_=as_li_ss_tl"
-           rel="sponsored noopener">
-          See MyHeritage DNA on Amazon
-        </a>
+        <div class="card-ghost">
+          <h3>Safer defaults (in our view)</h3>
+          <ul>
+            <li>Clear, written retention limits (not “indefinitely unless you ask”).</li>
+            <li>Easy, documented process for full deletion and sample destruction.</li>
+            <li>No surprise re-use of your data for new purposes without fresh consent.</li>
+          </ul>
+        </div>
       </div>
 
-      <h2>MyHeritage DNA: best overall starting point</h2>
+      <h2 id="law-enforcement">2. Law enforcement & third-party access</h2>
+      <div class="chip-row">
+        <div class="chip"><span>★</span> Warrants & court orders</div>
+        <div class="chip"><span>★</span> Police use of databases</div>
+        <div class="chip"><span>★</span> Cross-border data</div>
+      </div>
       <p>
-        If you want one kit that balances price, ethnicity detail and family matching,
-        <strong>MyHeritage DNA</strong> is our default recommendation.
+        Some DNA databases have been used in criminal investigations, sometimes indirectly via relatives.
+        Companies differ in how often they cooperate, and under what conditions.
       </p>
-      <ul>
-        <li>Very solid ethnicity estimates, especially for European ancestry.</li>
-        <li>Strong matching for Scandinavia, Eastern Europe, the Balkans and Jewish heritage.</li>
-        <li>Clean interface and easy family tree tools.</li>
-        <li>Frequently discounted on Amazon.</li>
-      </ul>
-      <div class="cta-box">
-        <strong>Our verdict: the best “first DNA kit” for most Amazon buyers.</strong>
-        <a href="https://www.amazon.com/MyHeritage-DNA-Test-Kit-Ethnicity/dp/B072SY5JHQ?crid=2UQM2Q8OBHN2B&dib=eyJ2IjoiMSJ9.3R_ukTQB9lcZafUQkHIdGXFbN6V6x8cz5G5GfknSCo94j3TsFh9ogFTJWsDAMJ_4GSNjas5EhNCNczuoDGxOJ4FNa8bK92IzhK_Eok4uNw4jT21ZI3ZcBIyzHXhKYsoKrafhPujNL5xrSx5PoWv-IpCshkdJ_NO22MFe7-wnRvD0n-NDB_-ALAmRhSGFt96od9HCm-bVeyPFOn4IwAmwVdi208IG6xsW9f2Ah3mBapI.FuhzjY2WsM_HbTK4G3I_gsgpcZYmHmUfrrGneowzRVw&dib_tag=se&keywords=myheritage+dna+test+kit&qid=1763242435&sprefix=MyHer%2Caps%2C184&sr=8-1&linkCode=ll1&tag=genecticscom-20&linkId=10d0d4cd6d53cbea8e7a3549226ccaea&language=en_US&ref_=as_li_ss_tl"
-           rel="sponsored noopener">
-          Buy MyHeritage DNA on Amazon
-        </a>
+
+      <div class="grid-2">
+        <div class="card-ghost">
+          <h3>Read the fine print on:</h3>
+          <ul class="checklist">
+            <li>Whether they accept law-enforcement warrants at all.</li>
+            <li>If they notify you when data is requested (unless prohibited by law).</li>
+            <li>Which country’s courts and police have jurisdiction over the data.</li>
+          </ul>
+        </div>
+        <div class="card-ghost">
+          <h3>Things to keep in mind</h3>
+          <ul>
+            <li>Your DNA can indirectly identify relatives who never consented.</li>
+            <li>Policies can change if the company is sold or merges.</li>
+            <li>Different brands have very different approaches to police access.</li>
+          </ul>
+        </div>
       </div>
 
-      <h2>AncestryDNA: best for big family trees</h2>
+      <h2 id="research">3. Research, partners & “optional” consent</h2>
+      <div class="chip-row">
+        <div class="chip"><span>★</span> Opt-in vs. opt-out</div>
+        <div class="chip"><span>★</span> Pharma & university deals</div>
+        <div class="chip"><span>★</span> Commercial use</div>
+      </div>
       <p>
-        <strong>AncestryDNA</strong> is built around one thing: relatives. If you care more about
-        cousin matches and records than tiny percentage tweaks, this is the kit designed for you.
+        Many DNA companies offer to use your anonymised data for research or partnerships with universities
+        and commercial organisations. This can be positive, but only if you’re genuinely comfortable with it.
       </p>
-      <ul>
-        <li>Access to one of the largest consumer DNA databases.</li>
-        <li>Excellent match system for building out huge family trees.</li>
-        <li>Tight integration with Ancestry’s historical records (subscription optional).</li>
+
+      <ul class="checklist">
+        <li>Is research data sharing <strong>opt-in</strong> (ideal) or opt-out?</li>
+        <li>Can you change your mind later and withdraw consent?</li>
+        <li>Do they share data with pharmaceutical or commercial partners?</li>
+        <li>What exactly counts as “anonymised” in their policy?</li>
       </ul>
-      <div class="cta-box">
-        <strong>Our verdict: ideal if “family tree” is your main hobby.</strong>
-        <a href="https://www.amazon.com/AncestryDNA-Genetic-Ethnicity-Test/dp/B00TRLVKW0?crid=20GDMNH7N058L&dib=eyJ2IjoiMSJ9.DKc32ncgQExyWl1pTkpnOLffBpJ4ShzbPE9pZEmQB_4uyjUkUb6zQ79ANHIvkTVeze-qIPR8K43CQTRI4-3r7KItVWltAkmP4luBTc3fKpGozV-BD5G8ziXXHrPOXZQ5f5aN7O7ThWnp0edv4j2uQkYq0HDxEnsuNhm3IPJq73hpT_w96UWL51TuvlN3FxOpIOxVWqJjvNvUG_-1VCLRrfniqZm_TvPYjScnt9WwENw.o7-7uNHt1wndAKe7_z1tq6BdARMoH7XLtOMfSrD5mPM&dib_tag=se&keywords=23+and+me+dna+test+kit&qid=1763242964&sprefix=23++dna+test+kit%2Caps%2C207&sr=8-1&linkCode=ll1&tag=genecticscom-20&linkId=3fd3b2d1065c8e17766c358e929ea61e&language=en_US&ref_=as_li_ss_tl"
-           rel="sponsored noopener">
-          Buy AncestryDNA on Amazon
-        </a>
+
+      <h2 id="relatives">4. Relatives, surprises & emotional impact</h2>
+      <div class="chip-row">
+        <div class="chip"><span>★</span> Hidden relatives</div>
+        <div class="chip"><span>★</span> Non-paternity events</div>
+        <div class="chip"><span>★</span> Family dynamics</div>
+      </div>
+      <p>
+        DNA testing can reveal unexpected siblings, misattributed parentage, donor-conceived relatives and
+        other surprises. For some people this is healing. For others, it is destabilising.
+      </p>
+
+      <div class="grid-2">
+        <div class="card-ghost">
+          <h3>Before you test</h3>
+          <ul class="checklist">
+            <li>Ask yourself: “Am I ready to discover something I didn’t expect?”</li>
+            <li>Consider talking with close family about your decision to test.</li>
+            <li>Think about who you would talk to if a result is emotionally heavy.</li>
+          </ul>
+        </div>
+        <div class="card-ghost">
+          <h3>If you uncover a big surprise</h3>
+          <ul>
+            <li>Pause before contacting new relatives or confronting family.</li>
+            <li>Consider professional counselling if the news is overwhelming.</li>
+            <li>Remember that DNA results can be accurate but incomplete for context.</li>
+          </ul>
+        </div>
       </div>
 
-      <h2>FamilyTreeDNA: for serious DNA hobbyists</h2>
+      <h2 id="children">5. Testing children and other people</h2>
+      <div class="chip-row">
+        <div class="chip"><span>★</span> Consent</div>
+        <div class="chip"><span>★</span> Future autonomy</div>
+        <div class="chip"><span>★</span> Long-term records</div>
+      </div>
       <p>
-        <strong>FamilyTreeDNA</strong> is less “pretty”, more powerful. It’s what you choose when
-        you already know the basics and want deeper tools and segment analysis.
+        Some companies allow parents or guardians to submit DNA for children. This raises extra questions
+        about consent and future privacy.
       </p>
-      <ul>
-        <li>Advanced tools for analysing matches and shared segments.</li>
-        <li>Good upgrade if you’ve tested elsewhere and want extra depth.</li>
-        <li>Interface is more technical, but very capable once you get used to it.</li>
+
+      <ul class="checklist">
+        <li>Does your local law or the provider’s policy restrict child testing?</li>
+        <li>Will this create a permanent record your child did not choose?</li>
+        <li>Could the data affect your child’s insurance or privacy in the future
+            if policies or laws change?</li>
       </ul>
-      <div class="cta-box">
-        <strong>Our verdict: the right upgrade when you’ve outgrown beginner kits.</strong>
-        <a href="https://www.amazon.com/FamilyTreeDNA-Geographic-Relatives-Processed-Convenient/dp/B01NAQ1UCW?crid=1GW150RW66L28&dib=eyJ2IjoiMSJ9.gKnNnRCobmrvAXfLUUrpiKhzKJCOCDaRiXpFn34G842dBO38u11iqKmvGLz6ivGXm57Ofjxs6DUgXYXKy7J0N_qrp5iYS9Pi8yOclCaRZYPzEaz0CcX81QBcRaVb1_d5BR23sWtD_Pk3pIrSX7U6aW-d5at4F783rEgLwVNc50jfi7nu-KBtzY2KqBdRyIh8aBdMqzrEJifEcV4fu-81PJYL7xYDM2GgjK4az6YqOf4.WnUeCCsDnvJbUtTz57sy-wTn5lxiA6qNMYfbPrc6UWU&dib_tag=se&keywords=dna+kit&qid=1763243406&sprefix=dna+kit%2Caps%2C178&sr=8-10&linkCode=ll1&tag=genecticscom-20&linkId=8166a15dd53d7d11eb1912d8266f5ef4&language=en_US&ref_=as_li_ss_tl"
-           rel="sponsored noopener">
-          Buy FamilyTreeDNA on Amazon
-        </a>
+
+      <h2 id="security">6. Account security & practical protection</h2>
+      <div class="chip-row">
+        <div class="chip"><span>★</span> Strong passwords</div>
+        <div class="chip"><span>★</span> Two-factor login</div>
+        <div class="chip"><span>★</span> Shared devices</div>
+      </div>
+      <p>
+        Even with a good privacy policy, weak account security can expose sensitive information.
+      </p>
+
+      <div class="grid-2">
+        <div class="card-ghost">
+          <h3>Basic steps</h3>
+          <ul class="checklist">
+            <li>Use a unique, strong password for your DNA account.</li>
+            <li>Turn on two-factor authentication if the provider supports it.</li>
+            <li>Log out on shared or public devices.</li>
+          </ul>
+        </div>
+        <div class="card-ghost">
+          <h3>Extra caution</h3>
+          <ul>
+            <li>Be careful about posting screenshots with names or kit IDs online.</li>
+            <li>Think twice before linking your DNA account to many third-party tools.</li>
+          </ul>
+        </div>
       </div>
 
-      <h2>LifeDNA: health & lifestyle over ancestry</h2>
+      <h2 id="choosing">7. Putting it all together before you buy</h2>
       <p>
-        <strong>LifeDNA</strong> turns the focus away from “where are my ancestors from?” and
-        towards “how might my genetics affect lifestyle and wellness decisions?”.
+        When you compare kits on the main <a href="index.html">comparison page</a>, you can use this guide
+        as a mental checklist. Price and features matter – but so do policies and your own comfort level.
       </p>
-      <ul>
-        <li>Reports centred on wellness, nutrition and lifestyle.</li>
-        <li>Interesting if you already know your ancestry and want something different.</li>
-        <li>Not ideal if your main goal is building a family tree.</li>
-      </ul>
-      <div class="cta-box">
-        <strong>Our verdict: niche but useful for health-focused users.</strong>
-        <a href="https://www.amazon.com/Methylation-Complete-Wellness-Analysis-Nutrition/dp/B0DJ1VWJYL?crid=1GW150RW66L28&dib=eyJ2IjoiMSJ9.gKnNnRCobmrvAXfLUUrpiKhzKJCOCDaRiXpFn34G842dBO38u11iqKmvGLz6ivGXm57Ofjxs6DUgXYXKy7J0N_qrp5iYS9Pi8yOclCaRZYPzEaz0CcX81QBcRaVb1_d5BR23sWtD_Pk3pIrSX7U6aW-d5at4F783rEgLwVNc50jfi7nu-KBtzY2KqBdRyIh8aBdMqzrEJifEcV4fu-81PJYL7xYDM2GgjK4az6YqOf4.WnUeCCsDnvJbUtTz57sy-wTn5lxiA6qNMYfbPrc6UWU&dib_tag=se&keywords=dna+kit&qid=1763243406&sprefix=dna+kit%2Caps%2C178&sr=8-16&linkCode=ll1&tag=genecticscom-20&linkId=1a1fadf8654317b5cf1b5c613432626d&language=en_US&ref_=as_li_ss_tl"
-           rel="sponsored noopener">
-          Buy LifeDNA on Amazon
-        </a>
-      </div>
 
-      <h2>What about LivingDNA and 23andMe?</h2>
-      <p>
-        Two honourable mentions that are not the core of this Amazon-focused list:
-      </p>
-      <ul>
-        <li>
-          <strong>LivingDNA</strong> – still one of the best options for extremely detailed
-          British/European ancestry and a strong privacy stance. Great if you prioritise European
-          detail and data protection.
-        </li>
-        <li>
-          <strong>23andMe</strong> – a leader in traits and health-oriented reports, but less
-          genealogy-focused than MyHeritage DNA and AncestryDNA.
-        </li>
-      </ul>
+      <div class="cta-box">
+        <strong>How to use Genectics.com:</strong>
+        <ul class="checklist">
+          <li>Start on the <a href="index.html">comparison page</a> to match a kit to your goal.</li>
+          <li>Open the provider’s privacy policy in a new tab and skim for the topics above.</li>
+          <li>Only click through to Amazon when you’re comfortable with both features and policies.</li>
+        </ul>
+        <a href="index.html">Back to best DNA kits on Amazon</a>
+      </div>
 
       <p class="disclaimer">
-        <strong>Disclaimer:</strong> Genectics.com is an independent comparison site. Content is
-        for informational purposes only and is not medical advice. Always consult a qualified
-        healthcare professional about medical questions or genetic results. Some links are Amazon
-        affiliate links, which may pay a commission at no extra cost to you.
+        <strong>Disclaimer:</strong> This guide is for general information only and is not legal,
+        medical or financial advice. Policies change over time and may differ by country. Always
+        read the current terms on the provider’s own site and consult qualified professionals for
+        advice about your specific situation.
       </p>
     </article>
   </main>

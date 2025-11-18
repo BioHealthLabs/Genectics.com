@@ -1,113 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genectics.com – Contact</title>
-    <style>
-        :root { --bg: #020617; --text-main: #e5e7eb; --text-muted: #9ca3af; --accent: #38bdf8; }
-        * { box-sizing: border-box; }
-        body {
-            margin: 0; padding: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            line-height: 1.7;
-            background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #020617 100%);
-            color: var(--text-main);
-            -webkit-font-smoothing: antialiased;
-        }
-        .page { min-height: 100vh; display: flex; flex-direction: column; }
-        .site-header { padding: 18px 20px 8px; max-width: 1120px; margin: 0 auto; }
-        .site-brand { text-decoration: none; color: var(--text-main); font-weight: 600; letter-spacing: 0.05em; font-size: 0.9rem; text-transform: uppercase; display: none; }
-        .site-banner {
-            display: block;
-            width: 100%; max-width: 520px;
-            height: auto; margin: 10px auto 14px;
-            border-radius: 14px;
-            box-shadow: 0 12px 32px rgba(0,0,0,0.55);
-        }
-        .site-nav { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
-        .nav-link {
-            font-size: 0.85rem; padding: 6px 14px;
-            border-radius: 999px; border: 1px solid transparent;
-            background: rgba(15,23,42,0.9);
-            color: var(--text-muted); text-decoration: none;
-        }
-        .nav-link:hover { border-color: var(--accent); color: var(--accent); }
-        .nav-link.active { border-color: var(--accent); color: #e0f2fe; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        .site-main { flex: 1; max-width: 780px; margin: 0 auto 40px; padding: 10px 20px 40px; }
-        .content-card {
-            background: radial-gradient(circle at top left,#020617,#020617 55%,#020617);
-            border-radius: 22px;
-            padding: 26px 26px 30px;
-            box-shadow: 0 22px 60px rgba(0,0,0,0.75);
-            border: 1px solid rgba(148,163,184,0.16);
-        }
-        h1 { font-size: 2rem; margin-top: 4px; margin-bottom: 12px; color: #f9fafb; }
-        p { color: var(--text-main); margin-top: 0; }
-        strong { color: #f9fafb; }
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .footer {
-            text-align: center; padding: 18px 0 26px;
-            margin-top: 10px; border-top: 1px solid rgba(31,41,55,0.9);
-            font-size: 0.8em; color: var(--text-muted);
-        }
-        .footer a { color: var(--text-muted); text-decoration: none; margin: 0 10px; }
-        .footer a:hover { color: #e5e7eb; text-decoration: underline; }
-        @media (max-width: 640px) {
-            .content-card { padding: 18px 16px 24px; }
-            h1 { font-size: 1.7rem; }
-        }
-    </style>
+  <title>Genectics.com – Contact</title>
+  <meta name="description"
+        content="Contact Genectics.com for corrections, questions or partnership inquiries.">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GVJ73QQ5J"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-3GVJ73QQ5J');
-    </script>
+  <style>
+    :root {
+      --bg: #020617;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --accent: #38bdf8;
+      --chip-bg: #0b1220;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+      background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #020617 100%);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page { min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* HEADER — SAME AS NEW STYLE */
+    .site-header {
+      padding: 18px 20px 8px;
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      color: #e5e7eb;
+    }
+
+    .brand-dot {
+      width: 10px; height: 10px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(56,189,248,0.8);
+    }
+
+    .brand-text { opacity: 0.9; }
+
+    .brand-tagline {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .site-nav {
+      margin-top: 4px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .nav-link {
+      font-size: 0.82rem;
+      padding: 6px 16px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background: rgba(15,23,42,0.95);
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .nav-link.active {
+      border-color: var(--accent);
+      color: #e0f2fe;
+    }
+
+    /* MAIN SECTION */
+    .site-main {
+      flex: 1;
+      max-width: 780px;
+      margin: 0 auto 40px;
+      padding: 10px 20px 40px;
+    }
+
+    .content-card {
+      background: radial-gradient(circle at top left,#020617,#020617 55%,#020617);
+      border-radius: 22px;
+      padding: 26px 26px 30px;
+      box-shadow: 0 22px 60px rgba(0,0,0,0.75);
+      border: 1px solid rgba(148,163,184,0.16);
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      margin-top: 4px;
+      margin-bottom: 12px;
+      color: #f9fafb;
+    }
+
+    p { font-size: 0.95rem; }
+
+    strong { color: #f9fafb; }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 18px 0 26px;
+      margin-top: 10px;
+      border-top: 1px solid rgba(31,41,55,0.9);
+      font-size: 0.8em;
+      color: var(--text-muted);
+    }
+
+    .footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      color: #e5e7eb;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .content-card { padding: 18px 16px 24px; }
+      h1 { font-size: 1.6rem; }
+    }
+  </style>
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GVJ73QQ5J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3GVJ73QQ5J');
+  </script>
 </head>
 <body>
 <div class="page">
-    <header class="site-header">
-        <a href="index.html" class="site-brand">GENECTICS.COM</a>
-        <img src="genectics_banner.png" alt="Genectics.com" class="site-banner">
 
-        <nav class="site-nav">
-            <a href="index.html" class="nav-link">Comparison</a>
-            <a href="guide.html" class="nav-link">Safety Guide</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a href="privacy.html" class="nav-link">Privacy</a>
-            <a href="disclosure.html" class="nav-link">Disclosure</a>
-            <a href="contact.html" class="nav-link active">Contact</a>
-        </nav>
-    </header>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-mark">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Genectics.com</span>
+      </div>
+      <div class="brand-tagline">
+        Independent DNA test comparison and safety guidance.
+      </div>
+    </div>
 
-    <main class="site-main">
-        <section class="content-card">
-            <h1>Contact Us</h1>
+    <nav class="site-nav">
+      <a href="index.html" class="nav-link">Comparison</a>
+      <a href="guide.html" class="nav-link">Safety Guide</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="privacy.html" class="nav-link">Privacy</a>
+      <a href="disclosure.html" class="nav-link">Disclosure</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </nav>
+  </header>
 
-            <p>Do you have questions, want to report an error, or have a partnership inquiry? We’d love to hear from you!</p>
+  <!-- MAIN -->
+  <main class="site-main">
+    <section class="content-card">
 
-            <p><strong>Email:</strong> info@genectics.com</p>
-            <p><strong>Company:</strong> Ronarn AS</p>
-            <p><strong>Registered Address:</strong><br>
-                Pb. 1010, 1010 Lillstrom syd,<br>
-                2012 Lillestrom, Norway
-            </p>
+      <h1>Contact Us</h1>
 
-            <p><a href="index.html">Back to Home</a></p>
-        </section>
+      <p>Do you have corrections, feedback, partnership requests, or want to report an issue?</p>
 
-        <div class="footer">
-            <a href="about.html">About Us</a> |
-            <a href="privacy.html">Privacy Policy</a> |
-            <a href="disclosure.html">Affiliate Disclosure</a> |
-            <a href="contact.html">Contact</a>
-        </div>
-    </main>
+      <p><strong>Email:</strong><br>
+         info@genectics.com
+      </p>
+
+      <p><strong>Company:</strong><br>
+         Ronarn AS
+      </p>
+
+      <p><strong>Registered Address:</strong><br>
+         Pb. 1010 Lillestrøm Syd<br>
+         2012 Lillestrøm, Norway
+      </p>
+
+      <p><a href="index.html">← Back to Home</a></p>
+
+    </section>
+
+    <div class="footer">
+      <a href="about.html">About Us</a> |
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="disclosure.html">Affiliate Disclosure</a> |
+      <a href="contact.html">Contact</a>
+
+      <p>Genectics.com is owned and operated by Ronarn AS.</p>
+    </div>
+  </main>
 </div>
 </body>
 </html>

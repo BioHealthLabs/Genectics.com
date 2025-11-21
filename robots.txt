@@ -1,3 +1,1 @@
-User-agent: *
-Allow: /
-Sitemap: https://www.genectics.com/sitemap.xml
+Sitemap: https://genectics.com/sitemap.xml

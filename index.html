@@ -6,381 +6,11 @@
 
   <title>Genectics.com – Best DNA Test Kits on Amazon (2025)</title>
   <meta name="description"
-        content="Compare the most useful DNA test kits on Amazon in 2025. See which kits are best for ancestry detail, family matches, health & wellness and price – with clear star ratings per category.">
+        content="Compare the most useful DNA test kits on Amazon in 2025. See which kits are best for ancestry detail, family matches, health & wellness and price – with clear star ratings per category." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.genectics.com/" />
 
-  <style>
-    :root {
-      --bg: #020617;
-      --text-main: #e5e7eb;
-      --text-muted: #9ca3af;
-      --accent: #38bdf8;
-      --chip-bg: #0b1220;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.7;
-      background: radial-gradient(circle at top, #0b1120 0, #020617 45%, #020617 100%);
-      color: var(--text-main);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* HEADER – samme stil som de andre sidene */
-
-    .site-header {
-      padding: 18px 20px 8px;
-      max-width: 1120px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .brand {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .brand-mark {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      color: #e5e7eb;
-    }
-
-    .brand-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 12px rgba(56,189,248,0.8);
-    }
-
-    .brand-text { opacity: 0.9; }
-
-    .brand-tagline {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .site-nav {
-      margin-top: 4px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .nav-link {
-      font-size: 0.82rem;
-      padding: 6px 16px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      background: rgba(15,23,42,0.95);
-      color: var(--text-muted);
-      text-decoration: none;
-    }
-
-    .nav-link:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .nav-link.active {
-      border-color: var(--accent);
-      color: #e0f2fe;
-    }
-
-    /* MAIN LAYOUT */
-
-    .site-main {
-      flex: 1;
-      max-width: 900px;
-      margin: 0 auto 40px;
-      padding: 10px 20px 40px;
-    }
-
-    .article-card {
-      background: radial-gradient(circle at top left, #020617, #020617 55%, #020617);
-      border-radius: 22px;
-      padding: 22px 24px 32px;
-      box-shadow: 0 22px 60px rgba(0,0,0,0.75);
-      border: 1px solid rgba(148,163,184,0.16);
-    }
-
-    .hero-kicker {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--accent);
-      margin-bottom: 6px;
-    }
-
-    h1 {
-      color: #f9fafb;
-      font-size: 1.9rem;
-      margin-top: 2px;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      color: #e5e7eb;
-      border-bottom: 1px solid rgba(148,163,184,0.25);
-      padding-bottom: 6px;
-      margin-top: 28px;
-      font-size: 1.3rem;
-    }
-
-    h3 {
-      color: #e5e7eb;
-      margin-top: 18px;
-      font-size: 1.02rem;
-    }
-
-    p {
-      color: var(--text-main);
-      margin-top: 0;
-      font-size: 0.95rem;
-    }
-
-    ul { padding-left: 18px; margin-top: 6px; }
-    ul li { color: var(--text-main); font-size: 0.95rem; }
-
-    .inline-note {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      margin-top: 6px;
-    }
-
-    /* TOP PICKS */
-
-    .top-picks {
-      margin: 18px 0 20px;
-      padding: 16px 18px 18px;
-      border-radius: 16px;
-      border: 1px solid rgba(56,189,248,0.5);
-      background: radial-gradient(circle at top left,#061826,#020617 60%);
-    }
-
-    .top-picks-title {
-      font-size: 1.1rem;
-      margin: 0 0 8px;
-      color: #e5f4ff;
-    }
-
-    .top-picks-sub {
-      font-size: 0.86rem;
-      color: var(--text-muted);
-      margin: 0 0 10px;
-    }
-
-    .chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 10px;
-    }
-
-    .chip {
-      font-size: 0.76rem;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: var(--chip-bg);
-      border: 1px solid rgba(148,163,184,0.4);
-      color: var(--text-muted);
-      white-space: nowrap;
-    }
-
-    .top-picks-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 14px;
-    }
-
-    .pick-card {
-      padding: 12px 12px 14px;
-      border-radius: 14px;
-      background: rgba(15,23,42,0.95);
-      border: 1px solid rgba(148,163,184,0.35);
-    }
-
-    .pick-tag {
-      font-size: 0.8rem;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 2px;
-    }
-
-    .pick-title {
-      font-size: 0.96rem;
-      margin: 0 0 4px;
-      color: #f9fafb;
-    }
-
-    .pick-text {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      margin: 6px 0 10px;
-    }
-
-    .pick-card a {
-      display: inline-block;
-      background-color: var(--accent);
-      color: #020617;
-      padding: 7px 16px;
-      text-decoration: none;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.85rem;
-    }
-
-    .pick-card a:hover {
-      filter: brightness(1.05);
-    }
-
-    .top-note {
-      margin-top: 10px;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    /* TABLE + STARS */
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 16px 0 8px;
-      font-size: 0.9em;
-      text-align: left;
-    }
-
-    th, td {
-      border: 1px solid rgba(148,163,184,0.35);
-      padding: 8px 9px;
-      vertical-align: top;
-    }
-
-    th {
-      background-color: rgba(15,23,42,0.95);
-      color: #e5e7eb;
-      font-weight: 600;
-      font-size: 0.88rem;
-    }
-
-    tr:nth-child(even) td {
-      background-color: rgba(15,23,42,0.6);
-    }
-
-    .row-label {
-      width: 34%;
-      font-weight: 500;
-      color: #e5e7eb;
-      font-size: 0.9rem;
-    }
-
-    .stars {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      letter-spacing: 0.05em;
-      color: #fbbf24; /* gyllen */
-      font-size: 0.9rem;
-      display: inline-block;
-      margin-bottom: 2px;
-    }
-
-    .table-note {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
-
-    /* CTA-BOKSER */
-
-    .cta-box {
-      border: 1px solid rgba(56,189,248,0.7);
-      padding: 16px 18px;
-      margin: 22px 0;
-      background: radial-gradient(circle at top left,#102a3a,#020617 55%);
-      border-radius: 14px;
-      text-align: left;
-      color: #e0f2fe;
-      font-size: 0.9rem;
-    }
-
-    .cta-box strong {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 0.94rem;
-    }
-
-    .cta-box a {
-      display: inline-block;
-      background-color: var(--accent);
-      color: #020617;
-      padding: 8px 18px;
-      text-decoration: none;
-      border-radius: 999px;
-      font-weight: 600;
-      margin-top: 8px;
-      font-size: 0.85rem;
-    }
-
-    .cta-box a:hover {
-      filter: brightness(1.05);
-    }
-
-    .disclaimer {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-top: 24px;
-      border-top: 1px solid rgba(31,41,55,0.9);
-      padding-top: 12px;
-    }
-
-    /* FOOTER */
-
-    .footer {
-      text-align: center;
-      padding: 18px 0 26px;
-      margin-top: 30px;
-      border-top: 1px solid rgba(31,41,55,0.9);
-      font-size: 0.8em;
-      color: var(--text-muted);
-    }
-
-    .footer a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    .footer a:hover {
-      color: #e5e7eb;
-      text-decoration: underline;
-    }
-
-    @media (max-width: 640px) {
-      .article-card { padding: 18px 16px 24px; }
-      h1 { font-size: 1.6rem; }
-      .top-picks-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="/styles.css" />
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GVJ73QQ5J"></script>
@@ -395,307 +25,316 @@
 <div class="page">
 
   <!-- HEADER -->
-  <header class="site-header">
+  <header>
     <div class="brand">
-      <div class="brand-mark">
-        <span class="brand-dot"></span>
-        <span class="brand-text">Genectics.com</span>
-      </div>
+      <div class="brand-name">Genectics.com</div>
       <div class="brand-tagline">
         Compare DNA test kits on Amazon – without guessing, hype or paid rankings.
       </div>
     </div>
-
-    <nav class="site-nav">
-      <a href="index.html" class="nav-link active">Comparison</a>
-      <a href="guide.html" class="nav-link">Safety Guide</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="privacy.html" class="nav-link">Privacy</a>
-      <a href="disclosure.html" class="nav-link">Disclosure</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </nav>
+    <div class="trust-tags">
+      <span class="trust-tag">No sponsorships</span>
+      <span class="trust-tag">Independent DNA kit reviews</span>
+      <span class="trust-tag">Affiliate-supported</span>
+    </div>
   </header>
 
   <!-- MAIN -->
-  <main class="site-main">
-    <article class="article-card">
+  <main>
 
-      <p class="hero-kicker">Amazon · 2025 short list</p>
-      <h1>Best DNA Test Kits on Amazon in 2025</h1>
-      <p>
-        Most people buying a DNA kit in 2025 do three things: search on Amazon, get overwhelmed,
-        and then pick whatever has the most reviews. Genectics.com exists to make that decision less random.
-      </p>
-      <p>
-        On this page we focus on four widely available kits that actually solve different jobs:
-        <strong>MyHeritage DNA</strong>, <strong>AncestryDNA</strong>,
-        <strong>FamilyTreeDNA</strong> and <strong>LifeDNA</strong>.
-        The goal is not to crown a single winner, but to show which kit is strongest for which goal – with
-        clear star ratings per category.
-      </p>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div>
+        <h1 id="hero-heading" class="hero-title">
+          Find the right DNA test kit for your actual goal.
+        </h1>
 
-      <!-- TOP PICKS – SELGENDE, MEN UTEN STJERNE-SPAM -->
-      <section class="top-picks">
-        <h2 class="top-picks-title">Quick picks if you don’t want to overthink it</h2>
-        <p class="top-picks-sub">
-          Choose your goal below and go straight to the kit that makes the most sense for that use-case.
+        <p class="hero-subtitle">
+          Most people buying a DNA kit in 2025 do three things: search on Amazon, get overwhelmed,
+          and then pick whatever has the most reviews. Genectics.com exists to make that decision less random.
         </p>
 
-        <div class="chip-row">
-          <span class="chip">Most beginners → MyHeritage DNA</span>
-          <span class="chip">Big family tree builders → AncestryDNA</span>
-          <span class="chip">Power users → FamilyTreeDNA</span>
-          <span class="chip">Wellness-focused → LifeDNA</span>
+        <ul class="hero-list">
+          <li>See which kits are best for ancestry detail vs. family matching vs. wellness.</li>
+          <li>Understand the real trade-offs between MyHeritage, AncestryDNA, FamilyTreeDNA and LifeDNA.</li>
+          <li>Avoid overpaying for features you don’t actually need on your first kit.</li>
+        </ul>
+
+        <div class="hero-highlight">
+          Our goal is simple: help you pick the DNA test that fits your main job today –
+          not the one with the flashiest marketing.
         </div>
-
-        <div class="top-picks-grid">
-          <div class="pick-card">
-            <div class="pick-tag">Best first DNA kit</div>
-            <h3 class="pick-title">MyHeritage DNA Test Kit</h3>
-            <p class="pick-text">
-              Great starting point if you want solid European ancestry detail, easy family matches and
-              frequent discounts. Designed for “normal people”, not just hardcore genealogists.
-            </p>
-            <a href="https://www.amazon.com/MyHeritage-DNA-Test-Kit-Ethnicity/dp/B072SY5JHQ?tag=genecticscom-20"
-               rel="sponsored noopener" target="_blank">
-              View MyHeritage DNA on Amazon
-            </a>
-          </div>
-
-          <div class="pick-card">
-            <div class="pick-tag">Best for family trees</div>
-            <h3 class="pick-title">AncestryDNA Genetic Test Kit</h3>
-            <p class="pick-text">
-              If your main goal is to map out a huge family tree and connect with cousins,
-              AncestryDNA is still the ecosystem built around that exact use-case.
-            </p>
-            <a href="https://www.amazon.com/AncestryDNA-Genetic-Ethnicity-Test/dp/B00TRLVKW0?tag=genecticscom-20"
-               rel="sponsored noopener" target="_blank">
-              View AncestryDNA on Amazon
-            </a>
-          </div>
-
-          <div class="pick-card">
-            <div class="pick-tag">For DNA geeks</div>
-            <h3 class="pick-title">FamilyTreeDNA Test Kit</h3>
-            <p class="pick-text">
-              Built for people who want to go beyond a simple ethnicity wheel: more tools, more knobs,
-              more depth. Less “pretty”, more control.
-            </p>
-            <a href="https://www.amazon.com/FamilyTreeDNA-Geographic-Relatives-Processed-Convenient/dp/B01NAQ1UCW?tag=genecticscom-20"
-               rel="sponsored noopener" target="_blank">
-              View FamilyTreeDNA on Amazon
-            </a>
-          </div>
-
-          <div class="pick-card">
-            <div class="pick-tag">Best for wellness</div>
-            <h3 class="pick-title">LifeDNA Wellness & Nutrition</h3>
-            <p class="pick-text">
-              You already know roughly where your family is from and care more about nutrition,
-              wellness and traits? LifeDNA leans into that instead of genealogy.
-            </p>
-            <a href="https://www.amazon.com/Methylation-Complete-Wellness-Analysis-Nutrition/dp/B0DJ1VWJYL?tag=genecticscom-20"
-               rel="sponsored noopener" target="_blank">
-              View LifeDNA on Amazon
-            </a>
-          </div>
-        </div>
-
-        <p class="top-note">
-          These are affiliate links. If you choose to buy through them, we may earn a commission at no extra cost to you.
-          Rankings are editorial and not for sale.
-        </p>
-      </section>
-
-      <h2>The 30-second comparison table (stars by category)</h2>
-      <p>
-        Each kit is rated <strong>by category</strong>, not overall. Nobody “wins everything” –
-        each brand has lanes where it clearly makes more sense.
-      </p>
-
-      <table>
-        <thead>
-          <tr>
-            <th class="row-label">Category</th>
-            <th>MyHeritage DNA</th>
-            <th>AncestryDNA</th>
-            <th>FamilyTreeDNA</th>
-            <th>LifeDNA</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="row-label">Ancestry detail (esp. Europe)</td>
-            <td>
-              <span class="stars">★★★★★</span><br>
-              Very strong for European and mixed European backgrounds.
-            </td>
-            <td>
-              <span class="stars">★★★★☆</span><br>
-              Good global coverage, slightly less “Euro-tilted”.
-            </td>
-            <td>
-              <span class="stars">★★★★☆</span><br>
-              Deep tools, especially with extra tests and uploads.
-            </td>
-            <td>
-              <span class="stars">★★☆☆☆</span><br>
-              Ancestry is not its main purpose.
-            </td>
-          </tr>
-          <tr>
-            <td class="row-label">Family matching & tree tools</td>
-            <td>
-              <span class="stars">★★★★☆</span><br>
-              Strong matches and solid tree tools for most users.
-            </td>
-            <td>
-              <span class="stars">★★★★★</span><br>
-              The king of giant trees and cousin networks.
-            </td>
-            <td>
-              <span class="stars">★★★★☆</span><br>
-              Powerful, more technical matching options.
-            </td>
-            <td>
-              <span class="stars">★★☆☆☆</span><br>
-              Focused on wellness, not big family trees.
-            </td>
-          </tr>
-          <tr>
-            <td class="row-label">Ease of use (for beginners)</td>
-            <td>
-              <span class="stars">★★★★★</span><br>
-              Very beginner-friendly and quick to understand.
-            </td>
-            <td>
-              <span class="stars">★★★★☆</span><br>
-              Also easy, especially if you like records and trees.
-            </td>
-            <td>
-              <span class="stars">★★★☆☆</span><br>
-              More buttons, more depth – better for enthusiasts.
-            </td>
-            <td>
-              <span class="stars">★★★★☆</span><br>
-              Simple dashboards focused on wellness and traits.
-            </td>
-          </tr>
-          <tr>
-            <td class="row-label">Health / wellness focus</td>
-            <td>
-              <span class="stars">★★☆☆☆</span><br>
-              Mainly ancestry & relatives, limited health angle.
-            </td>
-            <td>
-              <span class="stars">★★★☆☆</span><br>
-              Some health-related features, but not the core.
-            </td>
-            <td>
-              <span class="stars">★★☆☆☆</span><br>
-              Built more for genealogy than wellness.
-            </td>
-            <td>
-              <span class="stars">★★★★★</span><br>
-              Designed around wellness, nutrition and lifestyle.
-            </td>
-          </tr>
-          <tr>
-            <td class="row-label">Price / value (typical Amazon price)</td>
-            <td>
-              <span class="stars">★★★★★</span><br>
-              Often aggressively discounted – high value per euro.
-            </td>
-            <td>
-              <span class="stars">★★★★☆</span><br>
-              Mid-range pricing, strong value for tree-builders.
-            </td>
-            <td>
-              <span class="stars">★★★★☆</span><br>
-              Fair for the depth you get as an enthusiast.
-            </td>
-            <td>
-              <span class="stars">★★★☆☆</span><br>
-              You pay for the niche wellness angle.
-            </td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p class="table-note">
-        Star ratings are editorial, relative and rounded to the nearest half-step.  
-        They are not clinical accuracy scores – they’re here to make the trade-offs obvious at a glance.
-      </p>
-
-      <h2>Which kit should you actually pick?</h2>
-      <p>
-        If you want a simple rule of thumb:
-      </p>
-      <ul>
-        <li><strong>Choose MyHeritage DNA</strong> if this is your first kit and you care most about ancestry + relatives.</li>
-        <li><strong>Choose AncestryDNA</strong> if your main fantasy is a giant, documented family tree.</li>
-        <li><strong>Choose FamilyTreeDNA</strong> if you already love DNA as a hobby and want more knobs to turn.</li>
-        <li><strong>Choose LifeDNA</strong> if you’re more curious about wellness + nutrition than ancestry.</li>
-      </ul>
-
-      <div class="cta-box">
-        <strong>Ready to move from “maybe later” to done?</strong>
-        Start with the kit that fits your main goal now. You can always upload or test with other services later.
-        <a href="https://www.amazon.com/MyHeritage-DNA-Test-Kit-Ethnicity/dp/B072SY5JHQ?tag=genecticscom-20"
-           rel="sponsored noopener" target="_blank">
-          Check today’s price for MyHeritage DNA on Amazon
-        </a>
       </div>
 
-      <p class="disclaimer">
-        <strong>Disclaimer:</strong> Genectics.com does not provide medical or legal advice.  
-        This page is for informational and comparison purposes only. Always read the current terms and
-        privacy policies on the provider’s own website before buying.
+      <aside class="hero-aside">
+        <div class="rating-pill">
+          <span class="star">★</span>
+          Most popular: <strong>First-time ancestry kits</strong>
+        </div>
+        <p class="hero-note">
+          You don’t need to be a hardcore genealogist to get value from a DNA kit.
+          Start with one that matches your main goal – you can always upload or test elsewhere later.
+        </p>
+        <a href="#compare" class="btn-primary">
+          Compare top DNA kits
+          <span class="chevron">›</span>
+        </a>
+      </aside>
+    </section>
+
+    <!-- COMPARISON TABLE -->
+    <section id="compare" aria-labelledby="compare-heading">
+      <h2 id="compare-heading" class="section-title">
+        Best DNA test kits on Amazon – side by side
+      </h2>
+      <p class="section-subtitle">
+        Each kit is rated by category, not overall. Nobody “wins everything” – each brand has lanes where it
+        clearly makes more sense. We may earn a commission when you buy via our links, at no extra cost to you.
+        For privacy and risk, read our in-depth
+        <a href="guide.html">DNA safety & privacy guide</a>.
       </p>
 
-    </article>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+          <tr>
+            <th scope="col">Shop</th>
+            <th scope="col">DNA kit</th>
+            <th scope="col">Best for</th>
+            <th scope="col">Ancestry detail</th>
+            <th scope="col">Family matches</th>
+            <th scope="col">Health / wellness</th>
+            <th scope="col">Price / value</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          <!-- MyHeritage -->
+          <tr id="myheritage">
+            <td class="buy-col">
+              <a href="https://www.amazon.com/MyHeritage-DNA-Test-Kit-Ethnicity/dp/B072SY5JHQ?tag=genecticscom-20"
+                 class="btn-compare" rel="nofollow sponsored noopener" target="_blank">
+                View offer
+              </a>
+            </td>
+            <td class="brand-col">
+              MyHeritage DNA Test Kit
+              <div class="badge-top">Best first DNA kit</div>
+            </td>
+            <td><span class="pill-skin">Most beginners · European-leaning ancestry</span></td>
+            <td>
+              <div class="stars">★★★★★</div>
+              <div class="rating-score">Very strong for European &amp; mixed European backgrounds.</div>
+            </td>
+            <td>
+              <div class="stars">★★★★☆</div>
+              <div class="rating-score">Good matches &amp; solid tree tools for most users.</div>
+            </td>
+            <td>
+              <div class="stars">★★☆☆☆</div>
+              <div class="rating-score">Mainly ancestry &amp; relatives, limited health angle.</div>
+            </td>
+            <td>
+              <div class="stars">★★★★★</div>
+              <div class="rating-score">Often discounted – high value per euro.</div>
+            </td>
+          </tr>
+
+          <!-- AncestryDNA -->
+          <tr id="ancestry">
+            <td class="buy-col">
+              <a href="https://www.amazon.com/AncestryDNA-Genetic-Ethnicity-Test/dp/B00TRLVKW0?tag=genecticscom-20"
+                 class="btn-compare" rel="nofollow sponsored noopener" target="_blank">
+                View offer
+              </a>
+            </td>
+            <td class="brand-col">
+              AncestryDNA Genetic Test Kit
+              <div class="badge-top">Best for big family trees</div>
+            </td>
+            <td><span class="pill-skin">Family tree builders · records &amp; cousins</span></td>
+            <td>
+              <div class="stars">★★★★☆</div>
+              <div class="rating-score">Good global coverage, slightly less “Euro-tilted”.</div>
+            </td>
+            <td>
+              <div class="stars">★★★★★</div>
+              <div class="rating-score">The king of giant trees and cousin networks.</div>
+            </td>
+            <td>
+              <div class="stars">★★★☆☆</div>
+              <div class="rating-score">Some health features, but not the core focus.</div>
+            </td>
+            <td>
+              <div class="stars">★★★★☆</div>
+              <div class="rating-score">Strong value if you’ll use the records and tree tools.</div>
+            </td>
+          </tr>
+
+          <!-- FamilyTreeDNA -->
+          <tr id="ftdna">
+            <td class="buy-col">
+              <a href="https://www.amazon.com/FamilyTreeDNA-Geographic-Relatives-Processed-Convenient/dp/B01NAQ1UCW?tag=genecticscom-20"
+                 class="btn-compare" rel="nofollow sponsored noopener" target="_blank">
+                View offer
+              </a>
+            </td>
+            <td class="brand-col">
+              FamilyTreeDNA Test Kit
+              <div class="badge-top">For DNA geeks</div>
+            </td>
+            <td><span class="pill-skin">Enthusiasts · power-users</span></td>
+            <td>
+              <div class="stars">★★★★☆</div>
+              <div class="rating-score">Deep tools, especially with extra tests &amp; uploads.</div>
+            </td>
+            <td>
+              <div class="stars">★★★★☆</div>
+              <div class="rating-score">Powerful, more technical matching options.</div>
+            </td>
+            <td>
+              <div class="stars">★★☆☆☆</div>
+              <div class="rating-score">Built more for genealogy than wellness.</div>
+            </td>
+            <td>
+              <div class="stars">★★★★☆</div>
+              <div class="rating-score">Fair for the depth you get as an enthusiast.</div>
+            </td>
+          </tr>
+
+          <!-- LifeDNA -->
+          <tr id="lifedna">
+            <td class="buy-col">
+              <a href="https://www.amazon.com/Methylation-Complete-Wellness-Analysis-Nutrition/dp/B0DJ1VWJYL?tag=genecticscom-20"
+                 class="btn-compare" rel="nofollow sponsored noopener" target="_blank">
+                View offer
+              </a>
+            </td>
+            <td class="brand-col">
+              LifeDNA Wellness &amp; Nutrition
+              <div class="badge-top">Best for wellness focus</div>
+            </td>
+            <td><span class="pill-skin">Wellness-focused · traits &amp; lifestyle</span></td>
+            <td>
+              <div class="stars">★★☆☆☆</div>
+              <div class="rating-score">Ancestry is not its main purpose.</div>
+            </td>
+            <td>
+              <div class="stars">★★☆☆☆</div>
+              <div class="rating-score">Not built around big family trees.</div>
+            </td>
+            <td>
+              <div class="stars">★★★★★</div>
+              <div class="rating-score">Designed around wellness, nutrition &amp; lifestyle.</div>
+            </td>
+            <td>
+              <div class="stars">★★★☆☆</div>
+              <div class="rating-score">You pay for the niche wellness angle.</div>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <p class="section-subtitle">
+        Star ratings are editorial, relative and rounded to the nearest half-step.
+        They are here to make the trade-offs obvious at a glance – not to replace clinical accuracy studies.
+      </p>
+    </section>
+
+    <!-- GUIDE CARDS -->
+    <section class="grid" aria-label="Guides to DNA testing">
+      <article class="card">
+        <h2>New to DNA testing?</h2>
+        <p>
+          Start with a simple ancestry-first kit like MyHeritage DNA or AncestryDNA.
+          Our beginner guide walks you through what to expect, how to read your results and
+          how to avoid common regrets.
+        </p>
+        <a href="guide.html" class="btn-primary">
+          Read the safety & privacy guide ›
+        </a>
+      </article>
+
+      <article class="card">
+        <h2>Already own raw DNA data?</h2>
+        <p>
+          If you already tested elsewhere, you may be able to upload your raw DNA file to
+          other services for more insights instead of buying a brand new kit.
+        </p>
+        <a href="about.html" class="btn-primary">
+          Learn more about our approach ›
+        </a>
+      </article>
+    </section>
+
+    <!-- MINI FAQ -->
+    <section class="card faq" aria-labelledby="faq-heading" style="margin-top: 24px;">
+      <h2 id="faq-heading" class="section-title">DNA kit FAQ</h2>
+
+      <h3>Will these kits tell me everything about my health?</h3>
+      <p>
+        No. Consumer DNA tests are not a substitute for medical diagnostics. They can highlight traits,
+        risks or interesting patterns – but you should always discuss health decisions with a doctor.
+      </p>
+
+      <h3>Is my DNA safe with these companies?</h3>
+      <p>
+        Each provider has its own privacy policy and data-sharing rules. Before you buy, read their latest
+        terms on their website and decide what you’re comfortable with. Our
+        <a href="guide.html">safety guide</a> walks through what to look for.
+      </p>
+
+      <h3>Can I use more than one DNA service?</h3>
+      <p>
+        Yes. Many enthusiasts start with one kit, then either upload their raw data to other platforms
+        or order extra tests later for deeper ancestry or health insights.
+      </p>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="disclaimer">
+      <p>
+        Genectics.com does not provide medical or legal advice. This page is for informational and comparison
+        purposes only. Always read the current terms and privacy policies on the provider’s own website before buying.
+      </p>
+      <p>
+        This website is reader-supported. When you buy products via links on this page, we may earn a small
+        commission from Amazon or other partners. We do not accept payment for positive reviews or higher rankings.
+      </p>
+    </section>
+
   </main>
-  <footer class="footer">
-    <p>
-      © 2025 Genectics.com – Independent DNA test comparison. Operated by ronarn AS, Norway.
-      Affiliate-supported but independent. No paid rankings.
-    </p>
 
-    <p>
-      Contact: <a href="mailto:info@genectics.com">info@genectics.com</a> ·
-      Business address: Pb. 1010 Lillestrøm Syd, 2012 Lillestrøm, Norway
-    </p>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <span>© 2025 Genectics.com – Independent DNA test comparison. Operated by ronarn AS, Norway.</span>
+    <span>Affiliate-supported but independent. No paid rankings.</span>
+    <span>Contact: <a href="mailto:info@genectics.com">info@genectics.com</a></span>
+    <span>Business address: Pb. 1010 Lillestrøm Syd, 2012 Lillestrøm, Norway</span>
 
-    <p>
+    <span class="footer-links">
       <a href="about.html">About Genectics.com</a> ·
       <a href="privacy.html">On-site Privacy</a> ·
       <a href="disclosure.html">Affiliate Disclosure</a> ·
-      <a href="contact.html">Contact</a>
-    </p>
-
-    <p>
-      <a href="https://privacypolicy.bio" target="_blank" rel="noopener">Global Privacy Policy</a> ·
-      <a href="https://terms.bio" target="_blank" rel="noopener">Terms</a> ·
-      <a href="https://disclaimer.bio" target="_blank" rel="noopener">Medical &amp; Affiliate Disclaimer</a> ·
-      <a href="https://disclosure.bio" target="_blank" rel="noopener">Network Affiliate Disclosure</a> ·
-      <a href="https://policies.bio" target="_blank" rel="noopener">Policies</a> ·
-      <a href="https://transparency.bio" target="_blank" rel="noopener">Transparency</a>
-    </p>
-
-    <p>
+      <a href="contact.html">Contact</a> ·
       <a href="https://organization.bio" target="_blank" rel="noopener">About the Publisher</a> ·
       <a href="https://contactus.bio" target="_blank" rel="noopener">Network Contact</a> ·
       <a href="https://affiliates.bio" target="_blank" rel="noopener">Affiliates</a> ·
       <a href="https://advertisement.bio" target="_blank" rel="noopener">Advertisements</a> ·
       <a href="https://guides.bio" target="_blank" rel="noopener">Editorial Guides</a> ·
+      <a href="https://policies.bio" target="_blank" rel="noopener">Policies</a> ·
+      <a href="https://transparency.bio" target="_blank" rel="noopener">Transparency</a> ·
       <a href="https://ethics.bio" target="_blank" rel="noopener">Ethics</a> ·
       <a href="https://standards.bio" target="_blank" rel="noopener">Editorial Standards</a> ·
       <a href="https://indexing.bio" target="_blank" rel="noopener">Indexing</a> ·
-      <a href="https://verification.bio" target="_blank" rel="noopener">Verification</a>
-    </p>
+      <a href="https://verification.bio" target="_blank" rel="noopener">Verification</a> ·
+      <a href="https://disclaimer.bio" target="_blank" rel="noopener">Disclaimer</a> ·
+      <a href="https://disclosure.bio" target="_blank" rel="noopener">Network Disclosure</a> ·
+      <a href="https://terms.bio" target="_blank" rel="noopener">Terms</a>
+    </span>
   </footer>
-
 
 </div>
 </body>

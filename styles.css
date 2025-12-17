@@ -153,37 +153,41 @@ header {
   font-weight: 600;
 }
 
-.hero-aside { display: flex; flex-direction: column; gap: 10px; }
-.hero-note { font-size: 12px; color: var(--text-muted); margin: 0; }
-
-/* HERO ACTIONS – spacing fixed */
+/* HERO ACTIONS */
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;             /* desktop spacing */
+  gap: 14px;
   margin-top: 14px;
   align-items: center;
 }
 
-/* Extra targeted spacing for the exact case in your screenshot */
-.hero-actions .btn-secondary + .rating-pill {
-  margin-top: 6px;
+/* ✅ THE REAL FIX: space between CTA block and aside on mobile */
+.hero-aside { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px; 
+}
+@media (max-width: 767px) {
+  .hero-aside { margin-top: 16px; }  /* <-- THIS fixes your screenshot */
+}
+@media (min-width: 768px) {
+  .hero-aside { margin-top: 0; }     /* grid gap handles spacing on desktop */
 }
 
-/* Mobile: stack + more air */
+.hero-note { font-size: 12px; color: var(--text-muted); margin: 0; }
+
+/* Mobile: stack buttons neatly */
 @media (max-width: 560px) {
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
-    gap: 16px;           /* mobile spacing */
+    gap: 16px;
   }
   .hero-actions .btn-primary,
   .hero-actions .btn-secondary {
     width: 100%;
     justify-content: center;
-  }
-  .hero-actions .btn-secondary + .rating-pill {
-    margin-top: 0; /* gap already handles spacing when stacked */
   }
 }
 
@@ -356,7 +360,6 @@ tbody tr:last-child td { border-bottom: none; }
   background: var(--bg-soft);
 }
 
-/* FIX: pill-skin should look like a pill */
 .pill-skin {
   display: inline-flex;
   align-items: center;
@@ -403,14 +406,12 @@ tbody tr:last-child td { border-bottom: none; }
   gap: 6px;
 }
 
-/* Footer links block */
 .footer-links {
   margin-top: 8px;
   line-height: 1.7;
   word-break: break-word;
 }
 
-/* Footer links subtle */
 .site-footer a {
   color: var(--text-main);
   text-decoration-color: rgba(15, 23, 42, 0.25);

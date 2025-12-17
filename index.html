@@ -21,6 +21,38 @@
       text-align: center;
     }
 
+    /* ===== Header tabs (added) ===== */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .tab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      background: var(--bg-soft);
+      font-size: 13px;
+      font-weight: 650;
+      text-decoration: none;
+      color: var(--text-main);
+      line-height: 1;
+    }
+    .tab:hover {
+      border-color: rgba(236, 72, 153, 0.45);
+      background: rgba(236, 72, 153, 0.06);
+    }
+    .tab.is-active,
+    .tab[aria-current="page"] {
+      border-color: rgba(236, 72, 153, 0.55);
+      background: var(--accent-soft);
+      color: var(--text-main);
+    }
+
     /* ===== Consent (HARD) ===== */
     body.consent-locked {
       overflow: hidden !important;
@@ -217,11 +249,22 @@
           Compare DNA test kits – without guessing, hype or paid rankings.
         </div>
       </div>
+
       <div class="trust-tags">
         <span class="trust-tag">No sponsorships</span>
         <span class="trust-tag">Independent DNA kit reviews</span>
         <span class="trust-tag">Independent comparisons</span>
       </div>
+
+      <!-- TABS (added) -->
+      <nav class="tabs" aria-label="Primary">
+        <a class="tab is-active" href="/" aria-current="page">Comparison</a>
+        <a class="tab" href="/guide.html">Safety Guide</a>
+        <a class="tab" href="/about.html">About</a>
+        <a class="tab" href="/privacy.html">Privacy</a>
+        <a class="tab" href="/disclosure.html">Disclosure</a>
+        <a class="tab" href="/contact.html">Contact</a>
+      </nav>
     </header>
 
     <!-- MAIN -->
@@ -268,7 +311,6 @@
         </div>
 
         <aside class="hero-aside">
-          <!-- Removed yellow rating-pill block entirely -->
           <p class="hero-note">
             If you have UK, Irish or European roots, <strong>Living DNA</strong> offers very
             detailed regional ancestry plus optional wellbeing tests. If your main goal is

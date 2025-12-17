@@ -27,7 +27,7 @@ body {
     line-height: 1.6;
 }
 
-/* Links (remove the “blue link” feel) */
+/* Links (clean, consistent) */
 a {
     color: var(--text-main);
     text-decoration: underline;
@@ -140,13 +140,26 @@ header {
 .hero-aside { display: flex; flex-direction: column; gap: 10px; }
 .hero-note { font-size: 12px; color: var(--text-muted); margin: 0; }
 
-/* Hero actions (this was missing in your CSS) */
+/* Hero actions */
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 12px;
     align-items: center;
+}
+
+/* On small screens: stack buttons neatly */
+@media (max-width: 560px) {
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* Pills / buttons */
@@ -163,6 +176,7 @@ header {
 }
 .rating-pill .star { color: var(--star); font-size: 14px; }
 
+/* Primary button */
 .btn-primary {
     display: inline-flex;
     align-items: center;
@@ -179,10 +193,10 @@ header {
     text-decoration: none;
 }
 .btn-primary:hover { filter: brightness(0.98); }
-
+.btn-primary:visited { color: #ffffff; }
 .btn-primary .chevron { font-size: 14px; }
 
-/* Secondary button (YOU USE THIS IN HTML – was missing) */
+/* Secondary button */
 .btn-secondary {
     display: inline-flex;
     align-items: center;
@@ -214,9 +228,22 @@ header {
     margin: 0 0 14px;
 }
 
-/* Table */
+/* Cards */
+.card {
+    border-radius: 18px;
+    border: 1px solid var(--border-soft);
+    padding: 16px 16px 18px;
+    background: #ffffff;
+}
+.card h2, .card h3 { margin-top: 0; }
+.card h3 { margin: 0 0 10px; font-size: 15px; }
+.card p { margin: 0 0 8px; font-size: 13px; color: var(--text-muted); }
+.card ul { margin: 6px 0 0; padding-left: 18px; font-size: 13px; color: var(--text-muted); }
+
+/* Table wrapper (safe mobile scrolling) */
 .table-wrapper {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     border-radius: 18px;
     border: 1px solid var(--border-soft);
     background: #ffffff;
@@ -227,7 +254,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     font-size: 13px;
-    min-width: 720px;
+    min-width: 760px; /* prevents cramped chaos on mobile */
 }
 
 thead { background: #f3f4f6; }
@@ -249,6 +276,7 @@ th {
 
 tbody tr:last-child td { border-bottom: none; }
 
+.buy-col { width: 170px; min-width: 170px; }
 .brand-col { font-weight: 700; }
 
 .badge-top {
@@ -261,7 +289,7 @@ tbody tr:last-child td { border-bottom: none; }
     background: #e0f2fe;
     color: #0369a1;
     font-weight: 700;
-    margin-top: 4px;
+    margin-top: 6px;
 }
 
 .stars { color: var(--star); font-size: 13px; margin-bottom: 2px; }
@@ -269,9 +297,10 @@ tbody tr:last-child td { border-bottom: none; }
 .rating-score {
     font-size: 11px;
     color: var(--text-muted);
+    line-height: 1.45;
 }
 
-/* Fix: links inside rating-score should NOT look blue */
+/* Links inside rating-score should stay readable, not “blue CTA” */
 .rating-score a {
     color: var(--text-main);
     text-decoration-color: rgba(15, 23, 42, 0.22);
@@ -285,7 +314,7 @@ tbody tr:last-child td { border-bottom: none; }
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 7px 12px;
+    padding: 8px 12px;
     border-radius: 999px;
     border: 1px solid var(--border-soft);
     background: var(--bg-soft);
@@ -294,6 +323,7 @@ tbody tr:last-child td { border-bottom: none; }
     cursor: pointer;
     text-decoration: none;
     color: var(--text-main);
+    width: 100%;
 }
 .btn-compare:hover { border-color: rgba(236, 72, 153, 0.45); }
 
@@ -305,12 +335,20 @@ tbody tr:last-child td { border-bottom: none; }
     font-size: 11px;
     background: var(--bg-soft);
 }
+
+/* FIX: pill-skin should actually look like a pill */
 .pill-skin {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
     font-size: 11px;
+    background: var(--bg-soft);
+    border: 1px solid var(--border-soft);
     color: var(--text-muted);
 }
 
-/* Cards */
+/* Grid */
 .grid {
     display: grid;
     grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
@@ -321,26 +359,20 @@ tbody tr:last-child td { border-bottom: none; }
     .grid { grid-template-columns: minmax(0, 1fr); }
 }
 
-.card {
-    border-radius: 18px;
-    border: 1px solid var(--border-soft);
-    padding: 16px 16px 18px;
-    background: #ffffff;
-}
-.card h2, .card h3 { margin-top: 0; }
-.card h3 { margin: 0 0 10px; font-size: 15px; }
-.card p { margin: 0 0 8px; font-size: 13px; color: var(--text-muted); }
-.card ul { margin: 6px 0 0; padding-left: 18px; font-size: 13px; color: var(--text-muted); }
-
 /* FAQ */
-.faq h3 { font-size: 15px; margin: 0 0 6px; }
+.faq h3 { font-size: 15px; margin: 16px 0 6px; }
 .faq p { font-size: 13px; margin: 0 0 12px; color: var(--text-muted); }
 
 /* Disclaimer */
-.disclaimer { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+.disclaimer {
+    font-size: 11px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-top: 10px;
+}
 
 /* Footer */
-.site-footer, footer {
+.site-footer {
     margin-top: 36px;
     border-top: 1px solid var(--border-soft);
     padding-top: 16px;
@@ -348,15 +380,22 @@ tbody tr:last-child td { border-bottom: none; }
     color: var(--text-muted);
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
 }
 
-/* Footer links: keep readable, not “bright blue” */
-.site-footer a, footer a {
+/* Footer links block: keep readable on mobile */
+.footer-links {
+    margin-top: 8px;
+    line-height: 1.7;
+    word-break: break-word;
+}
+
+/* Footer links: keep subtle (not bright blue) */
+.site-footer a {
     color: var(--text-main);
     text-decoration-color: rgba(15, 23, 42, 0.25);
 }
-.site-footer a:hover, footer a:hover {
+.site-footer a:hover {
     text-decoration-color: rgba(236, 72, 153, 0.65);
 }
 
@@ -373,35 +412,3 @@ main.article {
 .article li + li { margin-top: 3px; }
 
 strong { font-weight: 700; }
-
-/* --- HOTFIX: Kill blue links next to pink bubbles (force override) --- */
-.hero-actions a,
-.hero-actions a:visited,
-.rating-score a,
-.rating-score a:visited {
-  color: var(--text-main) !important;
-  text-decoration-color: rgba(15, 23, 42, 0.22) !important;
-}
-
-.hero-actions a:hover,
-.rating-score a:hover {
-  text-decoration-color: rgba(236, 72, 153, 0.65) !important;
-}
-
-/* If those links are meant to be secondary buttons, enforce it even without class */
-.hero-actions a:not(.btn-primary) {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 16px;
-  border-radius: 999px;
-  border: 1px solid rgba(236, 72, 153, 0.35);
-  background: #ffffff;
-  font-weight: 650;
-  text-decoration: none;
-}
-.hero-actions a:not(.btn-primary):hover {
-  border-color: rgba(236, 72, 153, 0.55);
-  background: rgba(236, 72, 153, 0.06);
-}
-

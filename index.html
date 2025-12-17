@@ -1,12 +1,19 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="verification" content="bacb74fbd2092e56d140909d788b3e11" />  <title>Genectics.com – Best DNA Test Kits (Amazon, Living DNA &amp; CircleDNA, 2025)</title>
+  <meta name="verification" content="bacb74fbd2092e56d140909d788b3e11" />
+
+  <title>Genectics.com – Best DNA Test Kits (Amazon, Living DNA &amp; CircleDNA, 2025)</title>
   <meta name="description"
         content="Compare top DNA test kits in 2025. See which kits are best for ancestry detail, family matches, health & wellness, and price — with clear star ratings and trusted links to Living DNA, CircleDNA, and leading Amazon DNA kits." />
   <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://www.genectics.com/" />  <link rel="stylesheet" href="/styles.css" />  <style>
+  <link rel="canonical" href="https://www.genectics.com/" />
+
+  <link rel="stylesheet" href="/styles.css" />
+
+  <style>
     /* Living DNA table tweaks: make all bubbles the same width */
     .livingdna-table .buy-col .btn-primary {
       display: block;
@@ -38,4 +45,719 @@
       max-width: 720px;
       background: #0b1220;
       color: #e5e7eb;
-      border: 1
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      overflow: hidden;
+    }
+    .consent-header { padding: 18px 18px 0 18px; }
+    .consent-title {
+      margin: 0;
+      font-size: 1.1rem;
+      letter-spacing: 0.01em;
+    }
+    .consent-body {
+      padding: 14px 18px 18px 18px;
+      line-height: 1.55;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+    .consent-body p { margin: 10px 0; }
+    .consent-list { margin: 12px 0 0 0; padding-left: 18px; }
+    .consent-list li { margin: 6px 0; }
+    .consent-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 16px 18px 18px 18px;
+      background: rgba(2, 6, 23, 0.5);
+      border-top: 1px solid rgba(148, 163, 184, 0.14);
+    }
+    .consent-btn {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.92rem;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+    .consent-accept { background: #ec4899; color: #0b1220; }
+    .consent-reject {
+      background: transparent;
+      color: #e5e7eb;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+    .consent-links {
+      margin-left: auto;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+    .consent-links a { color: #93c5fd; text-decoration: none; }
+    .consent-links a:hover { text-decoration: underline; }
+  </style>
+
+  <!-- Consent + GA loader (GA4 loads only AFTER accept) -->
+  <script>
+    (function () {
+      const CONSENT_KEY = "ronarn_consent_analytics_v1";
+      const GA_ID = "G-3GVJ73QQ5J";
+
+      function lockPage() {
+        document.body.classList.add("consent-locked");
+        const overlay = document.getElementById("consent-overlay");
+        if (overlay) overlay.setAttribute("aria-hidden", "false");
+      }
+
+      function unlockPage() {
+        document.body.classList.remove("consent-locked");
+        const overlay = document.getElementById("consent-overlay");
+        if (overlay) overlay.setAttribute("aria-hidden", "true");
+      }
+
+      function loadGA4() {
+        if (window.__gaLoaded) return;
+        window.__gaLoaded = true;
+
+        const s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_ID);
+        document.head.appendChild(s);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        window.gtag = gtag;
+
+        gtag("js", new Date());
+        gtag("config", GA_ID, { anonymize_ip: true });
+      }
+
+      function setConsent(value) { localStorage.setItem(CONSENT_KEY, value); }
+      function getConsent() { return localStorage.getItem(CONSENT_KEY); }
+      function clearConsent() { localStorage.removeItem(CONSENT_KEY); }
+
+      window.__openPrivacySettings = function () {
+        clearConsent();
+        window.location.reload();
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const saved = getConsent();
+
+        if (saved === "accepted") { loadGA4(); unlockPage(); return; }
+        if (saved === "rejected") { unlockPage(); return; }
+
+        lockPage();
+
+        const btnAccept = document.getElementById("consent-accept");
+        const btnReject = document.getElementById("consent-reject");
+
+        btnAccept.addEventListener("click", function () {
+          setConsent("accepted");
+          loadGA4();
+          unlockPage();
+        });
+
+        btnReject.addEventListener("click", function () {
+          setConsent("rejected");
+          unlockPage();
+        });
+      });
+    })();
+  </script>
+</head>
+
+<body class="consent-locked">
+  <!-- HARD Consent Overlay -->
+  <div id="consent-overlay" class="consent-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Privacy choices">
+    <div class="consent-modal">
+      <div class="consent-header">
+        <h2 class="consent-title">Privacy choices</h2>
+      </div>
+      <div class="consent-body">
+        <p>
+          Genectics.com uses <strong>analytics</strong> to understand which pages are useful and which topics people search for.
+          This helps us improve comparisons and keep the site accurate.
+        </p>
+        <ul class="consent-list">
+          <li><strong>If you accept:</strong> we load Google Analytics (GA4) to measure visits and basic usage trends.</li>
+          <li><strong>If you reject:</strong> the site still works normally, but we do not load analytics.</li>
+        </ul>
+        <p>
+          We do not sell DNA tests. Links may be affiliate links, but acceptance is only about <strong>analytics</strong>.
+        </p>
+      </div>
+      <div class="consent-actions">
+        <button id="consent-accept" class="consent-btn consent-accept" type="button">Accept analytics</button>
+        <button id="consent-reject" class="consent-btn consent-reject" type="button">Reject</button>
+
+        <div class="consent-links">
+          <span>Learn more:</span>
+          <a href="/privacy.html">Privacy</a>
+          <span>·</span>
+          <a href="/disclosure.html">Affiliate disclosure</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <!-- HEADER -->
+    <header>
+      <div class="brand">
+        <div class="brand-name">Genectics.com</div>
+        <div class="brand-tagline">
+          Compare DNA test kits – without guessing, hype or paid rankings.
+        </div>
+      </div>
+      <div class="trust-tags">
+        <span class="trust-tag">No sponsorships</span>
+        <span class="trust-tag">Independent DNA kit reviews</span>
+        <span class="trust-tag">Affiliate-supported (Living DNA, CircleDNA &amp; Amazon)</span>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div>
+          <h1 id="hero-heading" class="hero-title">
+            Find the right DNA test kit for your actual goal.
+          </h1>
+
+          <p class="hero-subtitle">
+            Most people buying a DNA kit in 2025 do three things: search online, get overwhelmed,
+            and then pick whatever has the most reviews. Genectics.com exists to make that decision less random.
+          </p>
+
+          <ul class="hero-list">
+            <li>See which kits are best for ancestry detail vs. family matching vs. wellness.</li>
+            <li>Understand the trade-offs between Living DNA, CircleDNA and Amazon DNA brands.</li>
+            <li>Avoid overpaying for features you don’t actually need on your first kit.</li>
+          </ul>
+
+          <div class="hero-highlight">
+            Our goal is simple: help you pick the DNA test that fits your main job today –
+            not the one with the flashiest marketing.
+          </div>
+
+          <div class="hero-actions">
+            <a href="#livingdna" class="btn-primary">
+              View Living DNA by country
+              <span class="chevron">›</span>
+            </a>
+
+            <a href="https://www.awin1.com/cread.php?awinmid=81635&amp;awinaffid=2660218"
+               class="btn-secondary" target="_blank" rel="nofollow sponsored noopener">
+              CircleDNA Premium (health &amp; wellness reports)
+            </a>
+
+            <a href="#compare" class="btn-secondary">
+              See Amazon DNA kit comparison
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-aside">
+          <div class="rating-pill">
+            <span class="star">★</span>
+            Most popular: <strong>First-time ancestry kits</strong>
+          </div>
+          <p class="hero-note">
+            If you have UK, Irish or European roots, <strong>Living DNA</strong> offers very
+            detailed regional ancestry plus optional wellbeing tests. If your main goal is
+            <strong>health &amp; wellness-style reports</strong>, <strong>CircleDNA</strong> is positioned as a premium option.
+          </p>
+        </aside>
+      </section>
+
+      <!-- LIVING DNA SECTION -->
+      <section id="livingdna" aria-labelledby="livingdna-heading" class="card">
+        <h2 id="livingdna-heading" class="section-title">
+          Living DNA – region-specific kits (ancestry &amp; wellbeing)
+        </h2>
+        <p class="section-subtitle">
+          Living DNA is strongest for people with UK, Irish and wider European ancestry, but they also
+          ship to the US, EU, Australia, New Zealand and many other countries. The table below shows
+          our main recommendation per region – just tap the pink button for your country. All links
+          are affiliate links via the CJ network.
+        </p>
+
+        <div class="table-wrapper">
+          <table class="livingdna-table">
+            <thead>
+              <tr>
+                <th scope="col">Region</th>
+                <th scope="col">Recommended kit (tap to open)</th>
+                <th scope="col">Why this first?</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <!-- USA -->
+              <tr>
+                <td><strong>United States</strong></td>
+                <td class="buy-col">
+                  <a href="https://www.jdoqocy.com/click-101587814-13878252"
+                     class="btn-primary" target="_blank" rel="nofollow sponsored noopener">
+                    US combined kit (ancestry + wellbeing)
+                  </a>
+                </td>
+                <td>
+                  Good balance of ancestry detail and lifestyle-style wellbeing reports for US customers.
+                  Easy “one and done” if you want roots + health in one kit.
+                  <div class="rating-score">
+                    Prefer to keep it simple?
+                    <a href="https://www.jdoqocy.com/click-101587814-14037081"
+                       rel="nofollow sponsored noopener" target="_blank">
+                      US ancestry-only kit
+                    </a>
+                    ·
+                    Focus mainly on lifestyle?
+                    <a href="https://www.tkqlhce.com/click-101587814-13878223"
+                       rel="nofollow sponsored noopener" target="_blank">
+                      US wellbeing kit
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- UK -->
+              <tr>
+                <td><strong>United Kingdom &amp; Irish heritage</strong></td>
+                <td class="buy-col">
+                  <a href="https://www.jdoqocy.com/click-101587814-13878250"
+                     class="btn-primary" target="_blank" rel="nofollow sponsored noopener">
+                    UK combined kit (ancestry + wellbeing)
+                  </a>
+                </td>
+                <td>
+                  Deepest regional breakdown for England, Scotland, Wales and Ireland plus optional
+                  wellbeing layer. Best default for people living in or descended from the UK.
+                  <div class="rating-score">
+                    Only want family roots?
+                    <a href="https://www.jdoqocy.com/click-101587814-13876558"
+                       rel="nofollow sponsored noopener" target="_blank">
+                      UK ancestry-only kit
+                    </a>
+                    ·
+                    Only care about lifestyle?
+                    <a href="https://www.tkqlhce.com/click-101587814-13878193"
+                       rel="nofollow sponsored noopener" target="_blank">
+                      UK wellbeing kit
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- EU -->
+              <tr>
+                <td><strong>European Union (EU)</strong></td>
+                <td class="buy-col">
+                  <a href="https://www.anrdoezrs.net/click-101587814-13878276"
+                     class="btn-primary" target="_blank" rel="nofollow sponsored noopener">
+                    EU ancestry kit
+                  </a>
+                </td>
+                <td>
+                  Best starting point if you live in the EU or have mainly European ancestry outside
+                  the UK. Focuses on ancestry; wellbeing is available as a separate kit.
+                  <div class="rating-score">
+                    Want lifestyle insights as well?
+                    <a href="https://www.anrdoezrs.net/click-101587814-13878316"
+                       rel="nofollow sponsored noopener" target="_blank">
+                      EU wellbeing kit
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Australia -->
+              <tr>
+                <td><strong>Australia</strong></td>
+                <td class="buy-col">
+                  <a href="https://www.dpbolvw.net/click-101587814-13878386"
+                     class="btn-primary" target="_blank" rel="nofollow sponsored noopener">
+                    Australia combined kit (ancestry + wellbeing)
+                  </a>
+                </td>
+                <td>
+                  One kit that covers both ancestry and wellbeing for Australian customers. Good fit for
+                  mixed European heritage and people who want simple, all-in-one results.
+                  <div class="rating-score">
+                    Only interested in roots?
+                    <a href="https://www.anrdoezrs.net/click-101587814-13878381"
+                       rel="nofollow sponsored noopener" target="_blank">
+                      Australia ancestry-only kit
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- New Zealand -->
+              <tr>
+                <td><strong>New Zealand</strong></td>
+                <td class="buy-col">
+                  <a href="https://www.kqzyfj.com/click-101587814-13878399"
+                     class="btn-primary" target="_blank" rel="nofollow sponsored noopener">
+                    New Zealand combined kit (ancestry + wellbeing)
+                  </a>
+                </td>
+                <td>
+                  Main Living DNA option for New Zealand – a combined kit aimed at people who want both
+                  roots and wellbeing insights in one purchase.
+                </td>
+              </tr>
+
+              <!-- International -->
+              <tr>
+                <td><strong>International (other countries)</strong></td>
+                <td class="buy-col">
+                  <a href="https://www.tkqlhce.com/click-101587814-13878335"
+                     class="btn-primary" target="_blank" rel="nofollow sponsored noopener">
+                    International combined kit (ancestry + wellbeing)
+                  </a>
+                </td>
+                <td>
+                  Use this if your country isn’t listed above. Coverage and price depend on where you live,
+                  but this is Living DNA’s main “rest of world” kit.
+                  <div class="rating-score">
+                    Prefer ancestry only?
+                    <a href="https://www.tkqlhce.com/click-101587814-13878336"
+                       rel="nofollow sponsored noopener" target="_blank">
+                      International ancestry kit
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <p class="section-subtitle">
+          We highlight these Living DNA kits because they match where the programme currently converts best
+          (US, UK, EU, Australia, New Zealand and international customers) and because combined ancestry +
+          wellbeing products tend to generate the highest commissions per order.
+        </p>
+      </section>
+
+      <!-- CIRCLEDNA SECTION (NEW) -->
+      <section id="circledna" aria-labelledby="circledna-heading" class="card">
+        <h2 id="circledna-heading" class="section-title">
+          CircleDNA – premium health &amp; wellness DNA testing (500+ reports)
+        </h2>
+
+        <p class="section-subtitle">
+          If your main goal is <strong>health and wellness-style insights</strong> (diet profiles, nutrient needs, exercise routines,
+          and broad genetic reporting), CircleDNA is positioned as a premium at-home test with a very high average order value.
+        </p>
+
+        <div class="hero-highlight" style="margin-top: 10px;">
+          CircleDNA is not a medical diagnostic test. Always consult a qualified healthcare professional for medical decisions.
+        </div>
+
+        <div class="hero-actions" style="margin-top: 14px;">
+          <a href="https://www.awin1.com/cread.php?awinmid=81635&amp;awinaffid=2660218"
+             class="btn-primary" target="_blank" rel="nofollow sponsored noopener">
+            View CircleDNA Premium Test
+            <span class="chevron">›</span>
+          </a>
+
+          <a href="/disclosure.html" class="btn-secondary">
+            Affiliate disclosure
+          </a>
+        </div>
+
+        <p class="section-subtitle" style="margin-top: 12px;">
+          Note: Links may be affiliate links. If you buy through them, we may earn a commission at no extra cost to you.
+        </p>
+      </section>
+
+      <!-- COMPARISON TABLE: AMAZON DNA KITS -->
+      <section id="compare" aria-labelledby="compare-heading">
+        <h2 id="compare-heading" class="section-title">
+          Best DNA test kits on Amazon – side by side
+        </h2>
+        <p class="section-subtitle">
+          Living DNA sells directly on their own site (see section above). The table below focuses
+          on DNA kits that are easy to buy on Amazon, where prices change frequently. Each kit is
+          rated by category, not overall. Nobody “wins everything” – each brand has lanes where it
+          clearly makes more sense. We may earn a commission when you buy via our links, at no extra
+          cost to you. For privacy and risk, read our in-depth
+          <a href="guide.html">DNA safety &amp; privacy guide</a>.
+        </p>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Shop</th>
+                <th scope="col">DNA kit</th>
+                <th scope="col">Best for</th>
+                <th scope="col">Ancestry detail</th>
+                <th scope="col">Family matches</th>
+                <th scope="col">Health / wellness</th>
+                <th scope="col">Price / value</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <!-- MyHeritage -->
+              <tr id="myheritage">
+                <td class="buy-col">
+                  <a href="https://www.amazon.com/MyHeritage-DNA-Test-Kit-Ethnicity/dp/B072SY5JHQ?tag=genecticscom-20"
+                     class="btn-compare" rel="nofollow sponsored noopener" target="_blank">
+                    View offer
+                  </a>
+                </td>
+                <td class="brand-col">
+                  MyHeritage DNA Test Kit
+                  <div class="badge-top">Best first DNA kit</div>
+                </td>
+                <td><span class="pill-skin">Most beginners · European-leaning ancestry</span></td>
+                <td>
+                  <div class="stars">★★★★★</div>
+                  <div class="rating-score">Very strong for European &amp; mixed European backgrounds.</div>
+                </td>
+                <td>
+                  <div class="stars">★★★★☆</div>
+                  <div class="rating-score">Good matches &amp; solid tree tools for most users.</div>
+                </td>
+                <td>
+                  <div class="stars">★★☆☆☆</div>
+                  <div class="rating-score">Mainly ancestry &amp; relatives, limited health angle.</div>
+                </td>
+                <td>
+                  <div class="stars">★★★★★</div>
+                  <div class="rating-score">Often discounted – high value per euro.</div>
+                </td>
+              </tr>
+
+              <!-- AncestryDNA -->
+              <tr id="ancestry">
+                <td class="buy-col">
+                  <a href="https://www.amazon.com/AncestryDNA-Genetic-Ethnicity-Test/dp/B00TRLVKW0?tag=genecticscom-20"
+                     class="btn-compare" rel="nofollow sponsored noopener" target="_blank">
+                    View offer
+                  </a>
+                </td>
+                <td class="brand-col">
+                  AncestryDNA Genetic Test Kit
+                  <div class="badge-top">Best for big family trees</div>
+                </td>
+                <td><span class="pill-skin">Family tree builders · records &amp; cousins</span></td>
+                <td>
+                  <div class="stars">★★★★☆</div>
+                  <div class="rating-score">Good global coverage, slightly less “Euro-tilted”.</div>
+                </td>
+                <td>
+                  <div class="stars">★★★★★</div>
+                  <div class="rating-score">The king of giant trees and cousin networks.</div>
+                </td>
+                <td>
+                  <div class="stars">★★★☆☆</div>
+                  <div class="rating-score">Some health features, but not the core focus.</div>
+                </td>
+                <td>
+                  <div class="stars">★★★★☆</div>
+                  <div class="rating-score">Strong value if you’ll use the records and tree tools.</div>
+                </td>
+              </tr>
+
+              <!-- FamilyTreeDNA -->
+              <tr id="ftdna">
+                <td class="buy-col">
+                  <a href="https://www.amazon.com/FamilyTreeDNA-Geographic-Relatives-Processed-Convenient/dp/B01NAQ1UCW?tag=genecticscom-20"
+                     class="btn-compare" rel="nofollow sponsored noopener" target="_blank">
+                    View offer
+                  </a>
+                </td>
+                <td class="brand-col">
+                  FamilyTreeDNA Test Kit
+                  <div class="badge-top">For DNA geeks</div>
+                </td>
+                <td><span class="pill-skin">Enthusiasts · power-users</span></td>
+                <td>
+                  <div class="stars">★★★★☆</div>
+                  <div class="rating-score">Deep tools, especially with extra tests &amp; uploads.</div>
+                </td>
+                <td>
+                  <div class="stars">★★★★☆</div>
+                  <div class="rating-score">Powerful, more technical matching options.</div>
+                </td>
+                <td>
+                  <div class="stars">★★☆☆☆</div>
+                  <div class="rating-score">Built more for genealogy than wellness.</div>
+                </td>
+                <td>
+                  <div class="stars">★★★★☆</div>
+                  <div class="rating-score">Fair for the depth you get as an enthusiast.</div>
+                </td>
+              </tr>
+
+              <!-- LifeDNA -->
+              <tr id="lifedna">
+                <td class="buy-col">
+                  <a href="https://www.amazon.com/Methylation-Complete-Wellness-Analysis-Nutrition/dp/B0DJ1VWJYL?tag=genecticscom-20"
+                     class="btn-compare" rel="nofollow sponsored noopener" target="_blank">
+                    View offer
+                  </a>
+                </td>
+                <td class="brand-col">
+                  LifeDNA Wellness &amp; Nutrition
+                  <div class="badge-top">Best for wellness focus</div>
+                </td>
+                <td><span class="pill-skin">Wellness-focused · traits &amp; lifestyle</span></td>
+                <td>
+                  <div class="stars">★★☆☆☆</div>
+                  <div class="rating-score">Ancestry is not its main purpose.</div>
+                </td>
+                <td>
+                  <div class="stars">★★★★★</div>
+                  <div class="rating-score">Designed around wellness, nutrition &amp; lifestyle.</div>
+                </td>
+                <td>
+                  <div class="stars">★★★☆☆</div>
+                  <div class="rating-score">You pay for the niche wellness angle.</div>
+                </td>
+                <td>
+                  <div class="stars">★★★☆☆</div>
+                  <div class="rating-score">Decent value if you mainly care about traits.</div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <p class="section-subtitle">
+          Star ratings are editorial, relative and rounded to the nearest half-step.
+          They are here to make the trade-offs obvious at a glance – not to replace clinical accuracy studies.
+        </p>
+      </section>
+
+      <!-- GUIDE CARDS -->
+      <section class="grid" aria-label="Guides to DNA testing">
+        <article class="card">
+          <h2>New to DNA testing?</h2>
+          <p>
+            Start with a simple ancestry-first kit like Living DNA, MyHeritage DNA or AncestryDNA.
+            Our beginner guide walks you through what to expect, how to read your results and
+            how to avoid common regrets.
+          </p>
+          <a href="guide.html" class="btn-primary">
+            Read the safety &amp; privacy guide ›
+          </a>
+        </article>
+
+        <article class="card">
+          <h2>Already own raw DNA data?</h2>
+          <p>
+            If you already tested elsewhere, you may be able to upload your raw DNA file to
+            other services for more insights instead of buying a brand new kit.
+          </p>
+          <a href="about.html" class="btn-primary">
+            Learn more about our approach ›
+          </a>
+        </article>
+      </section>
+
+      <!-- MINI FAQ -->
+      <section class="card faq" aria-labelledby="faq-heading" style="margin-top: 24px;">
+        <h2 id="faq-heading" class="section-title">DNA kit FAQ</h2>
+
+        <h3>Will these kits tell me everything about my health?</h3>
+        <p>
+          No. Consumer DNA tests are not a substitute for medical diagnostics. They can highlight traits,
+          risks or interesting patterns – but you should always discuss health decisions with a doctor.
+        </p>
+
+        <h3>Is my DNA safe with these companies?</h3>
+        <p>
+          Each provider has its own privacy policy and data-sharing rules. Before you buy, read their latest
+          terms on their website and decide what you’re comfortable with. Our
+          <a href="guide.html">safety guide</a> walks through what to look for.
+        </p>
+
+        <h3>Can I use more than one DNA service?</h3>
+        <p>
+          Yes. Many enthusiasts start with one kit, then either upload their raw data to other platforms
+          or order extra tests later for deeper ancestry or health insights.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Need a focused paternity DNA comparison?</h2>
+        <p>
+          Genectics.com is mainly about broad DNA test kits – ancestry, health and relatives.
+          For situations where the question is specifically about biological fatherhood,
+          we recommend reading our dedicated paternity overview on
+          <a href="https://paternity.bio/" rel="noopener">Paternity.bio</a>.
+        </p>
+        <p>
+          That site explains the difference between peace-of-mind testing and court-admissible
+          tests, compares typical providers, and highlights when you should speak with a lawyer
+          or healthcare professional instead of relying on a home kit.
+        </p>
+      </section>
+
+      <!-- DISCLAIMER -->
+      <section class="disclaimer">
+        <p>
+          Genectics.com does not provide medical or legal advice. This page is for informational and comparison
+          purposes only. Always read the current terms and privacy policies on the provider’s own website before buying.
+        </p>
+        <p>
+          This website is reader-supported. When you buy products via links on this page, we may earn a small
+          commission from Amazon or partners like Living DNA (CJ) and CircleDNA (Awin). We do not accept payment
+          for positive reviews or higher rankings.
+        </p>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <span>© 2025 Genectics.com – Independent DNA test comparison.</span>
+      <span>Operated by ronarn AS, Norway. Affiliate-supported but independent. No paid rankings.</span>
+      <span>Contact: <a href="mailto:info@genectics.com">info@genectics.com</a></span>
+      <span>Business address: Pb. 1010 Lillestrøm Syd, 2012 Lillestrøm, Norway</span>
+
+      <span class="footer-links">
+        <a href="about.html">About</a> ·
+        <a href="privacy.html">Privacy</a> ·
+        <a href="disclosure.html">Affiliate disclosure</a> ·
+        <a href="contact.html">Contact</a> ·
+        <a href="https://organization.bio" target="_blank" rel="noopener">About the Publisher</a> ·
+        <a href="https://contactus.bio" target="_blank" rel="noopener">Network Contact</a> ·
+        <a href="https://affiliates.bio" target="_blank" rel="noopener">Affiliates</a> ·
+        <a href="https://advertisement.bio" target="_blank" rel="noopener">Advertisements</a> ·
+        <a href="https://guides.bio" target="_blank" rel="noopener">Editorial Guides</a> ·
+        <a href="https://policies.bio" target="_blank" rel="noopener">Policies</a> ·
+        <a href="https://transparency.bio" target="_blank" rel="noopener">Transparency</a> ·
+        <a href="https://ethics.bio" target="_blank" rel="noopener">Ethics</a> ·
+        <a href="https://standards.bio" target="_blank" rel="noopener">Editorial Standards</a> ·
+        <a href="https://indexing.bio" target="_blank" rel="noopener">Indexing</a> ·
+        <a href="https://verification.bio" target="_blank" rel="noopener">Verification</a> ·
+        <a href="https://disclaimer.bio" target="_blank" rel="noopener">Disclaimer</a> ·
+        <a href="https://disclosure.bio" target="_blank" rel="noopener">Network Disclosure</a> ·
+        <a href="https://terms.bio" target="_blank" rel="noopener">Terms</a>
+        <span> · </span>
+        <a href="#" onclick="window.__openPrivacySettings(); return false;">Privacy settings</a>
+      </span>
+    </footer>
+
+  </div>
+</body>
+</html>
+```0

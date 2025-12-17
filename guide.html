@@ -9,88 +9,16 @@
   <meta name="description"
         content="A practical safety and privacy guide before you buy a DNA test kit. Learn about data storage, law enforcement access, emotional impact and how to protect yourself when testing.">
 
-  <!-- Use the same site-wide stylesheet -->
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.genectics.com/guide.html" />
+
   <link rel="stylesheet" href="/styles.css" />
-
-  <!-- Page-specific styles only (kept minimal to avoid changing global layout) -->
-  <style>
-    /* Keep this page aligned with Genectics.com layout */
-    .page { max-width: 1120px; margin: 0 auto; padding: 0 18px 48px; }
-
-    /* Match the card look from the main site */
-    .article-card { margin-top: 18px; }
-
-    /* Light “kicker” line above H1 */
-    .hero-kicker {
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-size: 0.78rem;
-      color: var(--accent, #38bdf8);
-      margin: 0 0 8px 0;
-    }
-
-    /* Chips used in sections (small, non-invasive) */
-    .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 8px; }
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--border-soft, rgba(148,163,184,0.25));
-      background: var(--bg-soft, rgba(15,23,42,0.55));
-      color: var(--text-muted, #9ca3af);
-      font-size: 0.82rem;
-      white-space: nowrap;
-    }
-
-    /* Checklist (only for this page) */
-    .checklist { list-style: none; padding-left: 0; margin: 10px 0 0; }
-    .checklist li { position: relative; padding-left: 20px; margin: 6px 0; }
-    .checklist li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--accent, #38bdf8);
-      font-size: 0.9rem;
-    }
-
-    /* 2-column info blocks (collapses on mobile) */
-    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin: 14px 0; }
-    .card-ghost {
-      border-radius: 16px;
-      padding: 14px 16px;
-      border: 1px solid var(--border-soft, rgba(148,163,184,0.18));
-      background: var(--bg-soft, rgba(15,23,42,0.55));
-    }
-    .card-ghost h3 { margin: 0 0 8px 0; font-size: 1.02rem; }
-    .card-ghost p { margin: 0; }
-
-    /* CTA boxes that match the site buttons/cards */
-    .cta-box {
-      border: 1px solid rgba(56,189,248,0.45);
-      background: rgba(15,23,42,0.55);
-      border-radius: 18px;
-      padding: 16px 16px 14px;
-      margin: 18px 0;
-    }
-    .cta-box strong { display: block; margin-bottom: 6px; }
-
-    /* Footer text inside card */
-    .disclaimer { margin-top: 18px; color: var(--text-muted, #9ca3af); font-size: 0.92rem; }
-
-    @media (max-width: 720px) {
-      .grid-2 { grid-template-columns: 1fr; }
-      .page { padding-inline: 14px; }
-    }
-  </style>
 </head>
 
 <body>
   <div class="page">
 
-    <!-- HEADER (same as main site + tabs) -->
+    <!-- HEADER (same structure as index.html) -->
     <header>
       <div class="brand">
         <div class="brand-name">Genectics.com</div>
@@ -99,6 +27,13 @@
         </div>
       </div>
 
+      <div class="trust-tags">
+        <span class="trust-tag">No sponsorships</span>
+        <span class="trust-tag">Independent DNA kit reviews</span>
+        <span class="trust-tag">Independent comparisons</span>
+      </div>
+
+      <!-- TABS / NAV (use the same classes you use on other pages) -->
       <nav class="tabs" aria-label="Primary">
         <a class="tab" href="/index.html">Comparison</a>
         <a class="tab is-active" href="/guide.html" aria-current="page">Safety Guide</a>
@@ -110,210 +45,90 @@
     </header>
 
     <main>
-      <article class="card article-card">
-        <p class="hero-kicker">Read this before you buy a kit</p>
+
+      <!-- HERO CARD -->
+      <section class="card">
+        <p class="kicker">Read this before you buy a kit</p>
+
         <h1 class="hero-title">DNA Test Safety &amp; Privacy Guide</h1>
 
-        <p class="section-subtitle" style="margin-top: 10px;">
+        <p class="section-subtitle">
           A DNA test is not just a one-time purchase. It is a long-term data relationship with a company —
           and sometimes with law enforcement, researchers and third parties.
         </p>
-        <p class="section-subtitle" style="margin-top: 10px;">
-          This guide walks you through the main safety and privacy topics to consider <em>before</em> you order any DNA kit.
+
+        <p class="section-subtitle">
+          This guide walks you through the main safety and privacy topics to consider before you order any DNA kit.
           It is not legal or medical advice, but a checklist to help you ask better questions.
         </p>
 
-        <div class="cta-box">
-          <strong>Short version</strong>
-          Don’t only compare price and “ethnicity percentage”. Also compare:
-          <ul class="checklist">
-            <li>How long they keep your raw data and physical sample.</li>
-            <li>Whether you can request full deletion and sample destruction.</li>
-            <li>How they handle law-enforcement and research requests.</li>
-            <li>How they protect relatives who never consented.</li>
-          </ul>
-          <div style="margin-top: 12px;">
-            <a class="btn-primary" href="/index.html">See the kit comparison page <span class="chevron">›</span></a>
-          </div>
+        <div class="hero-highlight">
+          <strong>Short version:</strong> Don’t only compare price and “ethnicity percentage”.
+          Also compare data retention, deletion, third-party access and how relatives are affected.
         </div>
 
+        <div class="hero-actions" style="margin-top: 14px;">
+          <a class="btn-primary" href="/index.html">
+            Back to kit comparison
+            <span class="chevron">›</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- CONTENT -->
+      <section class="card" style="margin-top: 18px;">
         <h2 class="section-title" id="data-storage">1. Data storage: how long do they keep your DNA?</h2>
-        <div class="chip-row">
-          <div class="chip">★ Raw data retention</div>
-          <div class="chip">★ Sample storage</div>
-          <div class="chip">★ Deletion process</div>
-        </div>
-        <p class="section-subtitle" style="margin-top: 10px;">
-          When you send in a DNA sample, most companies generate raw genetic data and then store it on their servers.
-          Some also keep the physical saliva or cheek-swab sample for future re-analysis.
-        </p>
-
-        <div class="grid-2">
-          <div class="card-ghost">
-            <h3>Questions to ask</h3>
-            <ul class="checklist">
-              <li>How long do you keep my raw DNA file?</li>
-              <li>Do you store my physical sample? If yes, for how long?</li>
-              <li>Can I ask you to destroy my sample and delete my data completely?</li>
-              <li>How do you verify that deletion is actually done?</li>
-            </ul>
-          </div>
-          <div class="card-ghost">
-            <h3>Safer defaults (in our view)</h3>
-            <ul class="hero-list" style="margin: 0; padding-left: 18px;">
-              <li>Clear, written retention limits (not “indefinitely unless you ask”).</li>
-              <li>Easy, documented process for full deletion and sample destruction.</li>
-              <li>No surprise re-use of your data for new purposes without fresh consent.</li>
-            </ul>
-          </div>
-        </div>
-
-        <h2 class="section-title" id="law-enforcement">2. Law enforcement &amp; third-party access</h2>
-        <div class="chip-row">
-          <div class="chip">★ Warrants &amp; court orders</div>
-          <div class="chip">★ Police use of databases</div>
-          <div class="chip">★ Cross-border data</div>
-        </div>
-        <p class="section-subtitle" style="margin-top: 10px;">
-          Some DNA databases have been used in criminal investigations, sometimes indirectly via relatives.
-          Companies differ in how often they cooperate, and under what conditions.
-        </p>
-
-        <div class="grid-2">
-          <div class="card-ghost">
-            <h3>Read the fine print on</h3>
-            <ul class="checklist">
-              <li>Whether they accept law-enforcement warrants at all.</li>
-              <li>If they notify you when data is requested (unless prohibited by law).</li>
-              <li>Which country’s courts and police have jurisdiction over the data.</li>
-            </ul>
-          </div>
-          <div class="card-ghost">
-            <h3>Things to keep in mind</h3>
-            <ul class="hero-list" style="margin: 0; padding-left: 18px;">
-              <li>Your DNA can indirectly identify relatives who never consented.</li>
-              <li>Policies can change if the company is sold or merges.</li>
-              <li>Different brands have very different approaches to police access.</li>
-            </ul>
-          </div>
-        </div>
-
-        <h2 class="section-title" id="research">3. Research, partners &amp; “optional” consent</h2>
-        <div class="chip-row">
-          <div class="chip">★ Opt-in vs. opt-out</div>
-          <div class="chip">★ Partners</div>
-          <div class="chip">★ Commercial use</div>
-        </div>
-        <p class="section-subtitle" style="margin-top: 10px;">
-          Many DNA companies offer to use anonymised data for research. This can be positive, but only if you’re genuinely
-          comfortable with it and the consent model is clear.
-        </p>
-
-        <ul class="checklist">
-          <li>Is research data sharing <strong>opt-in</strong> (ideal) or opt-out?</li>
-          <li>Can you change your mind later and withdraw consent?</li>
-          <li>Do they share data with commercial partners?</li>
-          <li>What exactly counts as “anonymised” in their policy?</li>
+        <ul class="hero-list">
+          <li>How long do they keep your raw DNA file?</li>
+          <li>Do they store your physical sample? For how long?</li>
+          <li>Can you request full deletion and sample destruction?</li>
+          <li>How do they verify deletion is completed?</li>
         </ul>
 
-        <h2 class="section-title" id="relatives">4. Relatives, surprises &amp; emotional impact</h2>
-        <div class="chip-row">
-          <div class="chip">★ Hidden relatives</div>
-          <div class="chip">★ Non-paternity events</div>
-          <div class="chip">★ Family dynamics</div>
-        </div>
-        <p class="section-subtitle" style="margin-top: 10px;">
-          DNA testing can reveal unexpected siblings, misattributed parentage, donor-conceived relatives and other surprises.
-          For some people this is healing. For others, it is destabilising.
-        </p>
-
-        <div class="grid-2">
-          <div class="card-ghost">
-            <h3>Before you test</h3>
-            <ul class="checklist">
-              <li>Ask yourself: “Am I ready to discover something I didn’t expect?”</li>
-              <li>Consider talking with close family about your decision to test.</li>
-              <li>Think about who you would talk to if a result is emotionally heavy.</li>
-            </ul>
-          </div>
-          <div class="card-ghost">
-            <h3>If you uncover a big surprise</h3>
-            <ul class="hero-list" style="margin: 0; padding-left: 18px;">
-              <li>Pause before contacting new relatives or confronting family.</li>
-              <li>Consider professional counselling if the news is overwhelming.</li>
-              <li>Remember that results can be accurate but incomplete for context.</li>
-            </ul>
-          </div>
-        </div>
-
-        <h2 class="section-title" id="children">5. Testing children and other people</h2>
-        <div class="chip-row">
-          <div class="chip">★ Consent</div>
-          <div class="chip">★ Future autonomy</div>
-          <div class="chip">★ Long-term records</div>
-        </div>
-        <p class="section-subtitle" style="margin-top: 10px;">
-          Some companies allow parents or guardians to submit DNA for children. This raises extra questions about consent and
-          future privacy.
-        </p>
-
-        <ul class="checklist">
-          <li>Does local law or the provider’s policy restrict child testing?</li>
-          <li>Will this create a permanent record your child did not choose?</li>
-          <li>Could the data affect future privacy if policies or laws change?</li>
+        <h2 class="section-title" id="law-enforcement" style="margin-top: 22px;">2. Law enforcement &amp; third-party access</h2>
+        <ul class="hero-list">
+          <li>Do they require warrants or court orders?</li>
+          <li>Do they notify you when data is requested (when allowed)?</li>
+          <li>Which country has jurisdiction over the data?</li>
+          <li>How do they handle cross-border requests?</li>
         </ul>
 
-        <h2 class="section-title" id="security">6. Account security &amp; practical protection</h2>
-        <div class="chip-row">
-          <div class="chip">★ Strong passwords</div>
-          <div class="chip">★ Two-factor login</div>
-          <div class="chip">★ Shared devices</div>
-        </div>
-        <p class="section-subtitle" style="margin-top: 10px;">
-          Even with a good privacy policy, weak account security can expose sensitive information.
+        <h2 class="section-title" id="research" style="margin-top: 22px;">3. Research &amp; optional consent</h2>
+        <ul class="hero-list">
+          <li>Is research sharing opt-in or opt-out?</li>
+          <li>Can you withdraw consent later?</li>
+          <li>Do they share with commercial partners?</li>
+          <li>What does “anonymised” mean in their terms?</li>
+        </ul>
+
+        <h2 class="section-title" id="relatives" style="margin-top: 22px;">4. Relatives &amp; emotional impact</h2>
+        <p class="section-subtitle">
+          DNA testing can reveal unexpected relatives and family events. Think through how you would handle surprises
+          before you test — and consider discussing it with close family.
         </p>
 
-        <div class="grid-2">
-          <div class="card-ghost">
-            <h3>Basic steps</h3>
-            <ul class="checklist">
-              <li>Use a unique, strong password for your DNA account.</li>
-              <li>Turn on two-factor authentication if the provider supports it.</li>
-              <li>Log out on shared or public devices.</li>
-            </ul>
-          </div>
-          <div class="card-ghost">
-            <h3>Extra caution</h3>
-            <ul class="hero-list" style="margin: 0; padding-left: 18px;">
-              <li>Be careful about posting screenshots with names or kit IDs online.</li>
-              <li>Think twice before linking your DNA account to third-party tools.</li>
-            </ul>
-          </div>
+        <h2 class="section-title" id="children" style="margin-top: 22px;">5. Testing children</h2>
+        <ul class="hero-list">
+          <li>Is child testing allowed by law/provider policy?</li>
+          <li>Does it create a permanent record the child didn’t choose?</li>
+          <li>Could future policy/law changes increase privacy risk?</li>
+        </ul>
+
+        <h2 class="section-title" id="security" style="margin-top: 22px;">6. Account security</h2>
+        <ul class="hero-list">
+          <li>Use a unique, strong password.</li>
+          <li>Enable two-factor authentication if available.</li>
+          <li>Be careful sharing screenshots with names or kit IDs.</li>
+        </ul>
+
+        <div class="disclaimer" style="margin-top: 18px;">
+          <p>
+            <strong>Disclaimer:</strong> This guide is general information only and is not legal or medical advice.
+            Policies can change and may vary by country. Always read the current terms on the provider’s own site.
+          </p>
         </div>
+      </section>
 
-        <h2 class="section-title" id="choosing">7. Putting it all together before you buy</h2>
-        <p class="section-subtitle" style="margin-top: 10px;">
-          Use this guide as a checklist when you compare kits on the <a href="/index.html">comparison page</a>.
-          Features matter — but so do policies and your own comfort level.
-        </p>
-
-        <div class="cta-box">
-          <strong>How to use Genectics.com</strong>
-          <ul class="checklist">
-            <li>Start on the <a href="/index.html">comparison page</a> to match a kit to your goal.</li>
-            <li>Open the provider’s privacy policy and skim for the topics above.</li>
-            <li>Only buy when you’re comfortable with both features and policies.</li>
-          </ul>
-          <div style="margin-top: 12px;">
-            <a class="btn-primary" href="/index.html">Back to kit comparisons <span class="chevron">›</span></a>
-          </div>
-        </div>
-
-        <p class="disclaimer">
-          <strong>Disclaimer:</strong> This guide is general information only and is not legal or medical advice.
-          Policies change over time and may differ by country. Always read the current terms on the provider’s own site.
-        </p>
-      </article>
     </main>
 
     <footer class="site-footer">
